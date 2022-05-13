@@ -1,14 +1,14 @@
 import React from "react";
-import Hero from "../components/layout/hero/hero";
-import Layout from "../components/layout/layout/layout";
-import ShopByCategory from "../components/layout/shop-by-category/shopByCategory";
-import TextImgSection from "../components/layout/text-img-section/textImgSection";
+import Hero from "../components/hero/hero";
+import Layout from "../components/layout/layout";
+import ShopByCategory from "../components/shop-by-category/shopByCategory";
+import TextImgSection from "../components/text-img-section/textImgSection";
 import katwalkBag from "../assets/images/designers/katwalk-bag.jpg";
-import Features from "../components/layout/features/features";
+import Features from "../components/features/features";
 
 function HomePage() {
   const designerData = {
-    title: "DESIGNERS",
+    title: "designers",
     text: "Explore our talented and independent designers.",
     img: katwalkBag,
   }; 

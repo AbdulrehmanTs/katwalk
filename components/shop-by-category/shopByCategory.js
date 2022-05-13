@@ -1,15 +1,10 @@
 import React from "react";
-import Image from "next/image";
-import logoSquare from "../../../assets/images/logo/logo-square.png";
-import vat from "../../../assets/images/logo/vat.png";
-import styles from "./shopByCategory.module.css";
-import heroImage from "../../../assets/images/hero-image.jpg";
-import springImg from "../../../assets/images/categories/print.jpg";
-import printImg from "../../../assets/images/categories/print.jpg";
-import blackImg from "../../../assets/images/categories/print.jpg";
-import eveningImg from "../../../assets/images/categories/print.jpg";
-import formalImg from "../../../assets/images/categories/print.jpg";
-import casualImg from "../../../assets/images/categories/print.jpg";
+import springImg from "../../assets/images/categories/print.jpg";
+import printImg from "../../assets/images/categories/print.jpg";
+import blackImg from "../../assets/images/categories/print.jpg";
+import eveningImg from "../../assets/images/categories/print.jpg";
+import formalImg from "../../assets/images/categories/print.jpg";
+import casualImg from "../../assets/images/categories/print.jpg";
 
 import ShopByCategorySection from "../shop-by-category-section/shopByCategorySection";
 

@@ -1,0 +1,139 @@
+/* 
+black	#000
+red	#C53A19
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Work";
+  src: url("../assets/fonts/work-sans/WorkSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Almarai-Regular";
+  src: url("../assets/fonts/almarai/Almarai-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fahkwang-Regular";
+  src: url("../assets/fonts/fahkwang/Fahkwang-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fahkwang-Light";
+  src: url("../assets/fonts/fahkwang/Fahkwang-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.work-regular {
+  font-family: "Work";
+}
+
+.almarai-regular {
+  font-family: "Almarai-Regular";
+}
+
+.fahkwang-regular {
+  font-family: "Fahkwang-Regular";
+}
+
+.fahkwang-light {
+  font-family: "Fahkwang-Light";
+}
+
+.image_container > span {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.image_container img {
+  object-fit: cover;
+}
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.show-dropdown {
+  height: auto;
+}
+
+.visibility-visible {
+  visibility: visible !important;
+}
+
+/* navigation start */
+.mob_menu_black_div {
+  width: calc(100% - 70px);
+}
+
+.menu_overlay {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.visibility-visible .menu_overlay {
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.visibility-visible .mob_menu_black_div {
+  transform: translateX(0);
+  transition: all 0.3s ease;
+}
+
+/* navigation end */
+/* hero section start */
+/* .orange-anim-btn:before {
+  background: white;
+  content: "";
+  width: 100%;
+  height: 1px;
+  -webkit-transition: height 0.3s ease;
+  -o-transition: height 0.3s ease;
+  transition: height 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.orange-anim-btn:hover:before {
+  background: #c53a19;
+  content: "";
+  width: 100%;
+  height: 30px;
+  z-index: -1;
+} */
+
+.category-card:hover .image_container {
+  opacity: .8;
+}
+@media(max-width: 1480px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media(max-width: 640px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+li.relative:hover .contact-box {
+  display: block !important;
+}

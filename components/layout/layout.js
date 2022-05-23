@@ -2,14 +2,23 @@ import React from "react";
 import Footer from "./footer/footer";
 import Navigation from "./navigation/navigation";
 
-const Layout = ({children}) => {
+const Layout = ({ children, footer }) => {
   return (
     <>
-      <Navigation />
-      {children}
-      <Footer />
+      {footer == "none" ? (
+        <>
+          <Navigation />
+          {children}
+        </>
+      ) : (
+        <>
+          <Navigation />
+          {children}
+          <Footer />
+        </>
+      )}
     </>
   );
-}
+};
 
 export default Layout;

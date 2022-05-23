@@ -4,6 +4,7 @@ import Layout from "../components/layout/layout";
 import ShopByCategory from "../components/shop-by-category/shopByCategory";
 import TextImgSection from "../components/text-img-section/textImgSection";
 import katwalkBag from "../assets/images/designers/katwalk-bag.jpg";
+import bestSellingProduct from "../assets/images/best-selling/best-selling-product.jpg";
 import Features from "../components/features/features";
 
 function HomePage() {
@@ -15,7 +16,7 @@ function HomePage() {
   const bestSellingData = {
     title: "Best Selling",
     text: "Our customers' favorite picks",
-    img: katwalkBag,
+    img: bestSellingProduct,
   }
   return (
     <>

@@ -1,10 +1,10 @@
 import React from "react";
-import springImg from "../../assets/images/categories/print.jpg";
+import springImg from "../../assets/images/categories/spring.jpg";
 import printImg from "../../assets/images/categories/print.jpg";
-import blackImg from "../../assets/images/categories/print.jpg";
-import eveningImg from "../../assets/images/categories/print.jpg";
-import formalImg from "../../assets/images/categories/print.jpg";
-import casualImg from "../../assets/images/categories/print.jpg";
+import blackImg from "../../assets/images/categories/black.jpg";
+import eveningImg from "../../assets/images/categories/evening.jpg";
+import formalImg from "../../assets/images/categories/formal.jpg";
+import casualImg from "../../assets/images/categories/casual.jpg";
 
 import ShopByCategorySection from "../shop-by-category-section/shopByCategorySection";
 

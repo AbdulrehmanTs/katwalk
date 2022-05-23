@@ -19,7 +19,7 @@ function TextImgSection({ data }) {
         </div>
         <div className="w-[100%]">
           <span className="image_container">
-            <Image src={katwalkBag} alt="image" />
+            <Image src={data.img} alt="image" />
           </span>
         </div>
       </section>

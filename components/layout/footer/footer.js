@@ -3,6 +3,7 @@ import Image from "next/image";
 import logoSquare from "../../../assets/images/logo/logo-square.png";
 import vat from "../../../assets/images/logo/vat.png";
 import styles from "./footer.module.css";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -18,12 +19,11 @@ function Footer() {
             className={`${styles.footer_menu} flex justify-start flex-wrap gap-x-[40px] pr-[20px] hidden       md:flex lg:pr-[0] lg:gap-x-[15px] xl:gap-x-[40px]`}
           >
             <li>
-              <a
-                href="#"
-                className="work-regular text-[#fff] text-[12px] tracking-[0.05em] uppercase cursor-pointer"
-              >
-                About us
-              </a>
+              <Link href="./about-us">
+                <a className="work-regular text-[#fff] text-[12px] tracking-[0.05em] uppercase cursor-pointer">
+                  About us
+                </a>
+              </Link>
             </li>
             <li className="relative">
               <a
@@ -32,19 +32,31 @@ function Footer() {
               >
                 Contact us
               </a>
-              <div className={`${styles.dropdown_menu_div} contact-box bg-[#fff] w-[402px] p-[20px] border-[#fbf1e8] border-[1px] absolute bottom-[30px] left-[50%] translate-x-[-50%] hidden`}>
+              <div
+                className={`${styles.dropdown_menu_div} contact-box bg-[#fff] w-[402px] p-[20px] border-[#fbf1e8] border-[1px] absolute bottom-[30px] left-[50%] translate-x-[-50%] hidden`}
+              >
                 <div className="flex justify-between">
                   <div className="border-r-[1px] border-[#e2e5ec] w-[48%] text-center">
                     <p className="work-regular text-[#000000b8] text-[12px] mb-[10px] uppercase">
                       click and chat
                     </p>
-                    <a href="#" className="work-regular text-[13px] text-[#c53a19]">Whatsapp</a>
+                    <a
+                      href="#"
+                      className="work-regular text-[13px] text-[#c53a19]"
+                    >
+                      Whatsapp
+                    </a>
                   </div>
                   <div className="w-[50%] text-center">
                     <p className="work-regular text-[#000000b8] text-[12px] mb-[10px] uppercase">
                       email
                     </p>
-                    <a href="#" className="work-regular text-[13px] text-[#c53a19]">customercare@katwalk.sa</a>
+                    <a
+                      href="#"
+                      className="work-regular text-[13px] text-[#c53a19]"
+                    >
+                      customercare@katwalk.sa
+                    </a>
                   </div>
                 </div>
                 <div>
@@ -52,7 +64,12 @@ function Footer() {
                     <p className="work-regular text-[#000000b8] text-[12px] mb-[10px] uppercase pt-[30px]">
                       partnership and pr
                     </p>
-                    <a href="#" className="work-regular text-[13px] text-[#c53a19]">info@katwalk.sa</a>
+                    <a
+                      href="#"
+                      className="work-regular text-[13px] text-[#c53a19]"
+                    >
+                      info@katwalk.sa
+                    </a>
                   </div>
                 </div>
               </div>
@@ -66,20 +83,18 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="work-regular text-[#fff] text-[12px] tracking-[0.05em] uppercase cursor-pointer"
-              >
-                FAQS
-              </a>
+              <Link href="./faqs">
+                <a className="work-regular text-[#fff] text-[12px] tracking-[0.05em] uppercase cursor-pointer">
+                  FAQS
+                </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="work-regular text-[#fff] text-[12px] tracking-[0.05em] uppercase cursor-pointer"
-              >
-                PRIVACY POLICY, TERMS & CONDITIONS
-              </a>
+              <Link href="./privacypolicy">
+                <a className="work-regular text-[#fff] text-[12px] tracking-[0.05em] uppercase cursor-pointer">
+                  PRIVACY POLICY, TERMS & CONDITIONS
+                </a>
+              </Link>
             </li>
           </ul>
         </div>

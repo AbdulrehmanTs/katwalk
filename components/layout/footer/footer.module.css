@@ -2,11 +2,11 @@
   color: #ecd9c4;
 }
 .footer_menu li:hover div a {
-    color: #c53a19;
-  }
-  .footer_menu li div a:hover {
-    color: #000000;
-  }
+  color: #c53a19;
+}
+.footer_menu li div a:hover {
+  color: #000000;
+}
 .dropdown_menu_div::before {
   position: absolute;
   content: "";

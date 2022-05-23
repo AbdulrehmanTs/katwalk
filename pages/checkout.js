@@ -63,7 +63,7 @@ function ProductDetail() {
   //     productSleeves: "25",
   //   }
   // ];
- 
+
   const productImages = [
     { image: img1 },
     { image: img2 },
@@ -246,10 +246,10 @@ function ProductDetail() {
       }
     }
     // console.log("arr after", _p);
- 
+
     // setProductToCheckout([]);
     // setProductToCheckout(_p);
-  // console.log("productToCheckout", productToCheckout);
+    // console.log("productToCheckout", productToCheckout);
 
   };
 
@@ -374,7 +374,7 @@ function ProductDetail() {
                       />
                       <label
                         className="fwr text-[13px] form-check-label inline-block uppercase flex"
-                        for="flexRadioDefault1"
+                        htmlFor="flexRadioDefault1"
                       >
                         <div className="max-w-[35px] mr-[5px] ml-[5px]">
                           <span className="">
@@ -393,7 +393,7 @@ function ProductDetail() {
                       />
                       <label
                         className="fwr text-[13px] form-check-label inline-block uppercase flex"
-                        for="flexRadioDefault2"
+                        htmlFor="flexRadioDefault2"
                       >
                         <div className="max-w-[35px] mr-[5px] ml-[5px]">
                           <span className="">
@@ -412,7 +412,7 @@ function ProductDetail() {
                       />
                       <label
                         className="fwr text-[13px] form-check-label inline-block uppercase flex"
-                        for="flexRadioDefault3"
+                        htmlFor="flexRadioDefault3"
                       >
                         <div className="max-w-[35px] mr-[5px] ml-[5px]">
                           <span className="">
@@ -503,7 +503,7 @@ function ProductDetail() {
 export default ProductDetail;
 
 function ProductInCart({ data, index, deletItem }) {
-    
+
   console.log("k", index);
   return (
     <>

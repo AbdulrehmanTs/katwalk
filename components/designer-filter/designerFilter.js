@@ -14,7 +14,7 @@ function DesignerFilter({ data, designer_dropdown }) {
             <IoSearchOutline className="text-[20px] mt-[8px] mr-[7px]" />
           </div>
         </div>
-        <div class="flex px-[15px] w-[100%] ">
+        <div className="flex px-[15px] w-[100%] ">
           <div className="w-[100%]">
             {data.map((value, index) => {
               return (
@@ -46,17 +46,17 @@ function DesignerFilterItem({ data, parentIndex }) {
             return (
               <div
                 key={inde}
-                class="form-check w-[100%] py-[7px] flex items-center border-[#e2e5ec] border-b-[1px] pb-[20px] cursor-pointer"
+                className="form-check w-[100%] py-[7px] flex items-center border-[#e2e5ec] border-b-[1px] pb-[20px] cursor-pointer"
               >
                 <input
-                  class="min-w-[25px] relative form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px] ml-[10px]"
+                  className="min-w-[25px] relative form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px] ml-[10px]"
                   type="checkbox"
                   value=""
                   id={`designer${parentIndex}${inde > 0 ? "0" : ""}`}
                 />
                 <label
-                  class="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px] cursor-pointer"
-                  for={`designer${parentIndex}${inde > 0 ? "0" : ""}`}
+                  className="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px] cursor-pointer"
+                  htmlFor={`designer${parentIndex}${inde > 0 ? "0" : ""}`}
                 >
                   {valu}
                 </label>

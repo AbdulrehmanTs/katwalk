@@ -189,159 +189,159 @@ function ShopFilters() {
                 className={`  w-[300px] border-[#fbf1e8] border-[1px] absolute z-[2] bg-[#fff] f-out`}
                 ref={category_dropdown}
               >
-                <div class="flex px-[15px] w-[100%] max-h-[350px] overflow-auto">
+                <div className="flex px-[15px] w-[100%] max-h-[350px] overflow-auto">
                   <div className="w-[100%]">
-                    <div class="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
+                    <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        class="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ1"
                       />
                       <label
-                        class="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
-                        for="categ1"
+                        className="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
+                        htmlFor="categ1"
                       >
                         abaya
                       </label>
                     </div>
-                    <div class="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
+                    <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        class="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ2"
                       />
                       <label
-                        class="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
-                        for="categ2"
+                        className="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
+                        htmlFor="categ2"
                       >
                         kaftan
                       </label>
                     </div>
-                    <div class="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
+                    <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        class="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ3"
                       />
                       <label
-                        class="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
-                        for="categ3"
+                        className="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
+                        htmlFor="categ3"
                       >
                         dress
                       </label>
                     </div>
-                    <div class="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
+                    <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        class="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ4"
                       />
                       <label
-                        class="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
-                        for="categ4"
+                        className="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
+                        htmlFor="categ4"
                       >
                         farwa
                       </label>
                     </div>
-                    <div class="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
+                    <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        class="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ5"
                       />
                       <label
-                        class="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
-                        for="categ5"
+                        className="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
+                        htmlFor="categ5"
                       >
                         kimaono
                       </label>
                     </div>
 
-                    <div class="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
+                    <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        class="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ6"
                       />
                       <label
-                        class="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
-                        for="categ6"
+                        className="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
+                        htmlFor="categ6"
                       >
                         embroidery
                       </label>
                     </div>
-                    <div class="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
+                    <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        class="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ7"
                       />
                       <label
-                        class="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
-                        for="categ7"
+                        className="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
+                        htmlFor="categ7"
                       >
                         printing bloom
                       </label>
                     </div>
-                    <div class="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
+                    <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        class="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ8"
                       />
                       <label
-                        class="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
-                        for="categ8"
+                        className="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
+                        htmlFor="categ8"
                       >
                         casual
                       </label>
                     </div>
-                    <div class="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
+                    <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        class="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ9"
                       />
                       <label
-                        class="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
-                        for="categ9"
+                        className="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
+                        htmlFor="categ9"
                       >
                         formal
                       </label>
                     </div>
-                    <div class="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
+                    <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        class="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ10"
                       />
                       <label
-                        class="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
-                        for="categ10"
+                        className="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
+                        htmlFor="categ10"
                       >
                         suit
                       </label>
                     </div>
-                    <div class="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
+                    <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        class="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ11"
                       />
                       <label
-                        class="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
-                        for="categ11"
+                        className="block w-[100%] fwr text-[11px] leading-[25px] text-[#000] capitalize form-check-label inline-block text-gray-800 pt-[4px] pl-[5px]"
+                        htmlFor="categ11"
                       >
                         lawns
                       </label>

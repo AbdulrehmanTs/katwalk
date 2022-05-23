@@ -15,7 +15,7 @@ import Designers from "./designers";
 export default function Home() {
   return (
     <>
-      {/* <HomePage /> */}
+      <HomePage />
       {/* <PrivacyPolicy /> */}
       {/* <FAQ /> */}
       {/* <About /> */}
@@ -24,7 +24,7 @@ export default function Home() {
       {/* <AllUsedIcons /> */}
       {/* <Login /> */}
       {/* <Shop /> */}
-      <Designers />
+      {/* <Designers /> */}
     </>
   );
 }

@@ -90,7 +90,7 @@ function Navigation() {
     }
   };
   return (
-    <> 
+    <>
       <nav className="fixed top-0 w-[100%] h-[60px] bg-[#fff] px-[3%] flex justify-between items-center z-[3] drop-shadow-[0_3px_10px_rgba(0,0,0,0.1)]     lg:h-[80px]">
         <div className="max-w-[115px] pt-[8px]     sm:max-w-[125px] sm:pt-[0]">
           <Link href="./">
@@ -252,7 +252,7 @@ function Navigation() {
           </li>
           <li>
             <a
-              href="#"
+              href="./designers"
               className="work-regular text-[#000] text-[13px] leading-[15px] uppercase px-[10px]"
             >
               DESIGNERS

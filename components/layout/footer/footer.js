@@ -16,11 +16,11 @@ function Footer() {
             </span>
           </div>
           <ul
-            className={`${styles.footer_menu} flex justify-start flex-wrap gap-x-[40px] pr-[20px] hidden       md:flex lg:pr-[0] lg:gap-x-[15px] xl:gap-x-[40px]`}
+            className={`${styles.footer_menu} flex md:flex-wrap justify-start gap-x-[20px] pr-[20px] hidden    md:flex lg:pr-[0] `}
           >
             <li>
               <Link href="/about-us">
-                <a className="work-regular text-[#fff] text-[12px] tracking-[0.05em] uppercase cursor-pointer">
+                <a className="work-regular whitespace-nowrap text-[#fff] text-[12px] tracking-[0.05em] uppercase cursor-pointer">
                   About us
                 </a>
               </Link>
@@ -28,7 +28,7 @@ function Footer() {
             <li className="relative">
               <a
                 href="#"
-                className="work-regular text-[#fff] text-[12px] tracking-[0.05em] uppercase cursor-pointer"
+                className="work-regular text-[#fff] whitespace-nowrap text-[12px] tracking-[0.05em] uppercase cursor-pointer"
               >
                 Contact us
               </a>
@@ -77,21 +77,21 @@ function Footer() {
             <li>
               <a
                 href="#"
-                className="work-regular text-[#fff] text-[12px] tracking-[0.05em] uppercase cursor-pointer"
+                className="work-regular text-[#fff] whitespace-nowrap text-[12px] tracking-[0.05em] uppercase cursor-pointer"
               >
                 Join katwalk!
               </a>
             </li>
             <li>
               <Link href="/faqs">
-                <a className="work-regular text-[#fff] text-[12px] tracking-[0.05em] uppercase cursor-pointer">
+                <a className="work-regular text-[#fff] whitespace-nowrap text-[12px] tracking-[0.05em] uppercase cursor-pointer">
                   FAQS
                 </a>
               </Link>
             </li>
             <li>
               <Link href="/privacypolicy">
-                <a className="work-regular text-[#fff] text-[12px] tracking-[0.05em] uppercase cursor-pointer">
+                <a className="work-regular text-[#fff] whitespace-nowrap text-[12px] tracking-[0.05em] uppercase cursor-pointer">
                   PRIVACY POLICY, TERMS & CONDITIONS
                 </a>
               </Link>
@@ -99,7 +99,7 @@ function Footer() {
           </ul>
         </div>
         <div className="flex justify-end  items-end sm:items-center">
-          <p className="work-regular text-[#fff] text-[10px] tracking-[0.05em] uppercase cursor-pointer pr-[20px] pb-[4px] text-right     sm:text-left sm:text-[12px] sm:pb-[0]">
+          <p className="work-regular text-[#fff] whitespace-nowrap text-[10px] tracking-[0.05em] uppercase cursor-pointer pr-[20px] pb-[4px] text-right     sm:text-left sm:text-[12px] sm:pb-[0]">
             © KATWALK 2021 CR No. 2062617591 VAT No. 310401691200003
           </p>
           <div className="max-w-[40px] mt-[5px] mr-[10px]     sm:mr-[25px] sm:max-w-[45px]">

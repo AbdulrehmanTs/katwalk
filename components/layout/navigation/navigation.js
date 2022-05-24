@@ -331,7 +331,7 @@ function Navigation() {
         <div
           className={`${styles.mob_menu} ${togglerClasses.join(
             " "
-          )} fixed top-0 left-0 w-[100%] h-[100%]`}
+          )} fixed top-0 left-0 w-[100%] h-[100vh]`}
         >
           <div
             className={`menu_overlay absolute top-0 left-0 w-[100%] h-[100%] bg-[#00000080] opacity-0`}
@@ -626,7 +626,7 @@ function Navigation() {
         <div
           className={`${styles.mob_menu} ${searchToggleClasses.join(
             " "
-          )} fixed top-0 left-0 w-[100%] h-[100%]`}
+          )} fixed top-0 left-0 w-[100%] h-[100vh]`}
         >
           <div
             className={`menu_overlay absolute top-0 left-0 w-[100%] h-[100%] bg-[#fff] px-[20px] pt-[110px] opacity-0`}

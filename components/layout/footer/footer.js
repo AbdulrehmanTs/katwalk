@@ -98,7 +98,7 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div className="flex justify-end  items-end sm:items-center">
+        <div className="flex justify-end overflow-hidden items-end sm:items-center">
           <p className="work-regular text-[#fff] md:whitespace-nowrap text-[10px] tracking-[0.05em] uppercase cursor-pointer pr-[20px] pb-[4px] text-right     sm:text-left sm:text-[12px] sm:pb-[0]">
             © KATWALK 2021 CR No. 2062617591 VAT No. 310401691200003
           </p>

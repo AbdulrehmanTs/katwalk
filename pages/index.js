@@ -9,13 +9,14 @@ import HomePage from "./homePage";
 import Login from "./users/login";
 import PrivacyPolicy from "./privacypolicy";
 import ProductDetail from "./product-detail";
-import Shop from "./shop";
+import Shop from "./shop.js";
 import Designers from "./designers";
+import DesignerDetail from "./shop/designer";
 
 export default function Home() {
   return (
     <>
-      <HomePage />
+      {/* <HomePage /> */}
       {/* <PrivacyPolicy /> */}
       {/* <FAQ /> */}
       {/* <About /> */}
@@ -23,8 +24,9 @@ export default function Home() {
       {/* <Checkout /> */}
       {/* <AllUsedIcons /> */}
       {/* <Login /> */}
-      {/* <Shop /> */}
+      <Shop />
       {/* <Designers /> */}
+      {/* <DesignerDetail /> */}
     </>
   );
 }

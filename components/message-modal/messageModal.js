@@ -8,8 +8,9 @@ import { FiCheckCircle } from "react-icons/fi";
 import productImg1 from "../../assets/images/products/orange-1/img3.jpg";
 import { IoCloseOutline } from "react-icons/io5";
 import { FiLock } from "react-icons/fi";
+import Link from "next/link";
 
-function MessageModal({ purpose }) {
+function MessageModal({ purpose, closeItemAdded, proceedToCheckout, closeProceedToCheckout }) {
   console.log("purpose", purpose);
   return (
     <>
@@ -17,7 +18,10 @@ function MessageModal({ purpose }) {
         <div className="fixed top-0 left-0 bottom-0 right-0 w-[100%] h-[100%] z-[30] flex justify-center items-center">
           <div className="w-[625px] bg-[#fff] py-[20px] px-[25px] rounded-[7px] drop-shadow-[0_5px_10px_rgba(0,0,0,0.5)] border-[#aaa] border-[1px]">
             {" "}
-            <IoCloseOutline className="absolute text-[25px] right-[17px] top-[20px] z-[25]" />
+            <IoCloseOutline
+              className="absolute text-[25px] right-[17px] top-[20px] z-[25]"
+              onClick={() => closeItemAdded()}
+            />
             <div className="text-center pt-[5px]">
               <FiCheckCircle className="text-[#C53C19] text-[35px] mx-auto" />
               <p className="fwr text-[20px] text-[#C53C19] tracking-[0.5px]">
@@ -35,7 +39,7 @@ function MessageModal({ purpose }) {
                     Crinkled Abaya with Printed Pattern
                   </h6>
                   <p className="text-[#1b1b28] text-[13px]">
-                    Price:{" "}
+                    Price: 
                     <span className="fwr text-[#e62e04] pl-[30px] text-[13px]">
                       SAR 760
                     </span>
@@ -44,10 +48,16 @@ function MessageModal({ purpose }) {
               </div>
 
               <div className="flex justify-between gap-x-[5px]">
-                <button className="color-change-btn taPoint3 relative ffr overflow-hidden h-[40px] text-[14px] w-full text-[#fff] uppercase bg-[#111723] mt-[20px]">
+                <button
+                  className="color-change-btn taPoint3 relative ffr overflow-hidden h-[40px] text-[14px] w-full text-[#fff] uppercase bg-[#111723] mt-[20px]"
+                  onClick={() => closeItemAdded()}
+                >
                   <span className="relative z-[5]">back to shopping</span>
                 </button>
-                <button className="color-change-btn taPoint3 relative ffr overflow-hidden h-[40px] text-[14px] w-full text-[#fff] uppercase bg-[#111723] mt-[20px]">
+                <button
+                  className="color-change-btn taPoint3 relative ffr overflow-hidden h-[40px] text-[14px] w-full text-[#fff] uppercase bg-[#111723] mt-[20px]"
+                  onClick={() => proceedToCheckout()}
+                >
                   <span className="relative z-[5]">proceed to checkout</span>
                 </button>
               </div>
@@ -61,7 +71,7 @@ function MessageModal({ purpose }) {
         <div className="fixed top-0 left-0 bottom-0 right-0 w-[100%] h-[100%] z-[30] flex justify-center items-center">
           <div className="w-[625px] bg-[#fff] py-[20px] px-[25px] rounded-[7px] drop-shadow-[0_5px_10px_rgba(0,0,0,0.5)] border-[#aaa] border-[1px]">
             {" "}
-            <IoCloseOutline className="absolute text-[25px] right-[17px] top-[20px] z-[25]" />
+            <IoCloseOutline className="absolute text-[25px] right-[17px] top-[20px] z-[25]" onClick={()=>closeProceedToCheckout()}/>
             <div className="text-center pt-[5px]">
               <p className="fwr text-[20px] text-[#1b1b28] tracking-[0.5px] flex justify-center items-center">
                 <FiLock className="text-[#1b1b28] text-[20px] pr-[5px]" />
@@ -69,12 +79,16 @@ function MessageModal({ purpose }) {
               </p>
 
               <div className="flex justify-between gap-x-[5px] mt-[15px]">
+                  <Link href="/users/login">
                 <button className="color-change-btn taPoint3 relative ffr overflow-hidden h-[40px] text-[14px] w-full text-[#fff] uppercase bg-[#111723] mt-[20px]">
                   <span className="relative z-[5]">returning customer</span>
                 </button>
+                  </Link>
+                  <Link href="/checkout">
                 <button className="color-change-btn taPoint3 relative ffr overflow-hidden h-[40px] text-[14px] w-full text-[#fff] uppercase bg-[#111723] mt-[20px]">
                   <span className="relative z-[5]">checkout as a guest</span>
                 </button>
+                  </Link>
               </div>
             </div>
           </div>

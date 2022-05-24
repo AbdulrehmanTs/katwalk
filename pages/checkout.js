@@ -63,7 +63,7 @@ function ProductDetail() {
   //     productSleeves: "25",
   //   }
   // ];
-
+ 
   const productImages = [
     { image: img1 },
     { image: img2 },
@@ -246,10 +246,10 @@ function ProductDetail() {
       }
     }
     // console.log("arr after", _p);
-
+ 
     // setProductToCheckout([]);
     // setProductToCheckout(_p);
-    // console.log("productToCheckout", productToCheckout);
+  // console.log("productToCheckout", productToCheckout);
 
   };
 
@@ -478,7 +478,7 @@ function ProductDetail() {
                     </div>
                     <p className="fwr text-center text-[#6b6e73] text-[13px] my-[13px]">
                       By placing an order, you agree to Katwalk’s{" "}
-                      <Link href="./privacypolicy">
+                      <Link href="/privacypolicy">
                         <a>
                           <span className="block text-[#c53a19]">
                             Terms & conditions
@@ -503,7 +503,7 @@ function ProductDetail() {
 export default ProductDetail;
 
 function ProductInCart({ data, index, deletItem }) {
-
+    
   console.log("k", index);
   return (
     <>

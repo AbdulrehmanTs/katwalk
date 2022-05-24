@@ -19,7 +19,7 @@ function Footer() {
             className={`${styles.footer_menu} flex justify-start flex-wrap gap-x-[40px] pr-[20px] hidden       md:flex lg:pr-[0] lg:gap-x-[15px] xl:gap-x-[40px]`}
           >
             <li>
-              <Link href="./about-us">
+              <Link href="/about-us">
                 <a className="work-regular text-[#fff] text-[12px] tracking-[0.05em] uppercase cursor-pointer">
                   About us
                 </a>
@@ -83,14 +83,14 @@ function Footer() {
               </a>
             </li>
             <li>
-              <Link href="./faqs">
+              <Link href="/faqs">
                 <a className="work-regular text-[#fff] text-[12px] tracking-[0.05em] uppercase cursor-pointer">
                   FAQS
                 </a>
               </Link>
             </li>
             <li>
-              <Link href="./privacypolicy">
+              <Link href="/privacypolicy">
                 <a className="work-regular text-[#fff] text-[12px] tracking-[0.05em] uppercase cursor-pointer">
                   PRIVACY POLICY, TERMS & CONDITIONS
                 </a>

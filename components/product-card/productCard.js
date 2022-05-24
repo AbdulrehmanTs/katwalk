@@ -5,7 +5,7 @@ import Link from "next/link";
 function ProductCard({ data, newTag }) {
   return (
     <>
-      <Link href="./product-detail">
+      <Link href="/product-detail">
         <div
           className={`card cursor-pointer mt-[20px] mb-[20px] min-w-[49%] w-[49%]      sm:min-w-[24.4%] sm:w-[24.4%] md:min-w-[24.8%] md:w-[24.8%]`}
         >

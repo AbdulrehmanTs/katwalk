@@ -115,14 +115,16 @@ function Designers() {
                     key={index}
                     className={`${styles.designer_card} designer-card mt-[20px] mb-[20px]      md:mt-[90px]`}
                   >
-                    <a href="#">
-                      <div className="w-[100%] h-[100%] mb-[20px]">
-                        <Image src={value.image} alt="image" />
-                      </div>
-                      <p className="fwr text-[#000] text-[18px] mb-[10px]">
-                        {value.name}
-                      </p>
-                    </a>
+                    <Link href="/shop/designer">
+                      <a>
+                        <div className="w-[100%] h-[100%] mb-[20px]">
+                          <Image src={value.image} alt="image" />
+                        </div>
+                        <p className="fwr text-[#000] text-[18px] mb-[10px]">
+                          {value.name}
+                        </p>
+                      </a>
+                    </Link>
                   </div>
                 </>
               );

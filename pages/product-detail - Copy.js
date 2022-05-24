@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import Hero from "../components/hero/hero";
 import Layout from "../components/layout/layout";
 import productImg1 from "../assets/images/products/orange-1/img3.jpg";
 import productImg2 from "../assets/images/products/product2.jpg";
@@ -21,7 +20,6 @@ import OtherProducts from "../components/other-products/otherProducts";
 import styles from "../components/productDetails.module.css";
 import SizeGuideModal from "../components/size-guide-modal/SizeGuideModal";
 import MessageModal from "../components/message-modal/messageModal";
-import MessageBox from "../components/message-box/messageBox";
 
 function ProductDetail() {
   const productImages = [
@@ -30,10 +28,6 @@ function ProductDetail() {
     { image: img3 },
     { image: img4 },
   ];
-
-  const [itemAdded, setItemAdded] = useState("[]");
-  const [isSecureCheckout, setIsSecureCheckout] = useState("[]");
-
   const [togglerColorsDiv, settogglerColorsDiv] = useState([]);
   const [togglerColorsDivPlusIcon, settogglerColorsDivPlusIcon] = useState([]);
 
@@ -440,36 +434,17 @@ function ProductDetail() {
   const [listColor, setListColor] = useState([1, 2, 3, 4, 5]);
   const ref = useRef(null);
 
-  // const handleToggleClassListRef = (ref) => {
-  // console.log("handle");
-  // if (!ref.current) {
-  //   return;
-  // }
-  // if (!ref.current.classList.contains("color_selected")) {
-  //   ref.current.classList.add("color_selected");
-  // } else {
-  //   ref.current.classList.remove("color_selected");
-  //   ref.current = null;
-  // }
-  // };
-
-  const color = useRef("");
-
-  const addToBag = () => {
-    setItemAdded(true);
-  };
-
-  const closeItemAdded = () => {
-    setItemAdded(false);
-  };
-
-  const proceedToCheckout = () => {
-    setItemAdded(false);
-    setIsSecureCheckout(true);
-  };
-
-  const closeProceedToCheckout = () => {
-    setIsSecureCheckout(false);
+  const handleToggleClassListRef = (ref) => {
+    // console.log("handle");
+    // if (!ref.current) {
+    //   return;
+    // }
+    // if (!ref.current.classList.contains("color_selected")) {
+    //   ref.current.classList.add("color_selected");
+    // } else {
+    //   ref.current.classList.remove("color_selected");
+    //   ref.current = null;
+    // }
   };
 
   return (
@@ -560,24 +535,21 @@ function ProductDetail() {
                   )} taPoint3 h-[0] overflow-hidden`}
                 >
                   <h6 className="fwb text-[#1b1b28] text-[13px] pt-[10px] pb-[10px]">
-                    Sheila Color:
+                    Color:
                   </h6>
                   <div className="flex gap-x-[3px] pl-[2px]">
                     {sheilaColor.map((value, index) => {
                       return (
                         <>
-                          <div
-                            key={index}
-                            className={`${styles.color_main_div} `}
-                          >
+                          <div key={index} className={`${styles.color_main_div} `}>
                             <div
                               className={` "w-[83px] m-[2px] color-selected "`}
-                              // onClick={(event) => {
-                              //   handleToggleClassListRef(ref);
-                              //   event.stopPropagation();
-                              //   ref.current = event.target;
-                              //   handleToggleClassListRef(ref);
-                              // }}
+                              onClick={(event) => {
+                                handleToggleClassListRef(ref);
+                                event.stopPropagation();
+                                ref.current = event.target;
+                                handleToggleClassListRef(ref);
+                              }}
                             >
                               <div
                                 className={`w-[75px] h-[75px] ${value.colorCode} m-[3px]`}
@@ -679,265 +651,7 @@ function ProductDetail() {
               </div>
 
               {/* any alteration */}
-              <div className="w-[100%]">
-                <div className="w-[100%] flex justify-between max-w-[400px]     lg:max-w-[100%]">
-                  <div className="flex cursor-pointer">
-                    <div className="animated-circle relative mr-[25px]"></div>
-                    <p
-                      className="work-regular text-[12px] uppercase"
-                      onClick={() => alterationDivToggler()}
-                    >
-                      ANY ALTERATION?
-                    </p>
-                  </div>
-                  <div className="flex slide-underline relative  cursor-pointer">
-                    <BsRulers className="mr-[5px]"></BsRulers>
-                    <p
-                      className="work-regular text-[12px] uppercase"
-                      onClick={() => toggleSizeGuideModal()}
-                    >
-                      size guideccc
-                    </p>
-                    <div
-                      className={`${togglerSizeGuideModal.join(" ")}  dnone`}
-                    >
-                      <SizeGuideModal
-                        toggleSizeGuideModal={toggleSizeGuideModal}
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="w-[100% mt-[15px]">
-                  {/* length */}
-                  <div
-                    className={`${togglerAlterationDiv.join(
-                      " "
-                    )} taPoint3 h-[0] overflow-hidden`}
-                  >
-                    <div className="w-[100%} flex items-center mb-[20px]">
-                      <div className="min-w-[60px] max-w-[60px]">
-                        <h6 className="fwl text-[12px] mb-[2px] uppercase">
-                          length:
-                        </h6>
-                      </div>
-
-                      <div className="pt-[3px] border-b-[1px] border-[#ededed] w-[100%] max-w-[235px] relative">
-                        <div
-                          className="flex justify-between items-center"
-                          onClick={() => lengthToggler()}
-                        >
-                          <p className="fwr h-[40px] leading-[40px] text-[11px] text-[#7e7e7e] capitalize">
-                            select length
-                          </p>
-
-                          <BsChevronDown
-                            className={`${togglerLengthPlusIcon.join(
-                              " "
-                            )} taPoint3`}
-                          />
-                        </div>
-                        <div
-                          className={`${togglerLength.join(" ")} ${
-                            styles.variation_dropdowns
-                          } w-[100%] border-[#fbf1e8] border-[1px] border-b-[0] absolute bg-[#fff] z-[10] hidden`}
-                        >
-                          <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                            Select Length
-                          </div>
-                          <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                            50
-                          </div>
-                          <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                            52
-                          </div>
-                          <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                            54
-                          </div>
-                          <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                            56
-                          </div>
-                          <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                            58
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* bust */}
-                  <div
-                    className={`${togglerAlterationDiv.join(
-                      " "
-                    )} taPoint3 h-[0] overflow-hidden`}
-                  >
-                    <div className="w-[100%} flex items-center mb-[20px]">
-                      <div className="min-w-[60px] max-w-[60px]">
-                        <h6 className="fwl text-[12px] mb-[2px] uppercase">
-                          bust:
-                        </h6>
-                      </div>
-
-                      <div className="pt-[3px] border-b-[1px] border-[#ededed] w-[100%] max-w-[235px] relative">
-                        <div
-                          className="flex justify-between items-center"
-                          onClick={() => bustToggler()}
-                        >
-                          <p className="fwr h-[40px] leading-[40px] text-[11px] text-[#7e7e7e] capitalize">
-                            select bust
-                          </p>
-
-                          <BsChevronDown
-                            className={`${togglerBustPlusIcon.join(
-                              " "
-                            )} taPoint3`}
-                          />
-                        </div>
-                        <div
-                          className={`${togglerBust.join(" ")} ${
-                            styles.variation_dropdowns
-                          } w-[100%] border-[#fbf1e8] border-[1px] border-b-[0] absolute bg-[#fff] z-[10] hidden`}
-                        >
-                          <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                            Select Bust
-                          </div>
-                          <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                            20
-                          </div>
-                          <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                            22
-                          </div>
-                          <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                            23
-                          </div>
-                          <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                            25
-                          </div>
-                          <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                            26
-                          </div>
-                          <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                            28
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* sleeve */}
-                  <div
-                    className={`${togglerAlterationDiv.join(
-                      " "
-                    )} taPoint3 h-[0] overflow-hidden`}
-                  >
-                    <div className="w-[100%} flex items-center mb-[20px]">
-                      <div className="min-w-[60px] max-w-[60px]">
-                        <h6 className="fwl text-[12px] mb-[2px] uppercase">
-                          sleeve:
-                        </h6>
-                      </div>
-
-                      <div className="pt-[3px] border-b-[1px] border-[#ededed] w-[100%] max-w-[235px] relative">
-                        <div
-                          className="flex justify-between items-center"
-                          onClick={() => sleeveToggler()}
-                        >
-                          <p className="fwr h-[40px] leading-[40px] text-[11px] text-[#7e7e7e] capitalize">
-                            select sleeve
-                          </p>
-
-                          <BsChevronDown
-                            className={`${togglerSleevePlusIcon.join(
-                              " "
-                            )} taPoint3`}
-                          />
-                        </div>
-                        <div
-                          className={`${togglerSleeve.join(" ")} ${
-                            styles.variation_dropdowns
-                          } w-[100%] border-[#fbf1e8] border-[1px] border-b-[0] absolute bg-[#fff] z-[10] hidden`}
-                        >
-                          <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                            Select Sleeve
-                          </div>
-                          <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                            25
-                          </div>
-                          <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                            26
-                          </div>
-                          <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                            27
-                          </div>
-                          <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                            28
-                          </div>
-                          <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                            29
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <button
-                className="add-to-bag-btn relative ffr overflow-hidden h-[40px] text-[14px] w-full text-[#fff] uppercase bg-[#111723] mt-[20px]"
-                onClick={() => addToBag()}
-              >
-                <span className="relative z-[5]">add to bag</span>
-              </button>
-
-              <div
-                className={`${styles.need_help_div} slide-underline relative inline-block h-[20px] cursor-pointer pt-[20px] mb-[38px]`}
-              >
-                <p className="work-regular text-[12px] text-[#7e7e7e] uppercase ">
-                  need help?
-                </p>
-
-                <div
-                  className={`${styles.dropdown_menu_div} contact-box bg-[#fff] w-[402px] p-[20px] border-[#fbf1e8] border-[1px] absolute bottom-[25px] left-[50%] translate-x-[-50%] z-[12] cursor-default hidden`}
-                >
-                  <div className="flex justify-between">
-                    <div className="border-r-[1px] border-[#e2e5ec] w-[48%] text-center">
-                      <p className="work-regular text-[#000000b8] text-[12px] mb-[10px] uppercase">
-                        click and chat
-                      </p>
-                      <a
-                        href="#"
-                        className="work-regular text-[13px] text-[#c53a19]"
-                      >
-                        Whatsapp
-                      </a>
-                    </div>
-                    <div className="w-[50%] text-center">
-                      <p className="work-regular text-[#000000b8] text-[12px] mb-[10px] uppercase">
-                        email
-                      </p>
-                      <a
-                        href="#"
-                        className="work-regular text-[13px] text-[#c53a19]"
-                      >
-                        customercare@katwalk.sa
-                      </a>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="text-center">
-                      <p className="work-regular text-[#000000b8] text-[12px] mb-[10px] uppercase pt-[30px]">
-                        partnership and pr
-                      </p>
-                      <a
-                        href="#"
-                        className="work-regular text-[13px] text-[#c53a19]"
-                      >
-                        info@katwalk.sa
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+             
 
               {/* toggle tabs */}
               {/* tab1 */}
@@ -1159,11 +873,8 @@ function ProductDetail() {
 
           <OtherProducts data={otherProducts} />
         </div>
-
-        {itemAdded == true ? <MessageModal purpose={"item-added"} closeItemAdded={closeItemAdded} proceedToCheckout={proceedToCheckout} /> : ""}
-        {isSecureCheckout == true ? <MessageModal purpose={"secure-checkout"} closeProceedToCheckout={closeProceedToCheckout} /> : ""}
-
-        {/* <MessageBox /> */}
+        {/* <MessageModal purpose={'item-added'} /> */}
+        {/* <MessageModal purpose={'secure-checkout'} /> */}
       </Layout>
     </>
   );

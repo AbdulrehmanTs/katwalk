@@ -93,7 +93,7 @@ function Navigation() {
     <>
       <nav className="fixed top-0 w-[100%] h-[60px] bg-[#fff] px-[3%] flex justify-between items-center z-[3] drop-shadow-[0_3px_10px_rgba(0,0,0,0.1)]     lg:h-[80px]">
         <div className="max-w-[115px] pt-[8px]     sm:max-w-[125px] sm:pt-[0]">
-          <Link href="./">
+          <Link href="/">
             <span className="image_container">
               <Image src={logo} className="cursor-pointer" alt="logo image" />
             </span>
@@ -102,161 +102,147 @@ function Navigation() {
         <ul
           className={`${styles.middle_menu} flex justify-center flex-wrap px-[20px] relative hidden        lg:px-[0] lg:flex`}
         >
-          <li>
+          {/* <li>
             <a
               href="#"
               className="work-regular text-[#000] text-[13px] leading-[15px] uppercase px-[10px]"
             >
               Ready for shipping
             </a>
-          </li>
+          </li> */}
           <li className={`${styles.menu_with_dropdown}`}>
-            <Link href="./shop">
+            <Link href="/shop">
               <a className="work-regular text-[#000] text-[13px] leading-[15px] uppercase px-[10px]">
                 STYLES
               </a>
             </Link>
-            <ul className={`${styles.dropdown_for_desktop} fadeDown w-[620px] bg-[#000000bf] px-[50px] py-[25px] absolute z-[1] top-[25px] flex flex-wrap left-0 hidden`}>
+            <ul
+              className={`${styles.dropdown_for_desktop} fadeDown w-[620px] bg-[#000000bf] px-[50px] py-[25px] absolute z-[1] top-[25px] flex flex-wrap left-0 hidden`}
+            >
               <li className="w-[50%] my-[10px]">
-                <a
-                  href="#"
-                  className="work-regular text-[13px] text-[#fff] uppercase"
-                >
-                  WHATS&#39;S NEW?
-                </a>
+                <Link href="/shop">
+                  <a className="work-regular text-[13px] text-[#fff] uppercase">
+                    WHATS&#39;S NEW?
+                  </a>
+                </Link>
               </li>
               <li className="w-[50%] my-[10px]">
-                <a
-                  href="#"
-                  className="work-regular text-[13px] text-[#fff] uppercase"
-                >
-                  spring bloom
-                </a>
+                <Link href="/shop">
+                  <a className="work-regular text-[13px] text-[#fff] uppercase">
+                    spring bloom
+                  </a>
+                </Link>
               </li>
               <li className="w-[50%] my-[10px]">
-                <a
-                  href="#"
-                  className="work-regular text-[13px] text-[#fff] uppercase"
-                >
-                  classic black
-                </a>
+                <Link href="/shop">
+                  <a className="work-regular text-[13px] text-[#fff] uppercase">
+                    classic black
+                  </a>
+                </Link>
               </li>
               <li className="w-[50%] my-[10px]">
-                <a
-                  href="#"
-                  className="work-regular text-[13px] text-[#fff] uppercase"
-                >
-                  print
-                </a>
+                <Link href="/shop">
+                  <a className="work-regular text-[13px] text-[#fff] uppercase">
+                    print
+                  </a>
+                </Link>
               </li>
               <li className="w-[50%] my-[10px]">
-                <a
-                  href="#"
-                  className="work-regular text-[13px] text-[#fff] uppercase"
-                >
-                  embroidery
-                </a>
+                <Link href="/shop">
+                  <a className="work-regular text-[13px] text-[#fff] uppercase">
+                    embroidery
+                  </a>
+                </Link>
               </li>
               <li className="w-[50%] my-[10px]">
-                <a
-                  href="#"
-                  className="work-regular text-[13px] text-[#fff] uppercase"
-                >
-                  sets
-                </a>
+                <Link href="/shop">
+                  <a className="work-regular text-[13px] text-[#fff] uppercase">
+                    sets
+                  </a>
+                </Link>
               </li>
               <li className="w-[50%] my-[10px]">
-                <a
-                  href="#"
-                  className="work-regular text-[13px] text-[#fff] uppercase"
-                >
-                  color block
-                </a>
+                <Link href="/shop">
+                  <a className="work-regular text-[13px] text-[#fff] uppercase">
+                    color block
+                  </a>
+                </Link>
               </li>
             </ul>
           </li>
           <li className={`${styles.menu_with_dropdown}`}>
-            <a
-              href="#"
-              className="work-regular text-[#000] text-[13px] leading-[15px] uppercase px-[10px]"
-            >
-              OCCASIONS
-            </a>
+            <Link href="/shop">
+              <a className="work-regular text-[#000] text-[13px] leading-[15px] uppercase px-[10px]">
+                OCCASIONS
+              </a>
+            </Link>
             <ul className="fadeDown w-[620px] bg-[#000000bf] px-[50px] py-[25px] absolute z-[1] top-[25px] flex flex-wrap left-0 hidden">
               <li className="w-[50%] my-[10px]">
-                <a
-                  href="#"
-                  className="work-regular text-[13px] text-[#fff] uppercase"
-                >
-                  casual
-                </a>
+                <Link href="/shop">
+                  <a className="work-regular text-[13px] text-[#fff] uppercase">
+                    casual
+                  </a>
+                </Link>
               </li>
               <li className="w-[50%] my-[10px]">
-                <a
-                  href="#"
-                  className="work-regular text-[13px] text-[#fff] uppercase"
-                >
-                  evening
-                </a>
+                <Link href="/shop">
+                  <a className="work-regular text-[13px] text-[#fff] uppercase">
+                    evening
+                  </a>
+                </Link>
               </li>
               <li className="w-[50%] my-[10px]">
-                <a
-                  href="#"
-                  className="work-regular text-[13px] text-[#fff] uppercase"
-                >
-                  formal
-                </a>
+                <Link href="/shop">
+                  <a className="work-regular text-[13px] text-[#fff] uppercase">
+                    formal
+                  </a>
+                </Link>
               </li>
             </ul>
           </li>
           <li className={`${styles.menu_with_dropdown}`}>
-            <Link href="./shop">
+            <Link href="/shop">
               <a className="work-regular text-[#000] text-[13px] leading-[15px] uppercase px-[10px]">
                 SHOP ALL
               </a>
             </Link>
             <ul className="fadeDown w-[620px] bg-[#000000bf] px-[50px] py-[25px] absolute z-[1] top-[25px] flex flex-wrap left-0 hidden">
               <li className="w-[50%] my-[10px]">
-                <a
-                  href="#"
-                  className="work-regular text-[13px] text-[#fff] uppercase"
-                >
-                  abayas
-                </a>
+                <Link href="/shop">
+                  <a className="work-regular text-[13px] text-[#fff] uppercase">
+                    abayas
+                  </a>
+                </Link>
               </li>
               <li className="w-[50%] my-[10px]">
-                <a
-                  href="#"
-                  className="work-regular text-[13px] text-[#fff] uppercase"
-                >
-                  kaftans
-                </a>
+                <Link href="/shop">
+                  <a className="work-regular text-[13px] text-[#fff] uppercase">
+                    kaftans
+                  </a>
+                </Link>
               </li>
               <li className="w-[50%] my-[10px]">
-                <a
-                  href="#"
-                  className="work-regular text-[13px] text-[#fff] uppercase"
-                >
-                  dresses
-                </a>
+                <Link href="/shop">
+                  <a className="work-regular text-[13px] text-[#fff] uppercase">
+                    dresses
+                  </a>
+                </Link>
               </li>
               <li className="w-[50%] my-[10px]">
-                <a
-                  href="#"
-                  className="work-regular text-[13px] text-[#fff] uppercase"
-                >
-                  kimonos
-                </a>
+                <Link href="/shop">
+                  <a className="work-regular text-[13px] text-[#fff] uppercase">
+                    kimonos
+                  </a>
+                </Link>
               </li>
             </ul>
           </li>
           <li>
-            <a
-              href="./designers"
-              className="work-regular text-[#000] text-[13px] leading-[15px] uppercase px-[10px]"
-            >
-              DESIGNERS
-            </a>
+            <Link href="/designers">
+              <a className="work-regular text-[#000] text-[13px] leading-[15px] uppercase px-[10px]">
+                DESIGNERS
+              </a>
+            </Link>
           </li>
           <li>
             <a
@@ -375,7 +361,6 @@ function Navigation() {
                 <li>
                   <a
                     onClick={() => stylesDropdown()}
-                    href="#"
                     className="work-regular flex justify-between text-[#ffffff80] text-[13px] py-[13px] block border-b-[1px] border-[#505050] uppercase"
                   >
                     STYLES
@@ -387,66 +372,58 @@ function Navigation() {
                     )} overflow-hidden bg-[#c53a19a6] mx-[-20px] mt-[-1px] `}
                   >
                     <li>
-                      <a
-                        href="#"
-                        className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase"
-                      >
-                        What&#39;s new?
-                      </a>
+                      <Link href="/shop">
+                        <a className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                          What&#39;s new?
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase"
-                      >
-                        Spring Bloom
-                      </a>
+                      <Link href="/shop">
+                        <a className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                          Spring Bloom
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase"
-                      >
-                        classic black
-                      </a>
+                      <Link href="/shop">
+                        <a className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                          classic black
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase"
-                      >
-                        print
-                      </a>
+                      <Link href="/shop">
+                        <a className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                          print
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase"
-                      >
-                        embroidery
-                      </a>
+                      <Link href="/shop">
+                        <a className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                          embroidery
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase"
-                      >
-                        sets
-                      </a>
+                      <Link href="/shop">
+                        <a className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                          sets
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase"
-                      >
-                        color block
-                      </a>
+                      <Link href="/shop">
+                        <a className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                          color block
+                        </a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
                 <li>
                   <a
-                    href="#"
                     onClick={() => occasionsDropdown()}
                     className="work-regular flex justify-between text-[#ffffff80] text-[13px] py-[13px] block border-b-[1px] border-[#505050] uppercase"
                   >
@@ -459,34 +436,30 @@ function Navigation() {
                     )} overflow-hidden bg-[#c53a19a6] mx-[-20px] mt-[-1px]`}
                   >
                     <li>
-                      <a
-                        href="#"
-                        className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase"
-                      >
-                        casual
-                      </a>
+                      <Link href="/shop">
+                        <a className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                          casual
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase"
-                      >
-                        evening
-                      </a>
+                      <Link href="/shop">
+                        <a className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                          evening
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase"
-                      >
-                        formal
-                      </a>
+                      <Link href="/shop">
+                        <a className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                          formal
+                        </a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
                 <li>
                   <a
-                    href="#"
                     onClick={() => shopallDropdown()}
                     className="work-regular flex justify-between text-[#ffffff80] text-[13px] py-[13px] block border-b-[1px] border-[#505050] uppercase"
                   >
@@ -499,46 +472,41 @@ function Navigation() {
                     )} overflow-hidden bg-[#c53a19a6] mx-[-20px] mt-[-1px]`}
                   >
                     <li>
-                      <a
-                        href="#"
-                        className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase"
-                      >
-                        abayas
-                      </a>
+                      <Link href="/shop">
+                        <a className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                          abayas
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase"
-                      >
-                        kaftans
-                      </a>
+                      <Link href="/shop">
+                        <a className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                          kaftans
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase"
-                      >
-                        dresses
-                      </a>
+                      <Link href="/shop">
+                        <a className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                          dresses
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase"
-                      >
-                        kimonos
-                      </a>
+                      <Link href="/shop">
+                        <a className="work-regular text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                          kimonos
+                        </a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="work-regular text-[#ffffff80] text-[13px] py-[13px] block border-b-[1px] border-[#505050] uppercase"
-                  >
-                    DESIGNERS
-                  </a>
+                  <Link href="/designers">
+                    <a className="work-regular text-[#ffffff80] text-[13px] py-[13px] block border-b-[1px] border-[#505050] uppercase">
+                      DESIGNERS
+                    </a>
+                  </Link>
                 </li>
                 <li>
                   <a
@@ -551,28 +519,25 @@ function Navigation() {
               </ul>
               <ul>
                 <li>
-                  <a
-                    href="#"
-                    className="work-regular text-[#ffffff80] text-[13px] py-[8px] block uppercase"
-                  >
-                    about katwalk
-                  </a>
+                  <Link href="/about-us">
+                    <a className="work-regular text-[#ffffff80] text-[13px] py-[8px] block uppercase">
+                      about katwalk
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="work-regular text-[#ffffff80] text-[13px] py-[8px] block uppercase"
-                  >
-                    faqs
-                  </a>
+                  <Link href="/faqs">
+                    <a className="work-regular text-[#ffffff80] text-[13px] py-[8px] block uppercase">
+                      faqs
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="work-regular text-[#ffffff80] text-[13px] py-[8px] block uppercase"
-                  >
-                    privacy policy, terms & conditions
-                  </a>
+                  <Link href="/privacypolicy">
+                    <a className="work-regular text-[#ffffff80] text-[13px] py-[8px] block uppercase">
+                      privacy policy, terms & conditions
+                    </a>
+                  </Link>
                 </li>
               </ul>
               <div className="flex justify-start">
@@ -581,7 +546,7 @@ function Navigation() {
               </div>
             </div>
             <div className="absolute bottom-[20px] right-[20px] max-w-[55px]">
-              <Link href="./">
+              <Link href="/">
                 <Image src={logoSquare} alt="logo image" />
               </Link>
             </div>
@@ -593,14 +558,14 @@ function Navigation() {
         <div
           className={`${styles.mob_menu} ${cartToggleClasses.join(
             " "
-          )} cart-box fixed top-0 left-0 w-[100%] h-[100%]`}
+          )} cart-box fixed top-0 left-0 w-[100%] h-[100vh]`}
         >
           <div
             className={`menu-overlay absolute top-0 left-0 w-[100%] h-[100%] bg-[#00000080] opacity-0`}
           ></div>
           <AiOutlineClose className="text-[26px] text-[#fff] absolute top-[15px] right-[20px]" />
           <div
-            className={`mob-menu-white-div h-[100%] bg-[#fff] px-[20px] py-[20px] absolute translate-x-[140%] border-l-[1px] border-[#fbf1e8]`}
+            className={`mob-menu-white-div h-[100vh] bg-[#fff] px-[20px] py-[20px] absolute translate-x-[140%] border-l-[1px] border-[#fbf1e8]`}
           >
             <div className="flex justify-between border-b-[2px] border-[#ededed]">
               <h6 className="work-regular text-[13px] text-[#1b1b28] capitalize">

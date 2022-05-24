@@ -616,6 +616,12 @@ h3.steps-last:after {
   width: 100% !important;
   height: 100% !important;
 }
+/* .shop-for-designer-page .main-title {
+  display: block;
+  text-align: left;
+  padding-bottom: 0;
+  margin-bottom: 0;
+} */
 /* designers page css end */
 @media (max-width: 1480px) {
   .container {

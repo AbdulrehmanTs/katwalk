@@ -18,7 +18,7 @@ import ColorFilter from "../color-filter/colorFilter";
 import PriceFilter from "../price-filter/priceFilter";
 import SortByFilter from "../sort-by-filter/sortByFilter";
 
-function ShopFilters() {
+function ShopFilters({ forDesigner }) {
   const category_dropdown = useRef("");
   const size_dropdown = useRef("");
   const designer_dropdown = useRef("");
@@ -152,15 +152,31 @@ function ShopFilters() {
   return (
     <>
       <div className="w-[100%] pt-[0px] px-[16px]       lg:pt-[30px]">
-        <div className={`${styles.center_heading_div} flex text-center`}>
-          <p className="fwl text-[20px] tracking-[0.5px] uppercase mt-[-10px] pb-[10px]">
-            all products
-          </p>
-        </div>
+        {forDesigner == true ? (
+          <>
+            <div
+              className={`text-center pb-0 mb-[20px] block pt-[30px]      lg:mb-0 lg:text-left lg:pt-0 sm:mb-[30px]`}
+            >
+              <p className="fwl text-[20px] tracking-[0.5px] uppercase mt-[-10px] pb-[0px]">
+                NADA LINE PRODUCTS
+              </p>
+            </div>
+          </>
+        ) : (
+          <>
+            <div
+              className={`${styles.center_heading_div} flex text-center main-title`}
+            >
+              <p className="fwl text-[20px] tracking-[0.5px] uppercase mt-[-10px] pb-[10px]">
+                all products
+              </p>
+            </div>
+          </>
+        )}
 
         <div className={`${styles.right_heading_div} flex justify-end`}>
-          <p className="fwr self-end text-[13px] tracking-[0.5px] pr-[20px]">
-            Reset All filters
+          <p className="fwr self-end text-[13px] text-[#c53a19] tracking-[0.5px] pr-[20px] cursor-pointer">
+            {forDesigner == true ? "Reset filters" : "Reset All filters"}
           </p>
         </div>
         <div

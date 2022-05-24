@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import logoSquare from "../../assets/images/logo/logo-square.png";
 import vat from "../../assets/images/logo/vat.png";
-import styles from "./sizeGuideModal.module.css";
+import styles from "./SizeGuideModal.module.css";
 import sizeGuideModalImage from "../../assets/images/hero-image.jpg";
 import sizGuide from "../../assets/images/size-guide.jpg";
 import {
@@ -14,7 +14,7 @@ import {
   IoCloseOutline,
 } from "react-icons/io5";
 
-function SizeGuideModal({toggleSizeGuideModal}) {
+function SizeGuideModal({ toggleSizeGuideModal }) {
   return (
     <>
       <div className="fixed top-0 left-0 bottom-0 right-0 bg-[#00000087] w-[100%] h-[100%] z-[30] flex justify-center items-center">

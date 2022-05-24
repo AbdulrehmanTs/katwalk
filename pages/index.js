@@ -16,7 +16,7 @@ import DesignerDetail from "./shop/designer";
 export default function Home() {
   return (
     <>
-      {/* <HomePage /> */}
+      <HomePage />
       {/* <PrivacyPolicy /> */}
       {/* <FAQ /> */}
       {/* <About /> */}
@@ -24,7 +24,7 @@ export default function Home() {
       {/* <Checkout /> */}
       {/* <AllUsedIcons /> */}
       {/* <Login /> */}
-      <Shop />
+      {/* <Shop /> */}
       {/* <Designers /> */}
       {/* <DesignerDetail /> */}
     </>

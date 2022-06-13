@@ -9,7 +9,10 @@ import productImg3 from "../../assets/images/products/product3.jpg";
 import productImg4 from "../../assets/images/products/product4.jpg";
 import ShopFilters from "../../components/shop-filters/shopFilters";
 import ProductCard from "../../components/product-card/productCard";
+<<<<<<< HEAD
 import ImgLazyLoad from "../../components/img-lazy-load/img-lazy-load";
+=======
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
 
 function DesignerDetail() {
   const otherProducts = [
@@ -70,15 +73,23 @@ function DesignerDetail() {
           <div className="w-[100%] relative mb-[120px]">
             <div className="w-[100%] h-[495px]">
               <span className="image_container">
+<<<<<<< HEAD
                 {/* <Image src={nadaLineCover} alt="image" /> */}
                 <ImgLazyLoad src={nadaLineCover} alt={"image"} classes={""}  />
+=======
+                <Image src={nadaLineCover} alt="image" />
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
               </span>
             </div>
 
             <div className="absolute w-[220px] h-[220px] border-[1px] border-[#D2CED6] bg-[#fff] rounded-[50%] overflow-hidden bottom-[-100px] left-[50%] translate-x-[-50%]           lg:left-[110px] lg:translate-x-[0]">
               <div className="w-[100%] h-[400px]">
+<<<<<<< HEAD
                 {/* <Image src={nadaLineLogo} alt="image" /> */}
                 <ImgLazyLoad src={nadaLineLogo} alt={"image"} classes={""}  />
+=======
+                <Image src={nadaLineLogo} alt="image" />
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
               </div>
             </div>
           </div>
@@ -87,7 +98,11 @@ function DesignerDetail() {
           <div className="w-[100%] mt-[80px]">
             <ShopFilters forDesigner={true} />
           </div>
+<<<<<<< HEAD
           <div className="flex gap-x-[.2%] mb-[60px] justify-center flex-wrap px-[0px]      sm:px-[10px] md:px-0">
+=======
+          <div className="flex gap-x-[2px] mb-[60px] justify-center flex-wrap px-[0px]      sm:px-[10px] md:px-0">
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
             {otherProducts.map((value, index) => {
               return <ProductCard key={index} data={value} newTag={"none"} />;
             })}

@@ -5,15 +5,23 @@ function DesignerFilter({ data, designer_dropdown }) {
   return (
     <>
       <div
+<<<<<<< HEAD
         className={`w-[100%] lg:w-[320px] border-[#fbf1e8] border-[1px] relative lg:absolute 
  pt-[20px] lg:pt-0 z-[2] bg-[#fff] f-out max-h-[350px] overflow-auto`}
+=======
+        className={`w-[300px] border-[#fbf1e8] border-[1px] absolute z-[2] bg-[#fff] f-out max-h-[350px] overflow-auto`}
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
         ref={designer_dropdown}
       >
         <div className="w-[100%] px-[15px] pt-[25px]">
           <div className="border-[#e2e5ec] border-b-[1px] flex">
             <input className="fwr w-[100%] h-[32px] leading-[32px] text-[13px] text-[#898b92] pb-[3px] focus:outline-none rounded-none pr-[10px] input-with-search" />
+<<<<<<< HEAD
             {/* <IoSearchOutline className="text-[20px] mt-[8px] mr-[7px]" /> */}
             <div className="my-icon search w-[21px] h-[19px] cursor-pointer relative z-4 bgAllIcon bg-[left_-24px_top_-445px]"></div>
+=======
+            <IoSearchOutline className="text-[20px] mt-[8px] mr-[7px]" />
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
           </div>
         </div>
         <div className="flex px-[15px] w-[100%] ">

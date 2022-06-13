@@ -5,14 +5,21 @@
 .filter_main_div:hover .form-check-input {
   border-color: #c53a19 !important;
 }
+<<<<<<< HEAD
 /* .filters_heading {
   display: flex;
   flex-direction: column;
 } */
+=======
+.filters_heading {
+  display: none;
+}
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
 .center_heading_div {
   display: none;
 }
 @media (max-width: 1200px) {
+<<<<<<< HEAD
   /* .filters_heading {
     display: flex;
   } */
@@ -22,10 +29,20 @@
     
     /* display: flex; */
     flex-direction: column;
+=======
+  .filters_heading {
+    display: block;
+  }
+}
+@media (max-width: 1024px) {
+  .all_filters_div {
+    display: none;
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
   }
   .right_heading_div {
     display: none;
   }
+<<<<<<< HEAD
   
 }
 .center_heading_div {
@@ -43,3 +60,9 @@
   content: '+';
   font-size: 28px;
 }
+=======
+  .center_heading_div {
+    display: block;
+  }
+}
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238

@@ -8,6 +8,11 @@ import logo from "../../../assets/images/logo/logo.svg";
 import styles from "./navigation.module.css";
 import logoSquare from "../../../assets/images/logo/logo-square.png";
 import dress1 from "../../../assets/images/products/dress1.jpg";
+<<<<<<< HEAD
+=======
+import { useRef } from "react";
+import Link from "next/link";
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
 
 function Navigation() {
   const dropdown1 = useRef(null);
@@ -17,13 +22,20 @@ function Navigation() {
   const [searchDesktopToggleClasses, setSearchDesktopToggleClasses] = useState(
     []
   );
+<<<<<<< HEAD
   const [isCartEmpty, setIsCartEmpty] = useState(true);
+=======
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
   const navigationToggler = () => {
     if (!togglerClasses.includes("visibility-visible")) {
       setTogglerClasses(["visibility-visible"]);
     } else {
       setTogglerClasses([]);
     }
+<<<<<<< HEAD
+=======
+    console.log(togglerClasses);
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
   };
   const cartToggler = () => {
     if (!cartToggleClasses.includes("visibility-visible")) {
@@ -31,6 +43,10 @@ function Navigation() {
     } else {
       setCartToggleClasses([]);
     }
+<<<<<<< HEAD
+=======
+    console.log(cartToggleClasses);
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
   };
   const searchToggler = () => {
     if (!searchToggleClasses.includes("visibility-visible")) {
@@ -38,6 +54,10 @@ function Navigation() {
     } else {
       setSearchToggleClasses([]);
     }
+<<<<<<< HEAD
+=======
+    console.log(searchToggleClasses);
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
   };
 
   const searchDesktopToggler = () => {
@@ -46,6 +66,10 @@ function Navigation() {
     } else {
       setSearchDesktopToggleClasses([]);
     }
+<<<<<<< HEAD
+=======
+    console.log(searchDesktopToggleClasses);
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
   };
 
   // var isOpenDropdown1 = false;
@@ -54,6 +78,10 @@ function Navigation() {
   const [shopAllClasses, setShopAllClasses] = useState(["orange_dropdown"]);
 
   const stylesDropdown = () => {
+<<<<<<< HEAD
+=======
+    console.log("openDropdown called");
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
     if (!styleClasses.includes("show-dropdown")) {
       setStyleClasses([...styleClasses, "show-dropdown"]);
     } else {
@@ -62,7 +90,11 @@ function Navigation() {
   };
 
   const occasionsDropdown = () => {
+<<<<<<< HEAD
     //  console.log("openDropdown called");
+=======
+    console.log("openDropdown called");
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
     if (!occasionsClasses.includes("show-dropdown")) {
       setOccasionsClasses([...occasionsClasses, "show-dropdown"]);
     } else {
@@ -78,10 +110,14 @@ function Navigation() {
   };
   return (
     <>
+<<<<<<< HEAD
       <nav
         id="navbar"
         className="fixed top-0 w-[100%] h-[60px] bg-[#fff] px-[3%] flex justify-between items-center z-[3] drop-shadow-[0_0px_6px_rgba(0,0,0,0.08)]     lg:h-[80px]"
       >
+=======
+      <nav className="fixed top-0 w-[100%] h-[60px] bg-[#fff] px-[3%] flex justify-between items-center z-[3] drop-shadow-[0_3px_10px_rgba(0,0,0,0.1)]     lg:h-[80px]">
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
         <div className="max-w-[115px] pt-[8px]     sm:max-w-[125px] sm:pt-[0]">
           <Link href="/">
             <span className="image_container">
@@ -90,7 +126,11 @@ function Navigation() {
           </Link>
         </div>
         <ul
+<<<<<<< HEAD
           className={`${styles.middle_menu} flex justify-center flex-wrap px-[20px] pb-[4px] ml-[15px] relative hidden        lg:px-[0] lg:flex`}
+=======
+          className={`${styles.middle_menu} flex justify-center flex-wrap px-[20px] relative hidden        lg:px-[0] lg:flex`}
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
         >
           {/* <li>
             <a
@@ -102,7 +142,11 @@ function Navigation() {
           </li> */}
           <li className={`${styles.menu_with_dropdown}`}>
             <Link href="/shop">
+<<<<<<< HEAD
               <a className="work-regular text-[#000] text-[13px] leading-[15px] tracking-[0.5px] uppercase px-[8px]">
+=======
+              <a className="work-regular text-[#000] text-[13px] leading-[15px] uppercase px-[10px]">
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                 STYLES
               </a>
             </Link>
@@ -162,7 +206,11 @@ function Navigation() {
           </li>
           <li className={`${styles.menu_with_dropdown}`}>
             <Link href="/shop">
+<<<<<<< HEAD
               <a className="work-regular text-[#000] text-[13px] leading-[15px] tracking-[0.5px] uppercase px-[8px]">
+=======
+              <a className="work-regular text-[#000] text-[13px] leading-[15px] uppercase px-[10px]">
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                 OCCASIONS
               </a>
             </Link>
@@ -192,7 +240,11 @@ function Navigation() {
           </li>
           <li className={`${styles.menu_with_dropdown}`}>
             <Link href="/shop">
+<<<<<<< HEAD
               <a className="work-regular text-[#000] text-[13px] leading-[15px] tracking-[0.5px] uppercase px-[8px]">
+=======
+              <a className="work-regular text-[#000] text-[13px] leading-[15px] uppercase px-[10px]">
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                 SHOP ALL
               </a>
             </Link>
@@ -229,7 +281,11 @@ function Navigation() {
           </li>
           <li>
             <Link href="/designers">
+<<<<<<< HEAD
               <a className="work-regular text-[#000] text-[13px] leading-[15px] tracking-[0.5px] uppercase px-[8px]">
+=======
+              <a className="work-regular text-[#000] text-[13px] leading-[15px] uppercase px-[10px]">
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                 DESIGNERS
               </a>
             </Link>
@@ -246,9 +302,18 @@ function Navigation() {
         <div
           className={`${styles.menu_right_div} flex items-center ml-[80px] pb-[0px]     sm:pb-[4px] sm:ml-[0]`}
         >
+<<<<<<< HEAD
           <div className="pr-[6px] order-2 pb-[1px] border-r-[0px] border-[#e2e5ec]     sm:order-[unset] sm:border-r-[1px]">
             {/* search for for desktop */}
             <div className="relative hidden       lg:block">
+=======
+          <div className="pr-[10px] order-2     sm:order-[unset]">
+            {/* search for for desktop */}
+            <div
+              className="relative hidden      lg:block"
+              onClick={() => searchDesktopToggler()}
+            >
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
               <input
                 type="email"
                 name="email"
@@ -256,6 +321,7 @@ function Navigation() {
                   " "
                 )} work-regular px-[10px] bg-white focus:outline-none block w-f ull transition-all duration-300 w-[0] absolute right-0 top-0      sm:text-[13px] show-search-inpu t`}
               />
+<<<<<<< HEAD
               <div
                 className="my-icon search w-[21px] h-[19px] cursor-pointer relative z-4 bgAllIcon bg-[left_-24px_top_-445px]"
                 onClick={() => searchDesktopToggler()}
@@ -266,10 +332,20 @@ function Navigation() {
               className="my-icon search w-[21px] h-[19px] cursor-pointer relative z-4 bgAllIcon bg-[left_-24px_top_-445px] block      lg:hidden"
               onClick={() => searchToggler()}
             ></div>
+=======
+              <IoSearchOutline className="text-[20px] cursor-pointer relative z-4" />
+            </div>
+            {/* search for for mob */}
+            <IoSearchOutline
+              onClick={() => searchToggler()}
+              className="text-[20px] cursor-pointer block      lg:hidden"
+            />
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
           </div>
           <div className="px-[10px] flex items-center border-r-[0px] border-[#e2e5ec] order-3     sm:order-[unset] sm:border-r-[1px]">
             {/* cart icon for desktop */}
             <div className="cart-icon-div relative hidden     lg:block">
+<<<<<<< HEAD
               <div
                 className="my-icon bag w-[21px] h-[19px] cursor-pointer relative z-[4] bgAllIcon bg-[left_-10px_top_-151px]"
                 onClick={() => cartToggler()}
@@ -342,15 +418,44 @@ function Navigation() {
                       )}
                     </div>
                   </div>
+=======
+              <IoBagOutline
+                onClick={() => cartToggler()}
+                className="text-[20px] cursor-pointer"
+              />
+
+              <div
+                className={`${styles.card_sm_box} card-sm-box min-w-[110px] bg-[#fff] w-[322px] p-[20px] pb-[30px] border-[#fbf1e8] border-[1px] absolute top-[30px] left-[50%] translate-x-[-50%] hidden`}
+              >
+                <div className="border-b-[1px] border-[#e2e5ec] w-[100%] text-center flex justify-end">
+                  <p className="work-regular text-[#000000b8] text-[12px] mb-[10px] capitalize">
+                    My Bag
+                  </p>
+                </div>
+                <div>
+                  <div className="text-center">
+                    <p className="work-regular text-[#000000] text-[13px] mt-[10px]">
+                      Your Bag is empty
+                    </p>
+                  </div>
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                 </div>
               </div>
             </div>
             {/* cart icon for mob */}
+<<<<<<< HEAD
 
             <div className="my-icon bag w-[21px] h-[19px] cursor-pointer relative z-4 bgAllIcon bg-[left_-10px_top_-151px] block     lg:hidden"></div>
             <span className="work-regular text-[12px] ml-[7px] pt-[3px]">
               1
             </span>
+=======
+            <IoBagOutline
+              onClick={() => cartToggler()}
+              className="text-[20px] cursor-pointer block     lg:hidden"
+            />
+            <span className="work-regular text-[12px] ml-[7px]">0</span>
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
           </div>
           <div className="px-[8px] flex items-center border-r-[1px] border-[#e2e5ec] hidden       lg:flex">
             <Link href="/dashboard/wishlists">
@@ -386,11 +491,16 @@ function Navigation() {
         <div
           className={`${styles.mob_menu} ${togglerClasses.join(
             " "
+<<<<<<< HEAD
           )} fixed top-0 left-0 w-[100%] err h-[100vh]`}
+=======
+          )} fixed top-0 left-0 w-[100%] h-[100vh]`}
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
         >
           <div
             className={`menu_overlay absolute top-0 left-0 w-[100%] h-[100%] bg-[#00000080] opacity-0`}
           ></div>
+<<<<<<< HEAD
           {/* <AiOutlineClose
             onClick={() => navigationToggler()}
             className="text-[26px] text-[#fff] absolute top-[15px] right-[20px]"
@@ -399,6 +509,12 @@ function Navigation() {
             className="w-[21px] h-[19px] cursor-pointer bgAllIcon  absolute top-[15px] right-[25px] bg-[left_-3px_top_-37px]"
             onClick={() => navigationToggler()}
           ></div>
+=======
+          <AiOutlineClose
+            onClick={() => navigationToggler()}
+            className="text-[26px] text-[#fff] absolute top-[15px] right-[20px]"
+          />
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
           <div
             className={`mob_menu_black_div h-[100%] bg-[#000000bf] px-[20px] py-[20px] absolute translate-x-[-100%]`}
           >
@@ -623,14 +739,22 @@ function Navigation() {
         <div
           className={`${styles.mob_menu} ${cartToggleClasses.join(
             " "
+<<<<<<< HEAD
           )} cart-box fixed top-0 left-0 w-[100%] h-[100vh] z-[4]`}
+=======
+          )} cart-box fixed top-0 left-0 w-[100%] h-[100vh]`}
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
         >
           <div
             className={`menu-overlay absolute top-0 left-0 w-[100%] h-[100%] bg-[#00000080] opacity-0`}
           ></div>
           <AiOutlineClose className="text-[26px] text-[#fff] absolute top-[15px] right-[20px]" />
           <div
+<<<<<<< HEAD
             className={`mob-menu-white-div h-[100vh] bg-[#fff] px-[20px] pt-[15px] pb-[20px] absolute translate-x-[140%] border-l-[1px] border-[#fbf1e8]`}
+=======
+            className={`mob-menu-white-div h-[100vh] bg-[#fff] px-[20px] py-[20px] absolute translate-x-[140%] border-l-[1px] border-[#fbf1e8]`}
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
           >
             <div className="flex justify-between border-b-[1px] border-[#ededed]">
               <h6 className="fwl text-[13px] text-[#1b1b28] tracking-[0.5px] capitalize pb-[15px]">
@@ -638,10 +762,17 @@ function Navigation() {
                 {/* your bag is empty */}
               </h6>
               <div className="flex justify-end">
+<<<<<<< HEAD
                 <div
                   className="w-[21px] h-[19px] cursor-pointer bgAllIcon  absolute top-[15px] right-[20px] bg-[left_-22px_top_-37px] tScalePoint8"
                   onClick={() => cartToggler()}
                 ></div>
+=======
+                <IoCloseOutline
+                  onClick={() => cartToggler()}
+                  className="text-[28px] text-[#000] mx-[0px] mb-[15px] mt-[-5px] cursor-pointer"
+                />
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
               </div>
             </div>
 
@@ -713,6 +844,7 @@ function Navigation() {
               />
             </label>
           </div>
+<<<<<<< HEAD
           {/* <AiOutlineClose
             onClick={() => searchToggler()}
             className="text-[26px] text-[#000] absolute top-[15px] right-[20px]"
@@ -721,6 +853,12 @@ function Navigation() {
             className="w-[21px] h-[19px] cursor-pointer bgAllIcon  absolute top-[15px] right-[25px] bg-[left_-22px_top_-37px]"
             onClick={() => searchToggler()}
           ></div>
+=======
+          <AiOutlineClose
+            onClick={() => searchToggler()}
+            className="text-[26px] text-[#000] absolute top-[15px] right-[20px]"
+          />
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
         </div>
       </nav>
     </>

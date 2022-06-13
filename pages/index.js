@@ -12,7 +12,10 @@ import ProductDetail from "./product-detail";
 import Shop from "./shop.js";
 import Designers from "./designers";
 import DesignerDetail from "./shop/designer";
+<<<<<<< HEAD
 import AdminPanel from "./dashboard/home";
+=======
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
 
 export default function Home() {
   return (
@@ -28,9 +31,12 @@ export default function Home() {
       {/* <Shop /> */}
       {/* <Designers /> */}
       {/* <DesignerDetail /> */}
+<<<<<<< HEAD
 
       {/* admin panel */}
       {/* <AdminPanel /> */}
+=======
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
     </>
   );
 }

@@ -5,6 +5,10 @@ import blackImg from "../../assets/images/categories/black.jpg";
 import eveningImg from "../../assets/images/categories/evening.jpg";
 import formalImg from "../../assets/images/categories/formal.jpg";
 import casualImg from "../../assets/images/categories/casual.jpg";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
 import ShopByCategorySection from "../shop-by-category-section/shopByCategorySection";
 import allIcons from "../../assets/images/icons/all-icons.svg";
 

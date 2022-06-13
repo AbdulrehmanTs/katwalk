@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+<<<<<<< HEAD
 import styles from "./messageModal.module.css";
 import { FiCheckCircle } from "react-icons/fi";
 import { IoCloseOutline } from "react-icons/io5";
@@ -13,11 +14,29 @@ function MessageModal({
   proceedToCheckout,
   closeProceedToCheckout,
 }) {
+=======
+import logoSquare from "../../assets/images/logo/logo-square.png";
+import vat from "../../assets/images/logo/vat.png";
+import styles from "./messageModal.module.css";
+import heroImage from "../../assets/images/hero-image.jpg";
+import { FiCheckCircle } from "react-icons/fi";
+import productImg1 from "../../assets/images/products/orange-1/img3.jpg";
+import { IoCloseOutline } from "react-icons/io5";
+import { FiLock } from "react-icons/fi";
+import Link from "next/link";
+
+function MessageModal({ purpose, closeItemAdded, proceedToCheckout, closeProceedToCheckout }) {
+  console.log("purpose", purpose);
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
   return (
     <>
       {purpose == "item-added" ? (
         <div className="fixed top-0 left-0 bottom-0 right-0 w-[100%] h-[100%] z-[30] flex justify-center items-center">
           <div className="w-[625px] bg-[#fff] py-[20px] px-[25px] rounded-[7px] drop-shadow-[0_5px_10px_rgba(0,0,0,0.5)] border-[#aaa] border-[1px]">
+<<<<<<< HEAD
+=======
+            {" "}
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
             <IoCloseOutline
               className="absolute text-[25px] right-[17px] top-[20px] z-[25]"
               onClick={() => closeItemAdded()}
@@ -39,7 +58,11 @@ function MessageModal({
                     Crinkled Abaya with Printed Pattern
                   </h6>
                   <p className="text-[#1b1b28] text-[13px]">
+<<<<<<< HEAD
                     Price:
+=======
+                    Price: 
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                     <span className="fwr text-[#e62e04] pl-[30px] text-[13px]">
                       SAR 760
                     </span>
@@ -71,10 +94,14 @@ function MessageModal({
         <div className="fixed top-0 left-0 bottom-0 right-0 w-[100%] h-[100%] z-[30] flex justify-center items-center">
           <div className="w-[625px] bg-[#fff] py-[20px] px-[25px] rounded-[7px] drop-shadow-[0_5px_10px_rgba(0,0,0,0.5)] border-[#aaa] border-[1px]">
             {" "}
+<<<<<<< HEAD
             <IoCloseOutline
               className="absolute text-[25px] right-[17px] top-[20px] z-[25]"
               onClick={() => closeProceedToCheckout()}
             />
+=======
+            <IoCloseOutline className="absolute text-[25px] right-[17px] top-[20px] z-[25]" onClick={()=>closeProceedToCheckout()}/>
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
             <div className="text-center pt-[5px]">
               <p className="fwr text-[20px] text-[#1b1b28] tracking-[0.5px] flex justify-center items-center">
                 <FiLock className="text-[#1b1b28] text-[20px] pr-[5px]" />
@@ -82,6 +109,7 @@ function MessageModal({
               </p>
 
               <div className="flex justify-between gap-x-[5px] mt-[15px]">
+<<<<<<< HEAD
                 <Link href="/users/login">
                   <button className="color-change-btn taPoint3 relative ffr overflow-hidden h-[40px] text-[14px] w-full text-[#fff] uppercase bg-[#111723] mt-[20px]">
                     <span className="relative z-[5]">returning customer</span>
@@ -92,6 +120,18 @@ function MessageModal({
                     <span className="relative z-[5]">checkout as a guest</span>
                   </button>
                 </Link>
+=======
+                  <Link href="/users/login">
+                <button className="color-change-btn taPoint3 relative ffr overflow-hidden h-[40px] text-[14px] w-full text-[#fff] uppercase bg-[#111723] mt-[20px]">
+                  <span className="relative z-[5]">returning customer</span>
+                </button>
+                  </Link>
+                  <Link href="/checkout">
+                <button className="color-change-btn taPoint3 relative ffr overflow-hidden h-[40px] text-[14px] w-full text-[#fff] uppercase bg-[#111723] mt-[20px]">
+                  <span className="relative z-[5]">checkout as a guest</span>
+                </button>
+                  </Link>
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
               </div>
             </div>
           </div>

@@ -19,7 +19,10 @@ function HomePage() {
     title: "Best Selling",
     text: "Our customers' favorite picks",
     img: bestSellingProduct,
+<<<<<<< HEAD
     type: "product"
+=======
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
   }
 
 

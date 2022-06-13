@@ -199,6 +199,10 @@ function ProductDetail() {
     }
   };
   const toggleSizeGuideModal = () => {
+<<<<<<< HEAD
+=======
+    console.log("called");
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
     if (!togglerSizeGuideModal.includes("fading-in")) {
       setTogglerSizeGuideModal(["fading-in"]);
     } else {

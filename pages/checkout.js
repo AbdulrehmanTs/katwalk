@@ -1,10 +1,19 @@
 import React, { useState, useRef } from "react";
 import Image from "next/image";
+<<<<<<< HEAD
 import Layout from "../components/layout/layout";
+=======
+import Hero from "../components/hero/hero";
+import Layout from "../components/layout/layout";
+import ShopByCategory from "../components/shop-by-category/shopByCategory";
+import TextImgSection from "../components/text-img-section/textImgSection";
+import productImg from "../assets/images/products/product2.jpg";
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
 import img1 from "../assets/images/products/orange-1/img1.jpg";
 import img2 from "../assets/images/products/orange-1/img2.jpg";
 import img3 from "../assets/images/products/orange-1/img3.jpg";
 import img4 from "../assets/images/products/orange-1/img4.jpg";
+<<<<<<< HEAD
 import visa from "../assets/images/payment-methods/visa.png";
 import mada from "../assets/images/payment-methods/mada.png";
 import stcPay from "../assets/images/payment-methods/stc-pay.png";
@@ -13,10 +22,35 @@ import HeadingAndText from "../components/heading-and-text/headingAndText";
 import ColorBox from "../components/color-box/colorBox";
 import ProductSlider from "../components/product-slider/product-slider";
 import { IoCloseOutline } from "react-icons/io5";
+=======
+
+import visa from "../assets/images/payment-methods/visa.png";
+import mada from "../assets/images/payment-methods/mada.png";
+import stcPay from "../assets/images/payment-methods/stc-pay.png";
+
+import Features from "../components/features/features";
+import HeadingAndText from "../components/heading-and-text/headingAndText";
+import ColorBox from "../components/color-box/colorBox";
+import { BsPlusLg, BsRulers, BsChevronDown } from "react-icons/bs";
+import { IoShareSocialOutline } from "react-icons/io5";
+import ProductSlider from "../components/product-slider/product-slider";
+import {
+  IoBagOutline,
+  IoSearchOutline,
+  IoHeartOutline,
+  IoPersonOutline,
+  IoChevronDown,
+  IoCloseOutline,
+} from "react-icons/io5";
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import Link from "next/link";
 
 function ProductDetail() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
   const [productToCheckout, setProductToCheckout] = useState([
     {
       name: "Multicolor Printed Abaya with Fringe Detail",
@@ -29,9 +63,17 @@ function ProductDetail() {
       productBust: "20",
       productSleeves: "25",
       quantity: 1,
+<<<<<<< HEAD
     },
   ]);
 
+=======
+    }
+  ]);
+
+
+
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
   // const productToCheckout = [
   //   {
   //     name: "Multicolor Printed Abaya with Fringe Detail",
@@ -45,7 +87,11 @@ function ProductDetail() {
   //     productSleeves: "25",
   //   }
   // ];
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
   const productImages = [
     { image: img1 },
     { image: img2 },
@@ -228,10 +274,18 @@ function ProductDetail() {
       }
     }
     // console.log("arr after", _p);
+<<<<<<< HEAD
 
     // setProductToCheckout([]);
     // setProductToCheckout(_p);
     // console.log("productToCheckout", productToCheckout);
+=======
+ 
+    // setProductToCheckout([]);
+    // setProductToCheckout(_p);
+  // console.log("productToCheckout", productToCheckout);
+
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
   };
 
   return (
@@ -484,6 +538,10 @@ function ProductDetail() {
 export default ProductDetail;
 
 function ProductInCart({ data, index, deletItem }) {
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
   console.log("k", index);
   return (
     <>
@@ -494,9 +552,15 @@ function ProductInCart({ data, index, deletItem }) {
               <Image src={img3} alt="image" />
             </span>
           </div>
+<<<<<<< HEAD
           <div className="pl-[20px] pt-[20px ] relative w-[100%]     lg:w-[82%] ">
             <IoCloseOutline
               className="absolute right-[-7px] top-[3px]"
+=======
+          <div className="pl-[20px] pt-[20px] relative w-[100%]     lg:w-[82%] ">
+            <IoCloseOutline
+              className="absolute right-[-10px] top-[5px]"
+>>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
               onClick={() => deletItem(index)}
             />
             <p className="fwr text-[13px] leading-[1.5] text-[#00] tracking-[0.5px] pt-[3px]">

@@ -12,6 +12,7 @@ import styles from "./features.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import allIcons from "../../assets/images/icons/all-icons.svg";
 
 function Features() {
   const settings = {

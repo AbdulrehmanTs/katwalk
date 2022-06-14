@@ -25,7 +25,7 @@ function ColorFilter({ data, color_dropdown, choosingFilterOption,
                       key={index}
                       className={`${value.colorCode} w-[100%] h-[48px] p-[10px]`}
                     >
-                      <p className="fwl text-[#fff] text-[11px] capitalize">
+                      <p className="text-[#fff] text-[11px] capitalize">
                         {value.name}
                       </p>
                     </div>
@@ -46,7 +46,7 @@ function ColorFilter({ data, color_dropdown, choosingFilterOption,
                       key={index}
                       className={`${value.colorCode} w-[100%] h-[48px] p-[10px]`}
                     >
-                      <p className="fwl text-[#fff] text-[11px] capitalize">
+                      <p className="text-[#fff] text-[11px] capitalize">
                         {value.name}
                       </p>
                     </div>

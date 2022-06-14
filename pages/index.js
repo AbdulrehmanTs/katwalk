@@ -13,9 +13,14 @@ import Shop from "./shop.js";
 import Designers from "./designers";
 import DesignerDetail from "./shop/designer";
 import AdminPanel from "./dashboard/home";
+import { useEffect } from "react";
 
 export default function Home() {
+  // useEffect(() => {
+  //   document.querySelector("body").style.direction = 'ltr'
+  // }, [])
   return (
+
     <>
       <HomePage />
       {/* <PrivacyPolicy /> */}

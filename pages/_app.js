@@ -1,12 +1,9 @@
 import Head from "next/head";
 // import "../styles/globals.css";
-
-async function styles() {
-  if (window.location.pathname.includes('/ar')) {
-    await import("../styles/globalArabic.css").then(() => console.log("arabic"))
-  } else {
-    await import("../styles/globals.css").then(() => console.log("english"))
-  }
+if (window.location.pathname.includes('/ar')) {
+  import("../styles/globalArabic.css").then(() => console.log("arabic")).catch((error) => console.log(error))
+} else {
+  import("../styles/globals.css").then(() => console.log("english")).catch((error) => console.log(error))
 }
 
 
@@ -20,6 +17,6 @@ function MyApp({ Component, pageProps }) {
     </>
   );
 }
-styles()
+
 
 export default MyApp;

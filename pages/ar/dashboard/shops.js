@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "../components/layout/layout";
@@ -13,6 +13,9 @@ import ChooseImageModal from "../components/dashboard/choose-image-modal/ChooseI
 import TwoTabs from "../components/dashboard/two-tabs/TwoTabs";
 
 function Shops() {
+  useEffect(() => {
+    document.querySelector("body").style.direction = 'rtl'
+  }, [])
   const [shopDetails, setShopDetails] = useState({
     basicInfo: [
       { name: "product Name", value: "Test Designer" },

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "../components/layout/layout";
@@ -44,6 +44,9 @@ function Products() {
   const toggleModal = () => {
     setIsShowModal(!isShowModal);
   };
+  useEffect(() => {
+    document.querySelector("body").style.direction = 'rtl'
+  }, [])
   return (
     <>
       <Layout>

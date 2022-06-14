@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Layout from "../components/layout/layout";
 import AdminPanelLayout from "../components/dashboard/admin-panel-layout/AdminPanelLayout";
@@ -11,6 +11,9 @@ import HeadingBar from "../components/heading-bar/HeadingBar";
 import verified from "../../../assets/images/icons/verified.png";
 
 function PurchaseHistory() {
+  useEffect(() => {
+    document.querySelector("body").style.direction = 'rtl'
+  }, [])
   return (
     <>
       <Layout>

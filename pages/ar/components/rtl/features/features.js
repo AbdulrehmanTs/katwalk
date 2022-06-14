@@ -1,17 +1,17 @@
 import React from "react";
 import Image from "next/image";
-import logoSquare from "../../../assets/images/logo/logo-square.png";
-import heroImage from "../../../assets/images/hero-image.jpg";
-import bottle from "../../../assets/images/icons/bottle.png";
-import freeDelivery from "../../../assets/images/icons/free-delivery.png";
-import measurementTap from "../../../assets/images/icons/measurement-tap.png";
-import tags from "../../../assets/images/icons/tags.png";
-import FeaturesCard from "../../../features-card/features-card";
+import logoSquare from "../../../../../assets/images/logo/logo-square.png";
+import heroImage from "../../../../../assets/images/hero-image.jpg";
+import bottle from "../../../../../assets/images/icons/bottle.png";
+import freeDelivery from "../../../../../assets/images/icons/free-delivery.png";
+import measurementTap from "../../../../../assets/images/icons/measurement-tap.png";
+import tags from "../../../../../assets/images/icons/tags.png";
+import FeaturesCard from "../../features-card/features-card";
 import styles from "./features.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import allIcons from "../../../assets/images/icons/all-icons.svg";
+import allIcons from "../../../../../assets/images/icons/all-icons.svg";
 
 function Features() {
   const settings = {

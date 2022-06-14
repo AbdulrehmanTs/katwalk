@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Layout from "../components/layout/layout";
 import AdminPanelLayout from "../components/dashboard/admin-panel-layout/AdminPanelLayout";
@@ -18,6 +18,9 @@ import WishListCard from "../components/dashboard/wishlist-card/WishListCard";
 import BottomShadowCard from "../components/dashboard/bottom-shadow-card/BottomShadowCard";
 
 function Wishlists() {
+  useEffect(() => {
+    document.querySelector("body").style.direction = 'rtl'
+  }, [])
   const [wishlistItems, setWishlistItems] = useState([]);
   // const [wishlistItems, setWishlistItems] = useState([
   //   {

@@ -15,8 +15,12 @@ import ProductSlider from "./components/product-slider/product-slider";
 import { IoCloseOutline } from "react-icons/io5";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import Link from "next/link";
+import { useEffect } from "react";
 
 function ProductDetail() {
+  useEffect(() => {
+    document.querySelector("body").style.direction = 'rtl'
+  }, [])
   const [productToCheckout, setProductToCheckout] = useState([
     {
       name: "Multicolor Printed Abaya with Fringe Detail",

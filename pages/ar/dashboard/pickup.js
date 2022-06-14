@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Layout from "../components/layout/layout";
 import AdminPanelLayout from "../components/dashboard/admin-panel-layout/AdminPanelLayout";
@@ -24,6 +24,9 @@ const filters = [
 ];
 
 function Pickup() {
+  useEffect(() => {
+    document.querySelector("body").style.direction = 'rtl'
+  }, [])
   const [filterByPayment, setFilterByPayment] = useState(
     "Filter by Payment Status"
   );

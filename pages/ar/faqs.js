@@ -6,52 +6,56 @@ import TextImgSection from "./components/text-img-section/textImgSection";
 import katwalkBag from "../../assets/images/designers/katwalk-bag.jpg";
 import Features from "./components/features/features";
 import HeadingAndText from "./components/heading-and-text/headingAndText";
-
+import { useEffect } from "react";
 function FAQ() {
+  useEffect(() => {
+    document.querySelector("body").style.direction = 'rtl'
+  }, [])
+
   const FAQ_Content = [
     {
-      title: "About Katwalk",
+      title: "عن كات ووك",
     },
     {
-      title: "What’s Katwalk?",
+      title: "من كات ووك؟",
       content: [
         {
           type: "paragraph",
           text: [
-            "Katwalk is an elegant and sophisticated marketplace that connects creative designers with fashion-forward customers, bringing what’s new in the world of Arabian fashion.",
+            "كات ووك مفهوم عصري ومختلف في ربط المصمّمات ذوات الخبرة المبدعات مع محبي الموضة. تقود كات ووك التحوّل في الأزياء العربية؛ من خلال تقديم خدمات متكاملة تساعد المصممات الموهوبات على إحداث تأثيرٍ يساهم في تشكيل مستقبل الأزياء العربية.",
           ],
         },
       ],
     },
     {
-      title: "What are bespoke designs?",
+      title: "ما هي تصاميم بيسبوك؟",
       content: [
         {
           type: "paragraph",
           text: [
-            "Katwalk’s bespoke designs provide the ultimate personalised and unique pieces tailored to your tastes and exact size and fit. We complement your look with exclusive pieces and a variety of colours, cuts, and shapes to provide you with the experience and pieces you desire.",
+            "نقدّم تصاميم بيسبوك الحصرية لتوفير التجربة الشخصية المطلقة للقِطَع المُصمَّمة خصيصًا لمن يبحثن عن قِطَع فريدة تتناسب مع ذوقهن ومقاساتهن بدقة. خدمة بيسبوك تُكمّل مظهرك بمجموعة حصرية متنوعة من الألوان والخصائص والأشكال؛ لمنحك التجربة التي طالما رغبت بها.",
           ],
         },
       ],
     },
     {
-      title: "Is Katwalk a designer?",
+      title: "هل تقوم كات ووك بتصميم المنتجات؟",
       content: [
         {
           type: "paragraph",
           text: [
-            "Katwalk is not a designer. We connect creative designers with shoppers for a convenient shopping experience.",
+            "كات ووك منصة تسوق إلكترونية تربط المصمّمات ذوات الخبرة والناشئات المبدعات مع محبّي الموضة.",
           ],
         },
       ],
     },
     {
-      title: "How can I become a Katwalk partner?",
+      title: "كيف بإمكاني البيع في كات ووك؟",
       content: [
         {
           type: "paragraph",
           text: [
-            "If you’re passionate about becoming a part of the future of Arabian fashion, please visit",
+            "كوني جزءًا من مستقبل الأزياء العربية عن طريق زيارة",
           ],
         },
         {
@@ -61,44 +65,44 @@ function FAQ() {
       ],
     },
     {
-      title: "Delivery",
+      title: "الشحن والتوصيل",
       content: [
         {
           type: "paragraph",
           text: [
-            "What countries does Katwalk ship to?",
-            "We currently ship to Saudi Arabia only.",
+            "ماهي الدول التي يتم الشحن إليها؟",
+            "نشحن لجميع مدن المملكة في الوقت الحالي.",
           ],
         },
       ],
     },
     {
-      title: "How long will it take to deliver my order?",
+      title: "كم يوم يستغرق توصيل طلبي؟",
       content: [
         {
           type: "paragraph",
           text: [
-            "- Ready-to-wear products take 2 days to be handled to the carrier and made-to-measure and bespoke products take 10-14 days.",
-            "- All orders are shipped by Aramex and it may take the following timescale:",
+            "- القطع الجاهزة تستغرق يومين للتسليم إلى الناقل والقطع المفصلة حسب التصميم والمقاس تستغرق ١٠-١٤ يوم للتسليم إلى الناقل",
+            "- يتم تسليم الطلبات إلى الناقل الحصري أرامكس ويستغرق المدة التالية",
           ],
         },
         {
           type: "table",
-          tableHead: ["Shipping Costs", "Delivery Timescales	", "Location"],
+          tableHead: ["تكلفة الشحن", "المدة الزمنية	", "الموقع"],
           tableBody: [
             {
               rowData: [
-                "Free",
-                "2-5 Business Days",
-                "	Seller and customer in the same country",
+                "مجاناً",
+                "2-٥ أيام عمل",
+                "	المشتري والبائع في بلد واحد",
               ],
             },
 
             {
               rowData: [
-                "Customer is responsible for shipping costs",
-                "6-10 Business Days",
-                "Seller and customer in different countries",
+                "على المشتري",
+                "٦-١٠ أيام عمل",
+                "المشتري في بلد مختلف عن البائع",
               ],
             },
           ],
@@ -106,95 +110,94 @@ function FAQ() {
         {
           type: "paragraph",
           text: [
-            "- Above table is just an estimate delivery timescale; our sellers will do their best to deliver your orders on time.",
+            "- هذا الجدول مجرد تقدير زمني للتسليم، والبائعين لدينا يبذلون قصارى جهودهم لتسليم الطلبات الخاصة بكِ في الوقت المحدد.",
 
-            "- Please note that there might be some delays during peak or sale seasons, and holidays.",
-            "- Above timescales are expected after your order has been confirmed.",
-            "- Any cash-on-delivery orders are anticipated to a fee of SAR 20.",
-            "- When your order is put for delivery, you will be contacted by the carrier to confirm your location and time. Kindlynote that you only have 3 attempts for delivery before your order is cancelled or additional charges will apply.",
+            "- يرجى ملاحظة أنه قد يكون هناك بعض التأخير خلال مواسم الذروة والترويج والعطلات",
+            "- من المتوقع أن تدفع أي طلبات نقدية عند التسليم 20 ريال سعودي للشحن المحلي",
+            "- عندما يتم وضع طلبكِ للتسليم سيتم الاتصال بكِ من قبل الناقل لتأكيد موقعك والوقت. يرجى ملاحظة أن لديك فقط 3 محاولات لاستلام الطلب قبل إلغاء طلبكِ أو سيتم تطبيق رسوم إضافية.",
           ],
         },
       ],
     },
     {
-      title: "How can I track my shipment?",
+      title: "كيف يمكنني تتبع شحنتي؟",
       content: [
         {
           type: "paragraph",
           text: [
-            "You can track your shipment by visiting My Account > Purchase History.",
+            "يمكنكِ تتبع شحنتكِ عبر حسابي > طلباتي",
           ],
         },
       ],
     },
     {
-      title: "Orders",
+      title: "الطلب",
     },
     {
-      title: "How can I contact Katwalk customer support?",
+      title: "كيف يمكنني التواصل مع خدمة العملاء؟",
       content: [
         {
           type: "paragraph",
-          text: ["We’re here to help! Please visit  for customer support."],
+          text: ["يمكنكِ التواصل مع خدمة العملاء عن طريق زيارة: katwalk.sa/contact"],
         },
       ],
     },
     {
-      title: "Can I place an order via WhatsApp?",
+      title: "هل يمكنني الطلب عبر WhatsApp؟",
       content: [
         {
           type: "paragraph",
           text: [
-            "We require that all orders be placed through our website. You can reach us via WhatsApp if you need assistance!",
+            "جميع الطلبات تتم عبر موقعنا الإلكتروني فقط. بإمكانكِ التواصل معنا عن طريق WhatsApp للحصول على أيّ مساعدة.",
           ],
         },
       ],
     },
     {
-      title: "How will I know if a seller has accepted my order?",
+      title: "كيف سيتم إعلامي أن طلبي مقبول؟",
       content: [
         {
           type: "paragraph",
           text: [
-            "Once the order is accepted/rejected, a confirmation will be sent by SMS, email, or WhatsApp. Kindly note that it may take up to one business day for orders to be accepted by the designer.",
+            "بمجرد قبول الطلب/رفضه، سيتم إرسال إشعار تأكيد عبر الرسائل القصيرة أو البريد الإلكتروني أو عبر تطبيق WhatsApp. تستغرق الطلبات ما يصل إلى يوم عمل حتى يتم قبولها مِن قِبَل المصممة",
           ],
         },
       ],
     },
     {
-      title: "Can I change, edit, or cancel my order once it has been placed?",
+      title: "هل يمكنني تغيير طلبي أو تعديله أو إلغاؤه؟",
       content: [
         {
           type: "paragraph",
           text: [
-            "It is possible to change or cancel an order that has not yet been accepted by the seller. Once an order has been accepted, it cannot be changed or cancelled.",
-            "You can check the status of your order by visiting My Account > Purchase History.",
-            "If you wish to change, edit or cancel a non-approved order, please visit .",
+            "يمكنكِ ذلك فقط في حال عدم تأكيد طلبكِ من قِبَل المصممة.",
+            "بإمكانكِ تتبع حالة الطلب عبر حسابي > طلباتي",
+            "في حال كانت حالة طلبكِ غير مؤكدة، يمكنكِ تغيير، تعديل أو إلغاء طلبكِ من خلال التواصل مع خدمة العملاء عن طريق زيارة:  katwalk.sa/contact",
           ],
         },
         {
           type: "paragraph_sm",
           text: [
-            "Kindly note that following the Electronic Commerce Law in Saudi Arabia, made-to-measure pieces and bespoke designs cannot be returned.",
+            "يُرْجَى ملاحظة أنه وفقًا لقانون التجارة الإلكترونية في المملكة العربية السعودية، لا يمكن إرجاع القطع المفصّلة حسب التصميم والمقاس (منتجات تفصيل وبيسبوك)"
           ],
         },
       ],
     },
     {
-      title: "I gave wrong measurements, what should I do?",
+      title: "أعطيت قياسات خاطئة، ماذا أفعل؟",
       content: [
         {
           type: "paragraph",
           text: [
-            "It is possible to change or cancel an order that has not yet been accepted by the seller. Once an order has been accepted, it cannot be changed or cancelled.",
-            "You can check the status of your order by visiting My Account > Purchase History.",
-            "If you wish to change, edit or cancel a non-approved order, please visit .",
+            "يمكنكِ ذلك فقط في حال عدم تأكيد طلبكِ من قِبَل المصممة.",
+            "بإمكانكِ تتبع حالة الطلب عبر حسابي > طلباتي",
+            "في حال كانت حالة طلبكِ غير مؤكدة، يمكنكِ تغيير، تعديل أو إلغاء طلبكِ من خلال التواصل مع خدمة العملاء عن طريق زيارة:  katwalk.sa/contact",
           ],
         },
         {
           type: "paragraph_sm",
           text: [
-            "Kindly note that following the Electronic Commerce Law in Saudi Arabia, made-to-measure pieces and bespoke designs cannot be returned.",
+            "يُرْجَى ملاحظة أنه وفقًا لقانون التجارة الإلكترونية في المملكة العربية السعودية، لا يمكن إرجاع القطع المفصّلة حسب التصميم والمقاس (منتجات تفصيل وبيسبوك)"
           ],
         },
       ],
@@ -506,8 +509,8 @@ function FAQ() {
     <>
       <Layout>
         <div className="container-for-content-pages border-[1px] border-[#f9f9f9]">
-          <h1 className=" fahkwang-light text-[28px] text-center leading-[1.5] tracking-[0.5] mb-[23px]">
-            Frequently Asked Questions
+          <h1 className=" text-[28px] text-center leading-[1.5] tracking-[0.5] mb-[23px]">
+            الأسئلة المتكررة
           </h1>
           <div className="px-[20px] md:p-0">
             {FAQ_Content.map((value, index) => {

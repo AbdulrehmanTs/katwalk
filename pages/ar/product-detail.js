@@ -18,6 +18,7 @@ import SizeGuideModal from "./components/size-guide-modal/SizeGuideModal";
 import MessageModal from "./components/message-modal/messageModal";
 import MessageBox from "./components/message-box/messageBox";
 
+
 const basicColors = [
   {
     name: "Orange",
@@ -71,6 +72,10 @@ const otherProducts = [
 ];
 
 function ProductDetail() {
+  useEffect(() => {
+    document.querySelector("body").style.direction = 'rtl'
+  }, [])
+
   const [sheila, setSheila] = useState({});
   const [basicColor, setBasicColor] = useState({});
   const [selectedBasicSize, setSelectedBasicSize] = useState("");

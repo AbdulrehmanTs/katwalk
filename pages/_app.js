@@ -1,13 +1,8 @@
 import Head from "next/head";
-// import "../styles/globals.css";
-if (window.location.pathname.includes('/ar')) {
-  import("../styles/globalArabic.css").then(() => console.log("arabic")).catch((error) => console.log(error))
-} else {
-  import("../styles/globals.css").then(() => console.log("english")).catch((error) => console.log(error))
-}
+import "../styles/globals.css";
 
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
@@ -18,5 +13,3 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-
-export default MyApp;

@@ -7,8 +7,11 @@ import katwalkBag from "../../assets/images/designers/katwalk-bag.jpg";
 import bestSellingProduct from "../../assets/images/best-selling/best-selling-product.jpg";
 import Features from "./components/features/features";
 import allIcons from "../../assets/images/icons/all-icons.svg";
-
+import { useEffect } from "react";
 function HomePage() {
+  useEffect(() => {
+    document.querySelector("body").style.direction = 'rtl'
+  }, [])
   const designerData = {
     title: "المصممات",
     text: "تسوقي مصمماتنا المبدعات",

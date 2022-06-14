@@ -40,8 +40,11 @@ import ShopFilters from "./components/shop-filters/shopFilters";
 import ProductCard from "./components/product-card/productCard";
 import Link from "next/link";
 import ImgLazyLoad from "./components/img-lazy-load/img-lazy-load";
-
+import { useEffect } from "react";
 function Designers() {
+  useEffect(() => {
+    document.querySelector("body").style.direction = 'rtl'
+  }, [])
   const designers = [
     {
       name: "ثمانية",

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "../components/layout/layout";
@@ -55,6 +55,9 @@ const productsData = {
 };
 
 function AdminPanel() {
+  useEffect(() => {
+    document.querySelector("body").style.direction = 'rtl'
+  }, [])
   return (
     <>
       <Layout>

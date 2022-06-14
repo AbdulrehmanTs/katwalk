@@ -6,7 +6,7 @@ import { BsInstagram, BsWhatsapp } from "react-icons/bs";
 import { IoChevronDown, IoCloseOutline } from "react-icons/io5";
 import logoSquare from "../../../../../assets/images/logo/logo-square.png";
 import logo from "../../../../../assets/images/logo/katwalk_logo_arabic.svg";
-import dress1 from "../../../../../assets/images/ploducts/dress1.jpg";
+import dress1 from "../../../../../assets/images/products/dress1.jpg";
 import styles from "./navigation.module.css";
 
 function Navigation() {
@@ -90,7 +90,7 @@ function Navigation() {
           </Link>
         </div>
         <ul
-          className={`${styles.middle_menu} flex far justify-center flex-wrap px-[20px] pb-[4px] ml-[15px] relative hidden        lg:px-[0] lg:flex`}
+          className={`${styles.middle_menu} flex far justify-center flex-wrap px-[20px] pb-[4px] ml-[15px] relative hidden  lg:px-[0] lg:flex`}
         >
           {/* <li>
             <a
@@ -339,7 +339,7 @@ function Navigation() {
                                 SAR 1,030
                               </p>
                             </div>
-                            <button className="add-to-bag-btn relative overflow-hidden ffr text-[0.875rem] text-[#fff] uppercase bg-[#111723] px-[10px] py-[10px]">
+                            <button className="add-to-bag-btn relative overflow-hidden text-[0.875rem] text-[#fff] uppercase bg-[#111723] px-[10px] py-[10px]">
                               <Link href="/ar/checkout">
                                 <span className="relative z-[5]">متابعة الشراء</span>
                               </Link>
@@ -373,7 +373,7 @@ function Navigation() {
                 <div className="my-icon user w-[21px] h-[19px] cursor-pointer relative z-4 bgAllIcon bg-[left_-4px_top_-121px]"></div>
               </Link>
             </div>
-            <div className="pl-[0px] pl-[18px] order-1  sm:order-[unset] sm:pl-[5px] sm:pl-[10px] sm:pb-[4px]">
+            <div className="pr-[0px] pr-[18px] order-1  sm:pr-[5px] sm:pr-[10px]">
               <a href=" /" className="text-[13px] cursor-pointer">
                 English
               </a>
@@ -445,49 +445,49 @@ function Navigation() {
                   >
                     <li>
                       <Link href="/ar/shop">
-                        <a className="text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                        <a className="text-[#ffffff] text-[13px] block pr-[20px] py-[13px] uppercase">
                           ایش الجديد
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/ar/shop">
-                        <a className="text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                        <a className="text-[#ffffff] text-[13px] block pr-[20px] py-[13px] uppercase">
                           الربيع
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/ar/shop">
-                        <a className="text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                        <a className="text-[#ffffff] text-[13px] block pr-[20px] py-[13px] uppercase">
                           أسود كلاسيكي
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/ar/shop">
-                        <a className="text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                        <a className="text-[#ffffff] text-[13px] block pr-[20px] py-[13px] uppercase">
                           مطبوع
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/ar/shop">
-                        <a className="text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                        <a className="text-[#ffffff] text-[13px] block pr-[20px] py-[13px] uppercase">
                           تطریز
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/ar/shop">
-                        <a className="text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                        <a className="text-[#ffffff] text-[13px] block pr-[20px] py-[13px] uppercase">
                           طقتم
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/ar/shop">
-                        <a className="text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                        <a className="text-[#ffffff] text-[13px] block pr-[20px] py-[13px] uppercase">
                           تصمیم مقسم بألوان
                         </a>
                       </Link>
@@ -505,25 +505,25 @@ function Navigation() {
                   <ul
                     className={`${occasionsClasses.join(
                       " "
-                    )} overflow-hidden bg-[#c53a19a6] pl-[20px] mx-[-20px] mt-[-1px]`}
+                    )} overflow-hidden bg-[#c53a19a6] mx-[-20px] mt-[-1px]`}
                   >
                     <li>
                       <Link href="/ar/shop">
-                        <a className="text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                        <a className="text-[#ffffff] text-[13px] block pr-[20px] py-[13px] uppercase">
                           كاجوال
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/ar/shop">
-                        <a className="text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                        <a className="text-[#ffffff] text-[13px] block pr-[20px] py-[13px] uppercase">
                           سهرة
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/ar/shop">
-                        <a className="text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                        <a className="text-[#ffffff] text-[13px] block pr-[20px] py-[13px] uppercase">
                           رسمي
                         </a>
                       </Link>
@@ -541,32 +541,32 @@ function Navigation() {
                   <ul
                     className={`${shopAllClasses.join(
                       " "
-                    )} overflow-hidden bg-[#c53a19a6] pl-[20px] mx-[-20px] mt-[-1px]`}
+                    )} overflow-hidden bg-[#c53a19a6] mx-[-20px] mt-[-1px]`}
                   >
                     <li>
                       <Link href="/ar/shop">
-                        <a className="text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                        <a className="text-[#ffffff] text-[13px] block pr-[20px] py-[13px] uppercase">
                           عباءات
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/ar/shop">
-                        <a className="text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                        <a className="text-[#ffffff] text-[13px] block pr-[20px] py-[13px] uppercase">
                           قفاطين
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/ar/shop">
-                        <a className="text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                        <a className="text-[#ffffff] text-[13px] block pr-[20px] py-[13px] uppercase">
                           فساتين
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/ar/shop">
-                        <a className="text-[#ffffff] text-[13px] block pl-[20px] py-[13px] uppercase">
+                        <a className="text-[#ffffff] text-[13px] block pr-[20px] py-[13px] uppercase">
                           کیمونو
                         </a>
                       </Link>
@@ -610,7 +610,7 @@ function Navigation() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/ar/plivacypolicy">
+                  <Link href="/ar/privacypolicy">
                     <a className="text-[#ffffff80] text-[13px] py-[8px] block uppercase">
                       سياسة الخصوصية والشروط والأحكام
                     </a>

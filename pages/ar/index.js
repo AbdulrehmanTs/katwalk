@@ -16,9 +16,9 @@ import AdminPanel from "./dashboard/home";
 import { useEffect } from "react";
 
 export default function Home() {
-  // useEffect(() => {
-  //   document.querySelector("body").style.direction = 'rtl'
-  // }, [])
+  useEffect(() => {
+    document.querySelector("body").style.direction = 'rtl'
+  }, [])
   return (
     <>
       <HomePage />

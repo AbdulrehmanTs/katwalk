@@ -6,11 +6,15 @@ import TextImgSection from "./components/text-img-section/textImgSection";
 import katwalkBag from "../../assets/images/designers/katwalk-bag.jpg";
 import Features from "./components/features/features";
 import HeadingAndText from "./components/heading-and-text/headingAndText";
+import { useEffect } from "react";
 
 function PrivacyPolicy() {
+  useEffect(() => {
+    document.querySelector("body").style.direction = 'rtl'
+  }, [])
   const privacyPolicyContent = [
     {
-      title: "1. Introduction",
+      title: "١. المقدمة",
       content: [
         {
           type: "paragraph",
@@ -23,66 +27,66 @@ function PrivacyPolicy() {
           //   "-If you do not agree with (or cannot comply with) the Agreements, then you may not use the Service. In order to find a solution, please let us know by emailing us at customercare@katwalk.sa. These Terms apply to all visitors, users and others who wish to access or use the Service.",
           // ],
           text: [
-            "Welcome to Katwalk, an online shopping marketplace that connects sellers with buyers and provides marketing services to create added value for designers in Saudi Arabia particular and in wider GCC. Katwalk provides an unmatched shopping experience for modern Arab women through its website ('Platform', 'katwalk', 'we', 'our', 'us')",
-            "'Katwalk' is a registered trademark owned by Fashion Platform Est., commercial registration number: 2062617591, and VAT registration number: 310401691200003",
-            "- These Terms of Service (“Terms”, “Terms of Service”) govern your use of our website/app located at  (together or individually “Service”) operated by Katwalk.",
-            "- Our Privacy Policy also governs your use of our Service and explains how we collect, safeguard and disclose information that results from your use of our website",
-            "- Your agreement with us includes these Terms and our Privacy Policy (“Agreements”). You acknowledge that you have read and understood the Agreements and agreed to be bound of them.",
-            "-If you do not agree with (or cannot comply with) the Agreements, then you may not use the Service. In order to find a solution, please let us know by emailing us at customercare@katwalk.sa. These Terms apply to all visitors, users and others who wish to access or use the Service.",
+            "‌ب. مرحبا بك في Katwalk، منصة تسوق إلكترونية للبيع عن الغير تربط البائعين مع المشتريين وتقدم خدمات تسويقية تهدف الى خلق قيمة مضافة للمصممات السعوديات بشكل خاص والخليجيات بشكل عام كما تقدم تجربة تسوق نموذجية للمرأة العربية العصرية عبر موقعها الالكتروني  ('المنصة' ، 'katwalk'، 'نحن'، 'لدينا'،'لنا')",
+            "‌ج. 'Katwalk' علامة تجارية مسجلة ومملوكة لمؤسسة منصة أزياء التجارية، سجل تجاري رقم: ٢٠٦٢٦١٧٥٩١، ورقم ضريبي رقم: 310401691200003",
+            "‌د. تحكم شروط الخدمة هذه ('الشروط '، 'شروط الخدمة') استخدامك لموقعنا/تطبيقنا الموجود على  ('الخدمة' معا أو بشكل فردي) التي تديرها Katwalk. تحكم سياسة الخصوصية أيضا استخدامك لخدمتنا وتشرح كيف نقوم بجمع وحماية وكشف المعلومات التي تنتج عن استخدامك لصفحات الويب الخاصة بنا",
+            "‌و. تتضمن اتفاقيتك معنا هذه الشروط وسياسة الخصوصية الخاصة بنا ('الاتفاقية'). أنت تقر بأنك قد قرأت وفهمت الاتفاقية وتوافق على الالتزام بها.",
+            "‌ز. لا يجوز لك استخدام الخدمة إذا كنت لا توافق على الاتفاقية أو لا تستطيع الامتثال لها، و حتى نتمكن من محاولة إيجاد حل، الرجاء مراسلتنا عبر البريد الالكتروني customercare@katwalk.sa",
+            "‌ح. تنطبق هذه الشروط على جميع الزوار والمستخدمين وغيرهم ممن يرغبون في الوصول إلى الخدمة أو استخدامها.",
           ],
         },
       ],
     },
 
     {
-      title: "2. Communications",
+      title: "٢. الاتصالات",
       content: [
         {
           type: "paragraph",
           text: [
-            "By using our Service, you agree to subscribe to our newsletters, marketing or promotional materials and other information we may send. However, you may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or by emailing us at customercare@katwalk.sa",
+            "باستخدام خدمتنا، فإنك توافق على الاشتراك في النشرات الإخبارية أو المواد التسويقية أو الترويجية وغيرها من المعلومات التي قد نرسلها. ومع ذلك، يمكنك اختيار عدم تلقي أي من هذه الاتصالات أو جميعها منا باتباع رابط إلغاء الاشتراك أو عن طريق البريد الإلكتروني على: customercare@katwalk.sa",
           ],
         },
       ],
     },
     {
-      title: "3. Purchases",
+      title: "٣. المشتريات",
       content: [
         {
           type: "paragraph",
           text: [
-            "If you wish to purchase any product made available through the Service (“Purchase”), you may be asked to provide certain information relevant to your Purchase including but not limited to, your credit or debit card number, the expiration date of your card, your billing address and your shipping information.",
-            "You represent and warrant that: (i) you have the legal right to use any card (s) or other payment method(s) in connection with any Purchase; and that (ii) information such as mobile number, name email address, payment details and shipping address you provide to us are all valid, correct and complete.",
-            "We may employ the use of third-party services for the purpose of facilitating the payment and the completion of your Purchases. By submitting your information, you grant us the right to provide the information to these third parties subject to our Privacy Policy.",
+            "‌أ. إذا كنت ترغب في شراء أي منتج من خلال الخدمة ('الشراء')، فقد يطلب منك تقديم معلومات معينة ذات صلة بعملية الشراء بما في ذلك على سبيل المثال لا الحصر، رقم بطاقة الائتمان الخاصة بك، وتاريخ انتهاء صلاحية بطاقتك، وعنوان السكن الخاص بك، ومعلومات الشحن الخاصة بك.",
+            "‌ب. أنت تقر وتضمن ما يلي: (1) لديك الحق القانوني في استخدام أي بطاقة أو طريقة (طرق) دفع أخرى فيما يتعلق بأي عملية شراء؛ وأن (2) المعلومات مثل رقم الهاتف المحمول والاسم وعنوان البريد الإلكتروني صالحة وكذلك تفاصيل الدفع والعنوان التي تزودنا بها صحيحة وكاملة.",
+            "‌ج. يجوز لنا استخدام خدمات الطرف الثالث لغرض تسهيل الدفع وإكمال عمليات الشراء والشحن. من خلال تقديم معلوماتك، فإنك تمنحنا الحق في تقديم المعلومات إلى هذه الأطراف الثالثة الخاضعة لسياسة الخصوصية الخاصة بنا.",
           ],
         },
         {
           type: "paragraph_sm",
           text: [
-            "We reserve the right to refuse or cancel your order at any time for reasons including but not limited to product or service unavailability, errors in the description or the price of the product or service, errors in your order or other reasons.",
+            "‌د. نحن نحتفظ بالحق في رفض أو إلغاء طلبك في أي وقت لأسباب تشمل على سبيل المثال لا الحصر عدم توفر المنتج أو الخدمة، أخطاء في وصف أو سعر المنتج أو الخدمة، خطأ في طلبك أو أسباب أخرى.",
           ],
         },
         {
           type: "paragraph",
           text: [
-            "We reserve the right to refuse or cancel your order if fraud, unauthorized or illegal transaction is suspected.",
+            "‌ه. نحن نحتفظ بالحق في رفض أو إلغاء طلبك في حالة الاشتباه في حدوث احتيال أو معاملة غير مصرح بها أو غير قانونية.",
           ],
         },
       ],
     },
     {
-      title: "4. Contests, Offers and Discount Coupons",
+      title: "٤. المسابقات والعروض وكوبونات الخصم",
       content: [
         {
           type: "paragraph",
           text: [
-            "Any contests or other promotions (collectively, “Promotions”) made available through the Service may be governed by rules that are separate from these Terms of Service. If you participate in any Promotions, please review the applicable rules as well as our Privacy Policy. We may use data for any contests or competitions to announce the winners. Offers cannot be used, transferred, or sold to any third party for commercial purposes. You may use one offer or discount per order.",
+            "قد تخضع أي مسابقات أو عروض ترويجية أخرى (يشار إليها مجتمعة باسم 'العروض الترويجية') التي يتم توفيرها من خلال الخدمة لقواعد منفصلة عن شروط الخدمة هذه. إذا شاركت في أي عروض ترويجية، يرجى مراجعة القواعد المعمول بها وكذلك سياسة الخصوصية الخاصة بنا. يجوز لنا استخدام البيانات لأي مسابقات أو مسابقات للإعلان عن الفائزين. لا يمكن استخدام/نقل/بيع العروض إلى أي طرف ثالث لأغراض تجارية. يمكنك استخدام عرض / خصم واحد لكل طلب.",
           ],
         },
       ],
     },
     {
-      title: "5. Orders (Process, Availability, Confirmation)",
+      title: "(٥. الطلبات (عملية الطلب، التوفر، والتأكيد",
       content: [
         {
           type: "bulletList",
@@ -561,7 +565,7 @@ function PrivacyPolicy() {
       <Layout>
         <div className="container-for-content-pages border-[1px] border-[#f9f9f9]">
           <h1 className=" fahkwang-light text-[28px] text-center leading-[1.5] tracking-[0.5] mb-[23px]">
-            Privacy Policy, Terms and Conditions
+            سياسية الخصوصية والشروط والأحكام
           </h1>
           <div className="px-[20px] md:p-0">
             {privacyPolicyContent.map((value, index) => {

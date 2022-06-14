@@ -9,7 +9,7 @@ import { data } from "autoprefixer";
 function HeadingAndText({ data }) {
   return (
     <>
-      <h3 className="work-regular text-[20px] pt-[20px] mt-[16px]">
+      <h3 className=" text-[20px] pt-[20px] mt-[16px]">
         {data.title}
       </h3>
       {data.content ? (
@@ -23,7 +23,7 @@ function HeadingAndText({ data }) {
                       <>
                         {valu.text.map((val, ind) => {
                           return (
-                            <p key={ind} className="work-light text-[#6b6e73] text-[15px] leading-[28px] tracking-[0.5px] pt-[15px]">
+                            <p key={ind} className=" text-[#6b6e73] text-[15px] leading-[28px] tracking-[0.5px] pt-[15px]">
                               {val}
                             </p>
                           );
@@ -43,7 +43,7 @@ function HeadingAndText({ data }) {
                               return (
                                 <li
                                   key={val}
-                                  className="work-light text-[#6b6e73] text-[15px] leading-[28px] tracking-[0.5px]"
+                                  className=" text-[#6b6e73] text-[15px] leading-[28px] tracking-[0.5px]"
                                 >
                                   {val}
                                 </li>
@@ -64,7 +64,7 @@ function HeadingAndText({ data }) {
                                   return (
                                     <p
                                       key={val}
-                                      className="work-regular text-[#6b6e73] text-[13px] leading-[1.5] pt-[15px]"
+                                      className=" text-[#6b6e73] text-[13px] leading-[1.5] pt-[15px]"
                                     >
                                       {valu.text}
                                     </p>
@@ -87,7 +87,7 @@ function HeadingAndText({ data }) {
                                           return (
                                             <td
                                               key={ind}
-                                              className="work-regular text-[13px] border-[#fbf1e8] border-t-[1px] border-b-[1px] text-center py-[16px] px-[10px]"
+                                              className=" text-[13px] border-[#fbf1e8] border-t-[1px] border-b-[1px] text-center py-[16px] px-[10px]"
                                             >
                                               {val}
                                             </td>
@@ -105,7 +105,7 @@ function HeadingAndText({ data }) {
                                                       return (
                                                         <td
                                                           key={index_a}
-                                                          className="work-regular text-[13px] border-[#fbf1e8] border-t-[1px] border-b-[1px] text-center py-[16px] px-[10px]"
+                                                          className=" text-[13px] border-[#fbf1e8] border-t-[1px] border-b-[1px] text-center py-[16px] px-[10px]"
                                                         >
                                                           {value_a}
                                                         </td>
@@ -133,7 +133,7 @@ function HeadingAndText({ data }) {
                                     {valu.text ? (
                                       <a
                                         href="#"
-                                        className="work-regular text-[13px] mt-[15px] block"
+                                        className=" text-[13px] mt-[15px] block"
                                       >
                                         {valu.text}
                                       </a>
@@ -159,7 +159,7 @@ function HeadingAndText({ data }) {
       ) : (
         ""
       )}
-      {/* <p className="work-regular text-[#6b6e73] text-[15px] leading-[28px] tracking-[0.5px] py-[15px]">
+      {/* <p className=" text-[#6b6e73] text-[15px] leading-[28px] tracking-[0.5px] py-[15px]">
        ffffff
       </p> */}
     </>

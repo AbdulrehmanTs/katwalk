@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Layout from "../components/layout/layout";
 import AdminPanelLayout from "../components/dashboard/admin-panel-layout/AdminPanelLayout";
@@ -74,6 +74,9 @@ function Orders() {
 
     openSelect("options" + optionsIndex, optionsIndex)
   };
+  useEffect(() => {
+    document.querySelector("body").style.direction = 'rtl'
+  }, [])
 
   return (
     <>

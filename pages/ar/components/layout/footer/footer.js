@@ -90,7 +90,7 @@ function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/ar/plivacypolicy">
+              <Link href="/ar/privacypolicy">
                 <a className="text-[#fff] text-[12px] tracking-[0.05em] uppercase cursor-pointer">
                   سياسة الخصوصية والشروط والأحكام
                 </a>

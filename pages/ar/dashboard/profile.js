@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Layout from "../components/layout/layout";
@@ -11,6 +11,10 @@ import ManageProfileDesigner_VAT_and_CR_No from "../components/dashboard/manage-
 import ManageProfileChangeYourEmail from "../components/dashboard/manage-profile-change-your-email/ManageProfileChangeYourEmail";
 
 function Profiles() {
+  useEffect(() => {
+    document.querySelector("body").style.direction = 'rtl'
+  }, [])
+
   const [profileData, setProfileData] = useState({
     basicInfo: [
       { name: "Your name", value: "Aliya Almusawi" },

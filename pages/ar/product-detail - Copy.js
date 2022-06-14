@@ -1,27 +1,30 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import Layout from "../components/layout/layout";
-import productImg1 from "../assets/images/products/orange-1/img3.jpg";
-import productImg2 from "../assets/images/products/product2.jpg";
-import productImg3 from "../assets/images/products/product3.jpg";
-import productImg4 from "../assets/images/products/product4.jpg";
-import img1 from "../assets/images/products/orange-1/img1.jpg";
-import img2 from "../assets/images/products/orange-1/img2.jpg";
-import img3 from "../assets/images/products/orange-1/img3.jpg";
-import img4 from "../assets/images/products/orange-1/img4.jpg";
-import Features from "../components/features/features";
-import HeadingAndText from "../components/heading-and-text/headingAndText";
-import ColorBox from "../components/color-box/colorBox";
+import Layout from "./components/layout/layout";
+import productImg1 from "../../assets/images/products/orange-1/img3.jpg";
+import productImg2 from "../../assets/images/products/product2.jpg";
+import productImg3 from "../../assets/images/products/product3.jpg";
+import productImg4 from "../../assets/images/products/product4.jpg";
+import img1 from "../../assets/images/products/orange-1/img1.jpg";
+import img2 from "../../assets/images/products/orange-1/img2.jpg";
+import img3 from "../../assets/images/products/orange-1/img3.jpg";
+import img4 from "../../assets/images/products/orange-1/img4.jpg";
+import Features from "./components/features/features";
+import HeadingAndText from "./components/heading-and-text/headingAndText";
+import ColorBox from "./components/color-box/colorBox";
 import { BsPlusLg, BsRulers, BsChevronDown } from "react-icons/bs";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { AiOutlinePlus } from "react-icons/ai";
-import ProductSlider from "../components/product-slider/product-slider";
-import OtherProducts from "../components/other-products/otherProducts";
-import styles from "../components/productDetails.module.css";
-import SizeGuideModal from "../components/size-guide-modal/SizeGuideModal";
-import MessageModal from "../components/message-modal/messageModal";
+import ProductSlider from "./components/product-slider/product-slider";
+import OtherProducts from "./components/other-products/otherProducts";
+import styles from "./components/productDetails.module.css";
+import SizeGuideModal from "./components/size-guide-modal/SizeGuideModal";
+import MessageModal from "./components/message-modal/messageModal";
 
 function ProductDetail() {
+  useEffect(() => {
+    document.querySelector("body").style.direction = 'rtl'
+  }, [])
   const productImages = [
     { image: img1 },
     { image: img2 },

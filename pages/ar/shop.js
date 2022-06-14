@@ -25,6 +25,7 @@ import ProductCard from "./components/product-card/productCard";
 import MessageBox from "./components/message-box/messageBox";
 import Link from "next/link";
 
+
 const otherProducts = [
   {
     img: productImg1,
@@ -76,6 +77,9 @@ const otherProducts = [
   },
 ];
 function Shop() {
+  useEffect(() => {
+    document.querySelector("body").style.direction = 'rtl'
+  }, [])
 
   return (
     <>

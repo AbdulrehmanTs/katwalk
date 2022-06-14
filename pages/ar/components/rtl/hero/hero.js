@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import logoSquare from "../../assets/images/logo/logo-square.png";
-import vat from "../../assets/images/logo/vat.png";
+import logoSquare from "../../../../../assets/images/logo/logo-square.png";
+import vat from "../../../../../assets/images/logo/vat.png";
 import styles from "./hero.module.css";
-import heroImage from "../../assets/images/hero-image.jpg";
-import allIcons from "../../assets/images/icons/all-icons.svg";
+import heroImage from "../../../../../assets/images/hero-image.jpg";
+import allIcons from "../../../../../assets/images/icons/all-icons.svg";
 import ImgLazyLoad from "../../img-lazy-load/img-lazy-load";
 // import ImgLazyLoad from "../img-lazy-load/img-lazy-load";
 

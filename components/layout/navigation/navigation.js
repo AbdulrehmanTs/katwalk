@@ -368,7 +368,7 @@ function Navigation() {
             </Link>
           </div>
           <div className="pl-[0px] pr-[18px] pb-[9px] order-1      sm:order-[unset] sm:pl-[5px] sm:pr-[10px] sm:pb-[4px]">
-            <a href="/ar" className="almarai-regular text-[13px] cursor-pointer">
+            <a href=" /ar" className="almarai-regular text-[13px] cursor-pointer">
               عربي
             </a>
           </div>

@@ -28,18 +28,9 @@ import img1 from "../assets/images/products/orange-1/img1.jpg";
 import img2 from "../assets/images/products/orange-1/img2.jpg";
 import img3 from "../assets/images/products/orange-1/img3.jpg";
 import img4 from "../assets/images/products/orange-1/img4.jpg";
-<<<<<<< HEAD
 import styles from "../components/designers.module.css";
 import Features from "../components/features/features";
 import ColorBox from "../components/color-box/colorBox";
-=======
-import { AiOutlinePlus } from "react-icons/ai";
-import styles from "../components/designers.module.css";
-import Features from "../components/features/features";
-import { IoShareSocialOutline } from "react-icons/io5";
-import ColorBox from "../components/color-box/colorBox";
-import { BsPlusLg, BsRulers, BsChevronDown } from "react-icons/bs";
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
 import OtherProducts from "../components/other-products/otherProducts";
 import ProductSlider from "../components/product-slider/product-slider";
 import HeadingAndText from "../components/heading-and-text/headingAndText";
@@ -48,10 +39,7 @@ import MessageModal from "../components/message-modal/messageModal";
 import ShopFilters from "../components/shop-filters/shopFilters";
 import ProductCard from "../components/product-card/productCard";
 import Link from "next/link";
-<<<<<<< HEAD
 import ImgLazyLoad from "../components/img-lazy-load/img-lazy-load";
-=======
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
 
 function Designers() {
   const designers = [
@@ -128,12 +116,8 @@ function Designers() {
                     <Link href="/shop/designer">
                       <a>
                         <div className="w-[100%] h-[100%] mb-[20px]">
-<<<<<<< HEAD
                           {/* <Image src={value.image} alt="image" /> */}
                           <ImgLazyLoad src={value.image} alt={"image"} classes={""} />
-=======
-                          <Image src={value.image} alt="image" />
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                         </div>
                         <p className="fwr text-[#000] text-[18px] mb-[10px]">
                           {value.name}

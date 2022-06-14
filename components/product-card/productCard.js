@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,23 +30,6 @@ function ProductCard({ data, newTag }) {
             <div className="w-[100%] max-h-[530px] relative     2xl:max-h-[unset]">
               <span className="image_container">
                 <ImgLazyLoad src={data.img} alt={"image"} classesName={""} />
-=======
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-
-function ProductCard({ data, newTag }) {
-  return (
-    <>
-      <Link href="/product-detail">
-        <div
-          className={`card cursor-pointer mt-[20px] mb-[20px] min-w-[49%] w-[49%]      sm:min-w-[24.4%] sm:w-[24.4%] md:min-w-[24.8%] md:w-[24.8%]`}
-        >
-          <a>
-            <div className="w-[100%] max-h-[530px] relative">
-              <span className="image_container">
-                <Image src={data.img} alt="image" />
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
               </span>
               {newTag == "none" ? (
                 ""
@@ -69,15 +51,10 @@ function ProductCard({ data, newTag }) {
               <p className="fwr text-[14px] text-[#adadad]">SAR {data.price}</p>
             </div>
           </a>
-<<<<<<< HEAD
         </Link>
       </div>
 
       {isLogin == true ? <MessageBox message={"Please login first"} /> : ""}
-=======
-        </div>
-      </Link>
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
     </>
   );
 }

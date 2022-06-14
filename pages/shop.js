@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from "react";
-=======
-import React, { useState, useRef } from "react";
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
 import Image from "next/image";
 import Hero from "../components/hero/hero";
 import Layout from "../components/layout/layout";
@@ -16,18 +12,9 @@ import img1 from "../assets/images/products/orange-1/img1.jpg";
 import img2 from "../assets/images/products/orange-1/img2.jpg";
 import img3 from "../assets/images/products/orange-1/img3.jpg";
 import img4 from "../assets/images/products/orange-1/img4.jpg";
-<<<<<<< HEAD
 import styles from "../components/shop.module.css";
 import Features from "../components/features/features";
 import ColorBox from "../components/color-box/colorBox";
-=======
-import { AiOutlinePlus } from "react-icons/ai";
-import styles from "../components/shop.module.css";
-import Features from "../components/features/features";
-import { IoShareSocialOutline } from "react-icons/io5";
-import ColorBox from "../components/color-box/colorBox";
-import { BsPlusLg, BsRulers, BsChevronDown } from "react-icons/bs";
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
 import OtherProducts from "../components/other-products/otherProducts";
 import ProductSlider from "../components/product-slider/product-slider";
 import HeadingAndText from "../components/heading-and-text/headingAndText";
@@ -35,7 +22,6 @@ import SizeGuideModal from "../components/size-guide-modal/SizeGuideModal";
 import MessageModal from "../components/message-modal/messageModal";
 import ShopFilters from "../components/shop-filters/shopFilters";
 import ProductCard from "../components/product-card/productCard";
-<<<<<<< HEAD
 import MessageBox from "../components/message-box/messageBox";
 import Link from "next/link";
 
@@ -90,77 +76,19 @@ const otherProducts = [
   },
 ];
 function Shop() {
- 
-=======
-import Link from "next/link";
 
-function Shop() {
-  const otherProducts = [
-    {
-      img: productImg1,
-      companyName: "Nada Line",
-      productName: "Metallic Print Abaya",
-      price: "760",
-    },
-    {
-      img: productImg2,
-      companyName: "Nada Line",
-      productName: "Black Beaded Embroidery Abaya",
-      price: "1.125",
-    },
-    {
-      img: productImg3,
-      companyName: "Nada Line",
-      productName: "Crinkled Abaya with Printed Pattern",
-      price: "760",
-    },
-    {
-      img: productImg4,
-      companyName: "Nada Line",
-      productName: "Color Block Crinkled Abaya",
-      price: "760",
-    },
-    {
-      img: productImg2,
-      companyName: "Nada Line",
-      productName: "Black Beaded Embroidery Abaya",
-      price: "1.125",
-    },
-    {
-      img: productImg3,
-      companyName: "Nada Line",
-      productName: "Crinkled Abaya with Printed Pattern",
-      price: "760",
-    },
-    {
-      img: productImg1,
-      companyName: "Nada Line",
-      productName: "Metallic Print Abaya",
-      price: "760",
-    },
-    {
-      img: productImg2,
-      companyName: "Nada Line",
-      productName: "Black Beaded Embroidery Abaya",
-      price: "1.125",
-    },
-  ];
-
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
   return (
     <>
       <Layout>
         <div className="w-[100%] mt-[80px]">
           <ShopFilters />
         </div>
-<<<<<<< HEAD
         <div className="flex mb-[60px] justify-between flex-wrap px-[0px]      sm:px-[10px] md:px-0">
-=======
-        <div className="flex gap-x-[2px] mb-[60px] justify-center flex-wrap px-[0px]      sm:px-[10px] md:px-0">
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
-          {otherProducts.map((value, index) => {
-            return <ProductCard key={index} data={value} newTag={"none"} />;
-          })}
+          <div className="flex gap-x-[2px] mb-[60px] justify-center flex-wrap px-[0px]      sm:px-[10px] md:px-0">
+            {otherProducts.map((value, index) => {
+              return <ProductCard key={index} data={value} newTag={"none"} />;
+            })}
+          </div>
         </div>
       </Layout>
     </>

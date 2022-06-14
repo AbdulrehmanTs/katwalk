@@ -1,9 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-<<<<<<< HEAD
-=======
-import Hero from "../components/hero/hero";
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
 import Layout from "../components/layout/layout";
 import productImg1 from "../assets/images/products/orange-1/img3.jpg";
 import productImg2 from "../assets/images/products/product2.jpg";
@@ -13,17 +9,8 @@ import img1 from "../assets/images/products/orange-1/img1.jpg";
 import img2 from "../assets/images/products/orange-1/img2.jpg";
 import img3 from "../assets/images/products/orange-1/img3.jpg";
 import img4 from "../assets/images/products/orange-1/img4.jpg";
-<<<<<<< HEAD
 import ColorBox from "../components/color-box/colorBox";
 import { BsChevronDown } from "react-icons/bs";
-=======
-import Features from "../components/features/features";
-import HeadingAndText from "../components/heading-and-text/headingAndText";
-import ColorBox from "../components/color-box/colorBox";
-import { BsPlusLg, BsRulers, BsChevronDown } from "react-icons/bs";
-import { IoShareSocialOutline } from "react-icons/io5";
-import { AiOutlinePlus } from "react-icons/ai";
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
 import ProductSlider from "../components/product-slider/product-slider";
 import OtherProducts from "../components/other-products/otherProducts";
 import styles from "../components/productDetails.module.css";
@@ -31,7 +18,6 @@ import SizeGuideModal from "../components/size-guide-modal/SizeGuideModal";
 import MessageModal from "../components/message-modal/messageModal";
 import MessageBox from "../components/message-box/messageBox";
 
-<<<<<<< HEAD
 const basicColors = [
   {
     name: "Orange",
@@ -90,9 +76,6 @@ function ProductDetail() {
   const [selectedBasicSize, setSelectedBasicSize] = useState("");
   const [selectedSheilaSize, setSelectedSheilaSize] = useState("");
 
-=======
-function ProductDetail() {
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
   const productImages = [
     { image: img1 },
     { image: img2 },
@@ -100,7 +83,6 @@ function ProductDetail() {
     { image: img4 },
   ];
 
-<<<<<<< HEAD
   const settingBasicColor = (selectedBasicColor) => {
     setBasicColor({ ...selectedBasicColor });
   };
@@ -122,11 +104,6 @@ function ProductDetail() {
 
   const [isVartiationsSelected, setIsVartiationsSelected] = useState(false);
 
-=======
-  const [itemAdded, setItemAdded] = useState("[]");
-  const [isSecureCheckout, setIsSecureCheckout] = useState("[]");
-
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
   const [togglerColorsDiv, settogglerColorsDiv] = useState([]);
   const [togglerColorsDivPlusIcon, settogglerColorsDivPlusIcon] = useState([]);
 
@@ -165,57 +142,6 @@ function ProductDetail() {
   const [togglerTab4, settogglerTab4] = useState([]);
   const [togglerTab4PlusIcon, settogglerTab4PlusIcon] = useState([]);
 
-<<<<<<< HEAD
-=======
-  const basicColor = [
-    {
-      name: "Orange",
-      colorCode: "bg-[#FFA500]",
-    },
-  ];
-  const sheilaColor = [
-    {
-      name: "Dodger Blue",
-      colorCode: "bg-[#1E90FF]",
-    },
-    {
-      name: "Orange",
-      colorCode: "bg-[#FFA500]",
-    },
-    {
-      name: "red",
-      colorCode: "bg-[#ff0000]",
-    },
-  ];
-
-  const otherProducts = [
-    {
-      img: productImg1,
-      companyName: "Nada Line",
-      productName: "Metallic Print Abaya",
-      price: "760",
-    },
-    {
-      img: productImg2,
-      companyName: "Nada Line",
-      productName: "Black Beaded Embroidery Abaya",
-      price: "1.125",
-    },
-    {
-      img: productImg3,
-      companyName: "Nada Line",
-      productName: "Crinkled Abaya with Printed Pattern",
-      price: "760",
-    },
-    {
-      img: productImg4,
-      companyName: "Nada Line",
-      productName: "Color Block Crinkled Abaya",
-      price: "760",
-    },
-  ];
-
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
   const colorsDivToggler = () => {
     if (!togglerColorsDiv.includes("show-colors")) {
       settogglerColorsDiv(["show-colors"]);
@@ -301,10 +227,6 @@ function ProductDetail() {
     }
   };
   const toggleSizeGuideModal = () => {
-<<<<<<< HEAD
-=======
-    console.log("called");
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
     if (!togglerSizeGuideModal.includes("fading-in")) {
       setTogglerSizeGuideModal(["fading-in"]);
     } else {
@@ -539,7 +461,6 @@ function ProductDetail() {
   const [listColor, setListColor] = useState([1, 2, 3, 4, 5]);
   const ref = useRef(null);
 
-<<<<<<< HEAD
   const color = useRef("");
 
   const addToBag = () => {
@@ -552,29 +473,10 @@ function ProductDetail() {
       selectedSheilaSize == ""
     ) {
       setIsVartiationsSelected(true);
-      setTimeout(()=> setIsVartiationsSelected(false), 3000);
+      setTimeout(() => setIsVartiationsSelected(false), 3000);
     } else {
       setIsSecureCheckout(true);
     }
-=======
-  // const handleToggleClassListRef = (ref) => {
-  // console.log("handle");
-  // if (!ref.current) {
-  //   return;
-  // }
-  // if (!ref.current.classList.contains("color_selected")) {
-  //   ref.current.classList.add("color_selected");
-  // } else {
-  //   ref.current.classList.remove("color_selected");
-  //   ref.current = null;
-  // }
-  // };
-
-  const color = useRef("");
-
-  const addToBag = () => {
-    setItemAdded(true);
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
   };
 
   const closeItemAdded = () => {
@@ -598,11 +500,7 @@ function ProductDetail() {
             <div className="max-w-[1090p x] w-[100%] product-slider-div     lg:w-[68%]">
               <ProductSlider data={productImages} />
             </div>
-<<<<<<< HEAD
             <div className="product-detail-content-div min-w-[500p x] w-[100%] pl-[45px] pr-[60px]     lg:w-[32%]">
-=======
-            <div className="product-detail-content-div min-w-[500p x] w-[100%] pl-[50px] pr-[75px]     lg:w-[32%]">
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
               <p className="work-regular text-[#1b1b28] text-[12px] tracking-[0.1em] mt-[20px] mb-[10px] hidden      md:block">
                 Home / Abaya / Multicolor Printed Abaya with Fringe Detail
               </p>
@@ -630,7 +528,6 @@ function ProductDetail() {
                       Orange
                     </p>
                   </div>
-<<<<<<< HEAD
                   <div className="w-[20px] h-[20px] relative">
                     {/* <AiOutlinePlus
                       className={`${togglerColorsDivPlusIcon.join(
@@ -642,14 +539,6 @@ function ProductDetail() {
                         " "
                       )} taPoint3 w-[20px] h-[20px] cross down`}
                     ></div>
-=======
-                  <div>
-                    <AiOutlinePlus
-                      className={`${togglerColorsDivPlusIcon.join(
-                        " "
-                      )} taPoint3 text-[22px] text-[#757575]`}
-                    ></AiOutlinePlus>
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                   </div>
                 </div>
                 <div
@@ -660,7 +549,6 @@ function ProductDetail() {
                   <h6 className="fwb text-[#1b1b28] text-[13px] pt-[10px] pb-[10px]">
                     Color:
                   </h6>
-<<<<<<< HEAD
                   <div className="flex gap-x-[3px] pl-[2px] h-[110px]">
                     {basicColors.map((value, index) => {
                       return (
@@ -672,11 +560,6 @@ function ProductDetail() {
                           colorType={"basicColor"}
                         />
                       );
-=======
-                  <div className="flex gap-x-[3px] pl-[2px]">
-                    {basicColor.map((value, index) => {
-                      return <ColorBox key={index} data={value} />;
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                     })}
                   </div>
                 </div>
@@ -696,7 +579,6 @@ function ProductDetail() {
                       select sheila color
                     </p>
                   </div>
-<<<<<<< HEAD
                   <div className="w-[20px] h-[20px] relative">
                     {/* <AiOutlinePlus
                       className={`${togglerSheilaColorsDivPlusIcon.join(
@@ -708,14 +590,6 @@ function ProductDetail() {
                         " "
                       )} taPoint3 w-[20px] h-[20px] cross down`}
                     ></div>
-=======
-                  <div>
-                    <AiOutlinePlus
-                      className={`${togglerSheilaColorsDivPlusIcon.join(
-                        " "
-                      )} taPoint3 text-[22px] text-[#757575]`}
-                    ></AiOutlinePlus>
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                   </div>
                 </div>
                 <div
@@ -730,7 +604,6 @@ function ProductDetail() {
                     {sheilaColor.map((value, index) => {
                       return (
                         <>
-<<<<<<< HEAD
                           <ColorBox
                             key={index}
                             data={value}
@@ -738,29 +611,6 @@ function ProductDetail() {
                             currectSelectedColor={sheila}
                             colorType={"sheilaColor"}
                           />
-=======
-                          <div
-                            key={index}
-                            className={`${styles.color_main_div} `}
-                          >
-                            <div
-                              className={` "w-[83px] m-[2px] color-selected "`}
-                              // onClick={(event) => {
-                              //   handleToggleClassListRef(ref);
-                              //   event.stopPropagation();
-                              //   ref.current = event.target;
-                              //   handleToggleClassListRef(ref);
-                              // }}
-                            >
-                              <div
-                                className={`w-[75px] h-[75px] ${value.colorCode} m-[3px]`}
-                              ></div>
-                              <p className="work-regular text-[12px] leading-[1.2] tracking-[0.5px] pt-[3px] pr-[5px] pb-[5px] pl-[5px] max-w-[81px]">
-                                {value.name}
-                              </p>
-                            </div>
-                          </div>
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                         </>
                       );
                     })}
@@ -770,28 +620,19 @@ function ProductDetail() {
 
               {/* size */}
               <div className="w-[100%]">
-<<<<<<< HEAD
                 <div className="w-[100%] flex justify-start items-center mb-[20px]">
-=======
-                <div className="w-[100%} flex justify-start items-center mb-[20px]">
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                   <div className="min-w-[60px] max-w-[60px]">
                     <h6 className="fwl text-[12px] mt-[-13px] mb-[2px] uppercase">
                       <span className="text-[#ff0032]">*</span>size:
                     </h6>
                   </div>
 
-<<<<<<< HEAD
                   <div className="pt-[3px] border-b-[1px] border-[#ededed] w-[100%] max-w-[100%] relative">
-=======
-                  <div className="pt-[3px] border-b-[1px] border-[#ededed] w-[100%] max-w-[235px] relative">
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                     <div
                       className="flex justify-between items-center"
                       onClick={() => sizeToggler()}
                     >
                       <p className="fwr h-[40px] leading-[40px] text-[11px] text-[#7e7e7e] capitalize">
-<<<<<<< HEAD
                         {selectedBasicSize && selectedBasicSize !== ""
                           ? selectedBasicSize
                           : "select size:"}
@@ -801,21 +642,12 @@ function ProductDetail() {
                         className={`text-[12px] ${togglerSizePlusIcon.join(
                           " "
                         )} taPoint3`}
-=======
-                        select size
-                      </p>
-
-                      <BsChevronDown
-                        className={`${togglerSizePlusIcon.join(" ")} taPoint3`}
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                       />
                     </div>
                     <div
-                      className={`${togglerSize.join(" ")} ${
-                        styles.variation_dropdowns
-                      } w-[100%] border-[#fbf1e8] border-[1px] border-b-[0] absolute bg-[#fff] z-[10] hidden`}
+                      className={`${togglerSize.join(" ")} ${styles.variation_dropdowns
+                        } w-[100%] border-[#fbf1e8] border-[1px] border-b-[0] absolute bg-[#fff] z-[10] hidden`}
                     >
-<<<<<<< HEAD
                       {selectSize.map((value) => {
                         return (
                           <Options
@@ -827,17 +659,6 @@ function ProductDetail() {
                           />
                         );
                       })}
-=======
-                      <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                        50
-                      </div>
-                      <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px] active-variation">
-                        52
-                      </div>
-                      <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                        54
-                      </div>
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                     </div>
                   </div>
                 </div>
@@ -852,17 +673,12 @@ function ProductDetail() {
                     </h6>
                   </div>
 
-<<<<<<< HEAD
                   <div className="pt-[3px] border-b-[1px] border-[#ededed] w-[100%] max-w-[100%] relative">
-=======
-                  <div className="pt-[3px] border-b-[1px] border-[#ededed] w-[100%] max-w-[235px] relative">
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                     <div
                       className="flex justify-between items-center"
                       onClick={() => sheilaLengthToggler()}
                     >
                       <p className="fwr h-[40px] leading-[40px] text-[11px] text-[#7e7e7e] capitalize">
-<<<<<<< HEAD
                         {selectedSheilaSize && selectedSheilaSize !== ""
                           ? selectedSheilaSize
                           : "select sheila length:"}
@@ -870,23 +686,14 @@ function ProductDetail() {
 
                       <BsChevronDown
                         className={`text-[12px] ${togglerSheilaLengthPlusIcon.join(
-=======
-                        select sheila length:
-                      </p>
-
-                      <BsChevronDown
-                        className={`${togglerSheilaLengthPlusIcon.join(
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                           " "
                         )} taPoint3`}
                       />
                     </div>
                     <div
-                      className={`${togglerSheilaLength.join(" ")} ${
-                        styles.variation_dropdowns
-                      } w-[100%] border-[#fbf1e8] border-[1px] border-b-[0] absolute bg-[#fff] z-[10] hidden`}
+                      className={`${togglerSheilaLength.join(" ")} ${styles.variation_dropdowns
+                        } w-[100%] border-[#fbf1e8] border-[1px] border-b-[0] absolute bg-[#fff] z-[10] hidden`}
                     >
-<<<<<<< HEAD
                       {selectSheilaLength.map((value) => {
                         return (
                           <Options
@@ -898,17 +705,6 @@ function ProductDetail() {
                           />
                         );
                       })}
-=======
-                      <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px] active-variation">
-                        200cm
-                      </div>
-                      <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                        170cm
-                      </div>
-                      <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
-                        150cm
-                      </div>
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                     </div>
                   </div>
                 </div>
@@ -927,21 +723,13 @@ function ProductDetail() {
                     </p>
                   </div>
                   <div className="flex slide-underline relative  cursor-pointer">
-<<<<<<< HEAD
                     {/* <BsRulers className="mr-[5px]"></BsRulers> */}
                     <div className="w-[21px] h-[19px] cursor-pointer mr-[5px] bgAllIcon bg-[left_-4px_top_-659px]"></div>
-=======
-                    <BsRulers className="mr-[5px]"></BsRulers>
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                     <p
                       className="work-regular text-[12px] uppercase"
                       onClick={() => toggleSizeGuideModal()}
                     >
-<<<<<<< HEAD
                       size guide
-=======
-                      size guideccc
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                     </p>
                     <div
                       className={`${togglerSizeGuideModal.join(" ")}  dnone`}
@@ -953,21 +741,12 @@ function ProductDetail() {
                   </div>
                 </div>
 
-<<<<<<< HEAD
-                <div  className={`${togglerAlterationDiv.join(
-                      " "
-                    )} w-[100%] h-[0] overflow-hidden mt-[15px] taPoint3`}>
+                <div className={`${togglerAlterationDiv.join(
+                  " "
+                )} w-[100%] h-[0] overflow-hidden mt-[15px] taPoint3`}>
                   {/* length */}
                   <div
                     className={`  taPoint3  overflow-hidde n`}
-=======
-                <div className="w-[100% mt-[15px]">
-                  {/* length */}
-                  <div
-                    className={`${togglerAlterationDiv.join(
-                      " "
-                    )} taPoint3 h-[0] overflow-hidden`}
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                   >
                     <div className="w-[100%} flex items-center mb-[20px]">
                       <div className="min-w-[60px] max-w-[60px]">
@@ -976,11 +755,7 @@ function ProductDetail() {
                         </h6>
                       </div>
 
-<<<<<<< HEAD
                       <div className="pt-[3px] border-b-[1px] border-[#ededed] w-[100%] max-w-[100%] relative">
-=======
-                      <div className="pt-[3px] border-b-[1px] border-[#ededed] w-[100%] max-w-[235px] relative">
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                         <div
                           className="flex justify-between items-center"
                           onClick={() => lengthToggler()}
@@ -996,9 +771,8 @@ function ProductDetail() {
                           />
                         </div>
                         <div
-                          className={`${togglerLength.join(" ")} ${
-                            styles.variation_dropdowns
-                          } w-[100%] border-[#fbf1e8] border-[1px] border-b-[0] absolute bg-[#fff] z-[10] hidden`}
+                          className={`${togglerLength.join(" ")} ${styles.variation_dropdowns
+                            } w-[100%] border-[#fbf1e8] border-[1px] border-b-[0] absolute bg-[#fff] z-[10] hidden`}
                         >
                           <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
                             Select Length
@@ -1022,18 +796,9 @@ function ProductDetail() {
                       </div>
                     </div>
                   </div>
-<<<<<<< HEAD
                   {/* bust */}
                   <div
                     className={` taPoint3  overflow-hidde n`}
-=======
-
-                  {/* bust */}
-                  <div
-                    className={`${togglerAlterationDiv.join(
-                      " "
-                    )} taPoint3 h-[0] overflow-hidden`}
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                   >
                     <div className="w-[100%} flex items-center mb-[20px]">
                       <div className="min-w-[60px] max-w-[60px]">
@@ -1042,11 +807,7 @@ function ProductDetail() {
                         </h6>
                       </div>
 
-<<<<<<< HEAD
                       <div className="pt-[3px] border-b-[1px] border-[#ededed] w-[100%] max-w-[100%] relative">
-=======
-                      <div className="pt-[3px] border-b-[1px] border-[#ededed] w-[100%] max-w-[235px] relative">
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                         <div
                           className="flex justify-between items-center"
                           onClick={() => bustToggler()}
@@ -1062,9 +823,8 @@ function ProductDetail() {
                           />
                         </div>
                         <div
-                          className={`${togglerBust.join(" ")} ${
-                            styles.variation_dropdowns
-                          } w-[100%] border-[#fbf1e8] border-[1px] border-b-[0] absolute bg-[#fff] z-[10] hidden`}
+                          className={`${togglerBust.join(" ")} ${styles.variation_dropdowns
+                            } w-[100%] border-[#fbf1e8] border-[1px] border-b-[0] absolute bg-[#fff] z-[10] hidden`}
                         >
                           <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
                             Select Bust
@@ -1094,13 +854,7 @@ function ProductDetail() {
 
                   {/* sleeve */}
                   <div
-<<<<<<< HEAD
                     className={`  taPoint3  overflow-hidde n`}
-=======
-                    className={`${togglerAlterationDiv.join(
-                      " "
-                    )} taPoint3 h-[0] overflow-hidden`}
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                   >
                     <div className="w-[100%} flex items-center mb-[20px]">
                       <div className="min-w-[60px] max-w-[60px]">
@@ -1109,11 +863,7 @@ function ProductDetail() {
                         </h6>
                       </div>
 
-<<<<<<< HEAD
                       <div className="pt-[3px] border-b-[1px] border-[#ededed] w-[100%] max-w-[100%] relative">
-=======
-                      <div className="pt-[3px] border-b-[1px] border-[#ededed] w-[100%] max-w-[235px] relative">
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                         <div
                           className="flex justify-between items-center"
                           onClick={() => sleeveToggler()}
@@ -1129,9 +879,8 @@ function ProductDetail() {
                           />
                         </div>
                         <div
-                          className={`${togglerSleeve.join(" ")} ${
-                            styles.variation_dropdowns
-                          } w-[100%] border-[#fbf1e8] border-[1px] border-b-[0] absolute bg-[#fff] z-[10] hidden`}
+                          className={`${togglerSleeve.join(" ")} ${styles.variation_dropdowns
+                            } w-[100%] border-[#fbf1e8] border-[1px] border-b-[0] absolute bg-[#fff] z-[10] hidden`}
                         >
                           <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
                             Select Sleeve
@@ -1427,12 +1176,8 @@ function ProductDetail() {
 
               <div className="flex justify-end">
                 <div className="share-icon-div w-[34px] h-[34px] flex justify-center items-center cursor-pointer border-[1px] border-[#ededed] text-[20px]">
-<<<<<<< HEAD
                   {/* <IoShareSocialOutline /> */}
                   <div className="w-[21px] h-[19px] cursor-pointer relative z-4 bgAllIcon bg-[left_-47px_top_-260px]"></div>
-=======
-                  <IoShareSocialOutline />
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
                 </div>
               </div>
             </div>
@@ -1441,7 +1186,6 @@ function ProductDetail() {
           <OtherProducts data={otherProducts} />
         </div>
 
-<<<<<<< HEAD
         {itemAdded == true ? (
           <MessageModal
             purpose={"item-added"}
@@ -1463,18 +1207,10 @@ function ProductDetail() {
         {/* <MessageBox /> */}
       </Layout>
       {isVartiationsSelected == true ? <MessageBox message={"Please choose all the options"} /> : ""}
-=======
-        {itemAdded == true ? <MessageModal purpose={"item-added"} closeItemAdded={closeItemAdded} proceedToCheckout={proceedToCheckout} /> : ""}
-        {isSecureCheckout == true ? <MessageModal purpose={"secure-checkout"} closeProceedToCheckout={closeProceedToCheckout} /> : ""}
-
-        {/* <MessageBox /> */}
-      </Layout>
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
     </>
   );
 }
 
-<<<<<<< HEAD
 function Options({
   data,
   variationName,
@@ -1484,9 +1220,8 @@ function Options({
   return (
     <div
       key={data + 1}
-      className={` ${
-        currectSelectedValue == data ? "active-variation" : ""
-      } fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px] `}
+      className={` ${currectSelectedValue == data ? "active-variation" : ""
+        } fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px] `}
       onClick={() => settingVariation(data, variationName)}
     >
       {data}
@@ -1494,6 +1229,4 @@ function Options({
   );
 }
 
-=======
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
 export default ProductDetail;

@@ -252,6 +252,7 @@ function AddNewProduct() {
     openCategorySelect();
   };
   const [newProductDescription, setNewProductDescription] = useState(productDescription)
+
   function optionsHandler(e, values, value) {
     let current = productDescription.find((item) => item.name == value.name)
     console.log(current)
@@ -635,7 +636,7 @@ function AddNewProduct() {
     for (let i = 0; i < _productCategories.length; i++) {
       __productCategories.push(filterName[i].toLowerCase())
     }
-    const startsWithN = __productCategories.filter((country) => country.startsWith(event.target.value.toLowerCase()));
+    const startsWithN = __productCategories.filter((country) => country.startsWith(e.target.value.toLowerCase()));
     setProductCategoriesForShow(startsWithN);
   };
 

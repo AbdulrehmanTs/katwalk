@@ -21,7 +21,6 @@ function TextImgSection({ data }) {
           </div>
         </div>
         <div className="w-[100%]">
-<<<<<<< HEAD
           <Link href={data.type && data.type == "designer" ? "/designers" : "/shop"}>
             <a>
               <span className="image_container">
@@ -30,11 +29,6 @@ function TextImgSection({ data }) {
               </span>
             </a>
           </Link>
-=======
-          <span className="image_container">
-            <Image src={data.img} alt="image" />
-          </span>
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
         </div>
       </section>
     </>

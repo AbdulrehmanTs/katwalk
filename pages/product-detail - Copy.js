@@ -199,10 +199,6 @@ function ProductDetail() {
     }
   };
   const toggleSizeGuideModal = () => {
-<<<<<<< HEAD
-=======
-    console.log("called");
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
     if (!togglerSizeGuideModal.includes("fading-in")) {
       setTogglerSizeGuideModal(["fading-in"]);
     } else {
@@ -592,9 +588,8 @@ function ProductDetail() {
                       />
                     </div>
                     <div
-                      className={`${togglerSize.join(" ")} ${
-                        styles.variation_dropdowns
-                      } w-[100%] border-[#fbf1e8] border-[1px] border-b-[0] absolute bg-[#fff] z-[10] hidden`}
+                      className={`${togglerSize.join(" ")} ${styles.variation_dropdowns
+                        } w-[100%] border-[#fbf1e8] border-[1px] border-b-[0] absolute bg-[#fff] z-[10] hidden`}
                     >
                       <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px]">
                         50
@@ -635,9 +630,8 @@ function ProductDetail() {
                       />
                     </div>
                     <div
-                      className={`${togglerSheilaLength.join(" ")} ${
-                        styles.variation_dropdowns
-                      } w-[100%] border-[#fbf1e8] border-[1px] border-b-[0] absolute bg-[#fff] z-[10] hidden`}
+                      className={`${togglerSheilaLength.join(" ")} ${styles.variation_dropdowns
+                        } w-[100%] border-[#fbf1e8] border-[1px] border-b-[0] absolute bg-[#fff] z-[10] hidden`}
                     >
                       <div className="fwr text-[13px] text-[#1b1b28] border-b-[1px] border-b-[#fbf1e8] h-[48px] leading-[48px] pl-[7px] active-variation">
                         200cm
@@ -654,7 +648,7 @@ function ProductDetail() {
               </div>
 
               {/* any alteration */}
-             
+
 
               {/* toggle tabs */}
               {/* tab1 */}

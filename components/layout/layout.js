@@ -4,7 +4,6 @@ import Footer from "./footer/footer";
 import Navigation from "./navigation/navigation";
 
 const Layout = ({ children, footer }) => {
-<<<<<<< HEAD
   const [scrollTop, setScrollTop] = useState("");
 
   useEffect(() => {
@@ -17,8 +16,6 @@ const Layout = ({ children, footer }) => {
     });
   }, []);
 
-=======
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
   return (
     <>
       {footer == "none" ? (
@@ -30,10 +27,7 @@ const Layout = ({ children, footer }) => {
         <>
           <Navigation />
           {children}
-<<<<<<< HEAD
           {scrollTop == true ? <GoToTop /> : ""}
-=======
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
           <Footer />
         </>
       )}

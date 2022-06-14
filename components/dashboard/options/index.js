@@ -17,11 +17,16 @@ export default function Options({ value, index, setOption }) {
     );
 
     const [options, setOptions] = useState([])
+
     function optionsHandler(e, values) {
-        let text = e.target.value.toUpperCase()
-        const items = values.filter((item) => item.startsWith(text))
-        setOptions(items)
-        console.log(value)
+        let _productOptions = values;
+        let __productOptions = [];
+        for (let i = 0; i < _productOptions.length; i++) {
+            __productOptions.push(values[i].toLowerCase())
+        }
+        const matched = __productOptions.filter((item) => item.startsWith(e.target.value.toLowerCase()));
+
+        setOptions(matched);
     }
 
     return (

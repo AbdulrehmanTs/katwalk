@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import logoSquare from "../../assets/images/logo/logo-square.png";
 import vat from "../../assets/images/logo/vat.png";
-<<<<<<< HEAD
 // import styles from "./sizeGuideModal.module.css";
 import sizeGuideModalImage from "../../assets/images/hero-image.jpg";
 import sizGuide from "../../assets/images/size-guide.jpg";
@@ -11,22 +10,7 @@ import {
 } from "react-icons/io5";
 import ImgLazyLoad from "../img-lazy-load/img-lazy-load";
 
-function SizeGuideModal({toggleSizeGuideModal}) {
-=======
-import styles from "./SizeGuideModal.module.css";
-import sizeGuideModalImage from "../../assets/images/hero-image.jpg";
-import sizGuide from "../../assets/images/size-guide.jpg";
-import {
-  IoBagOutline,
-  IoSearchOutline,
-  IoHeartOutline,
-  IoPersonOutline,
-  IoChevronDown,
-  IoCloseOutline,
-} from "react-icons/io5";
-
 function SizeGuideModal({ toggleSizeGuideModal }) {
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
   return (
     <>
       <div className="fixed top-0 left-0 bottom-0 right-0 bg-[#00000087] w-[100%] h-[100%] z-[30] flex justify-center items-center">
@@ -34,12 +18,8 @@ function SizeGuideModal({ toggleSizeGuideModal }) {
           <IoCloseOutline className="absolute text-[25px] right-[17px] top-[20px] z-[25]" onClick={toggleSizeGuideModal} />
           <div className="overflow-auto max-h-[82vh] pb-[20px]">
             <span className="image_container">
-<<<<<<< HEAD
               {/* <Image src={sizGuide} alt="image" /> */}
               <ImgLazyLoad src={sizGuide} alt={"image"} classes={""} />
-=======
-              <Image src={sizGuide} alt="image" />
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
             </span>
           </div>
         </div>

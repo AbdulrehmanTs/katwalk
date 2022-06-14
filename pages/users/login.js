@@ -9,37 +9,26 @@ import loginBgImgMob from "../../assets/images/login-bg-mob.jpg";
 import Features from "../../components/features/features";
 import HeadingAndText from "../../components/heading-and-text/headingAndText";
 import styles from "../../components/login.module.css";
-<<<<<<< HEAD
 import ImgLazyLoad from "../../components/img-lazy-load/img-lazy-load";
-=======
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
 
 function Login() {
   return (
 
-    <Layout footer={"none"}> 
+    <Layout footer={"none"}>
       {/* object-position: 'top' */}
       <div
         className={`${styles.login_main_div} overflow-hidden relative w-[100%] pt-[50px] flex justify-end items-start `}
       >
         <div className={`${styles.login_bg_img_div} absolute w-[100%] h-[100%] z-[-1] hidden     sm:block`}>
           <span className="image_container ">
-<<<<<<< HEAD
             {/* <Image src={loginBgImg} alt="image" />  */}
             <ImgLazyLoad src={loginBgImg} alt={"image"} classes={''} />
-=======
-            <Image src={loginBgImg} alt="image" /> 
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
           </span>
         </div>
         <div className={`${styles.login_bg_img_div} absolute w-[100%] h-[100%] z-[-1] block      sm:hidden`}>
-          <span className="image_container "> 
-<<<<<<< HEAD
+          <span className="image_container ">
             {/* <Image src={loginBgImgMob} alt="image" /> */}
             <ImgLazyLoad src={loginBgImgMob} alt={"image"} classes={''} />
-=======
-            <Image src={loginBgImgMob} alt="image" />
->>>>>>> 6e4b02b2d51ced4251cf0c4534fe00d77855d238
           </span>
         </div>
         <div className="w-[100%] mx-auto h-[210px] bg-[#000000bf] p-[25px] mt-[130px] ml-[15px] mr-[15px]     sm:ml-[50px] sm:mr-[50px] sm:w-[90%] lg:w-[34%] lg:mr-[60px]">

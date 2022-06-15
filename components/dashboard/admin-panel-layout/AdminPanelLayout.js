@@ -1,8 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
-import GoToTop from "../../go-to-top/Go-to-top";
 import styles from "./AdminPanelLayout.module.css";
-import SideBar from "./sidebar/SideBar";
 import BottomBar from "./bottom-bar/BottomBar";
+import SideBar from "./sidebar/sideBar";
 
 const AdminPanelLayout = ({ children, footer, active }) => {
   const [showSideBar, setShowSideBar] = useState(false);

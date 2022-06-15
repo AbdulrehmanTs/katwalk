@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import AllUsedIcons from "../components/allUsedIcons";
+import AllUsedIcons from "../components/AllUsedIcons";
 import styles from "../styles/Home.module.css";
 import About from "./about-us";
 import Checkout from "./checkout";

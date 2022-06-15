@@ -13,10 +13,10 @@ import {
   IoCloseOutline,
 } from "react-icons/io5";
 import DesignerFilter from "../designer-filter/designerFilter";
-import SizeFilter from "../size-filter/sizeFilter";
+import SizeFilter from "../size-filter/SizeFilter";
 import ColorFilter from "../color-filter/colorFilter";
 import PriceFilter from "../price-filter/priceFilter";
-import SortByFilter from "../sort-by-filter/sortByFilter";
+import SortByFilter from "../sort-by-filter/SortByFilter";
 
 const allDesigners = [
   {

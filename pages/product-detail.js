@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import Layout from "../components/layout/layout";
+import Layout from "../components/layout/Layout";
 import productImg1 from "../assets/images/products/orange-1/img3.jpg";
 import productImg2 from "../assets/images/products/product2.jpg";
 import productImg3 from "../assets/images/products/product3.jpg";
@@ -9,14 +9,14 @@ import img1 from "../assets/images/products/orange-1/img1.jpg";
 import img2 from "../assets/images/products/orange-1/img2.jpg";
 import img3 from "../assets/images/products/orange-1/img3.jpg";
 import img4 from "../assets/images/products/orange-1/img4.jpg";
-import ColorBox from "../components/color-box/colorBox";
+import ColorBox from "../components/color-box/ColorBox";
 import { BsChevronDown } from "react-icons/bs";
-import ProductSlider from "../components/product-slider/product-slider";
-import OtherProducts from "../components/other-products/otherProducts";
+import ProductSlider from "../components/product-slider/Product-slider";
+import OtherProducts from "../components/other-products/OtherProducts";
 import styles from "../components/productDetails.module.css";
 import SizeGuideModal from "../components/size-guide-modal/SizeGuideModal";
-import MessageModal from "../components/message-modal/messageModal";
-import MessageBox from "../components/message-box/messageBox";
+import MessageModal from "../components/message-modal/MessageModal";
+import MessageBox from "../components/message-box/MessageBox";
 
 const basicColors = [
   {

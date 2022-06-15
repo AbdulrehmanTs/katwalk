@@ -1,15 +1,15 @@
 import React from "react";
-import Hero from "../components/hero/hero";
-import Layout from "../components/layout/layout";
-import ShopByCategory from "../components/shop-by-category/shopByCategory";
-import TextImgSection from "../components/text-img-section/textImgSection";
+import Hero from "../components/hero/Hero";
+import Layout from "../components/layout/Layout";
+import ShopByCategory from "../components/shop-by-category/ShopByCategory";
+import TextImgSection from "../components/text-img-section/TextImgSection";
 import katwalkBag from "../assets/images/designers/katwalk-bag.jpg";
-import Features from "../components/features/features";
-import HeadingAndText from "../components/heading-and-text/headingAndText";
+import Features from "../components/features/Features";
+import HeadingAndText from "../components/heading-and-text/HeadingAndText";
 import Image from "next/image";
 import printImg from "../assets/images/categories/1print.jpg";
 import styles from '../components/about.module.css';
-import ImgLazyLoad from "../components/img-lazy-load/img-lazy-load";
+import ImgLazyLoad from "../components/img-lazy-load/Img-lazy-load";
 
 function About() {
   const privacyPolicyContent = [

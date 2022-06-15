@@ -1,15 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import Hero from "../components/hero/hero";
-import Layout from "../components/layout/layout";
-import ShopByCategory from "../components/shop-by-category/shopByCategory";
-import TextImgSection from "../components/text-img-section/textImgSection";
+import Hero from "../../../components/rtl/hero/Hero";
+import Layout from "../../../components/rtl/layout/Layout";
+import ShopByCategory from "../../../components/rtl/shop-by-category/ShopByCategory";
+import TextImgSection from "../../../components/rtl/text-img-section/TextImgSection";
 import loginBgImg from "../../../assets/images/login-bg.jpg";
 import loginBgImgMob from "../../../assets/images/login-bg-mob.jpg";
-import Features from "../components/features/features";
-import HeadingAndText from "../components/heading-and-text/headingAndText";
-import styles from "../components/login.module.css";
-import ImgLazyLoad from "../components/img-lazy-load/img-lazy-load";
+import Features from "../../../components/rtl/features/Features";
+import HeadingAndText from "../../../components/rtl/heading-and-text/HeadingAndText";
+import styles from "../../../components/rtl/login.module.css";
+import ImgLazyLoad from "../../../components/rtl/img-lazy-load/Img-lazy-load";
 
 function Login() {
   return (

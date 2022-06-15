@@ -1,38 +1,13 @@
 import React from "react";
-import Hero from "./components/hero/hero";
-import Layout from "./components/layout/layout";
-import ShopByCategory from "./components/shop-by-category/shopByCategory";
-import TextImgSection from "./components/text-img-section/textImgSection";
-import katwalkBag from "../../assets/images/designers/katwalk-bag.jpg";
-import Features from "./components/features/features";
-import HeadingAndText from "./components/heading-and-text/headingAndText";
-import Image from "next/image";
+import Layout from "../../components/rtl/layout/Layout";
 import printImg from "../../assets/images/categories/1print.jpg";
-import styles from './components/about.module.css';
-import ImgLazyLoad from "./components/img-lazy-load/img-lazy-load";
+import styles from '../../components/rtl/about.module.css';
+import ImgLazyLoad from "../../components/rtl/img-lazy-load/Img-lazy-load";
 import { useEffect } from "react";
 function About() {
   useEffect(() => {
     document.querySelector("body").style.direction = 'rtl'
   }, [])
-  const privacyPolicyContent = [
-    {
-      title: "1. Introduction",
-      content: [
-        {
-          type: "paragraph",
-          text: [
-            "Welcome to Katwalk, an online shopping marketplace that connects sellers with buyers and provides marketing services to create added value for designers in Saudi Arabia particular and in wider GCC. Katwalk provides an unmatched shopping experience for modern Arab women through its website ('Platform', 'katwalk', 'we', 'our', 'us')",
-            "'Katwalk' is a registered trademark owned by Fashion Platform Est., commercial registration number: 2062617591, and VAT registration number: 310401691200003",
-            "- These Terms of Service (“Terms”, “Terms of Service”) govern your use of our website/app located at  (together or individually “Service”) operated by Katwalk.",
-            "- Our Privacy Policy also governs your use of our Service and explains how we collect, safeguard and disclose information that results from your use of our website",
-            "- Your agreement with us includes these Terms and our Privacy Policy (“Agreements”). You acknowledge that you have read and understood the Agreements and agreed to be bound of them.",
-            "-If you do not agree with (or cannot comply with) the Agreements, then you may not use the Service. In order to find a solution, please let us know by emailing us at customercare@katwalk.sa. These Terms apply to all visitors, users and others who wish to access or use the Service.",
-          ],
-        },
-      ],
-    },
-  ];
 
   return (
     <>

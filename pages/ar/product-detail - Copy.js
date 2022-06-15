@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import Layout from "./components/layout/layout";
+import Layout from "../../components/rtl/layout/Layout";
 import productImg1 from "../../assets/images/products/orange-1/img3.jpg";
 import productImg2 from "../../assets/images/products/product2.jpg";
 import productImg3 from "../../assets/images/products/product3.jpg";
@@ -9,17 +9,17 @@ import img1 from "../../assets/images/products/orange-1/img1.jpg";
 import img2 from "../../assets/images/products/orange-1/img2.jpg";
 import img3 from "../../assets/images/products/orange-1/img3.jpg";
 import img4 from "../../assets/images/products/orange-1/img4.jpg";
-import Features from "./components/features/features";
-import HeadingAndText from "./components/heading-and-text/headingAndText";
-import ColorBox from "./components/color-box/colorBox";
+import Features from "../../components/rtl/features/Features";
+import HeadingAndText from "../../components/rtl/heading-and-text/HeadingAndText";
+import ColorBox from "../../components/rtl/color-box/colorBox";
 import { BsPlusLg, BsRulers, BsChevronDown } from "react-icons/bs";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { AiOutlinePlus } from "react-icons/ai";
-import ProductSlider from "./components/product-slider/product-slider";
-import OtherProducts from "./components/other-products/otherProducts";
-import styles from "./components/productDetails.module.css";
-import SizeGuideModal from "./components/size-guide-modal/SizeGuideModal";
-import MessageModal from "./components/message-modal/messageModal";
+import ProductSlider from "../../components/rtl/product-slider/Product-slider";
+import OtherProducts from "../../components/rtl/other-products/OtherProducts";
+import styles from "../../components/rtl/productDetails.module.css";
+import SizeGuideModal from "../../components/rtl/size-guide-modal/SizeGuideModal";
+import MessageModal from "../../components/rtl/message-modal/MessageModal";
 
 function ProductDetail() {
   useEffect(() => {

@@ -1,12 +1,11 @@
 import React from "react";
-import Hero from "../components/hero/hero";
-import Layout from "../components/layout/layout";
-import ShopByCategory from "../components/shop-by-category/shopByCategory";
-import TextImgSection from "../components/text-img-section/textImgSection";
+import Hero from "../components/hero/Hero";
+import Layout from "../components/layout/Layout";
+import ShopByCategory from "../components/shop-by-category/ShopByCategory";
+import TextImgSection from "../components/text-img-section/TextImgSection";
 import katwalkBag from "../assets/images/designers/katwalk-bag.jpg";
 import bestSellingProduct from "../assets/images/best-selling/best-selling-product.jpg";
-import Features from "../components/features/features";
-import allIcons from "../assets/images/icons/all-icons.svg";
+import Features from "../components/features/Features";
 
 function HomePage() {
   const designerData = {

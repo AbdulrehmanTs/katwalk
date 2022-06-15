@@ -43,8 +43,7 @@ function SortByFilterItem({
   filterName,
   currectSelected,
 }) {
-  console.log("currectSelected", currectSelected);
-  console.log("data", data);
+
   return (
     <>
       {/* ${styles.active} */}

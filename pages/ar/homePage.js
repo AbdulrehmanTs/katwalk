@@ -1,11 +1,11 @@
 import React from "react";
-import Hero from "./components/hero/hero";
-import Layout from "./components/layout/layout";
-import ShopByCategory from "./components/shop-by-category/shopByCategory";
-import TextImgSection from "./components/text-img-section/textImgSection";
+import Hero from "../../components/rtl/hero/Hero";
+import Layout from "../../components/rtl/layout/Layout";
+import ShopByCategory from "../../components/rtl/shop-by-category/ShopByCategory";
+import TextImgSection from "../../components/rtl/text-img-section/TextImgSection";
 import katwalkBag from "../../assets/images/designers/katwalk-bag.jpg";
 import bestSellingProduct from "../../assets/images/best-selling/best-selling-product.jpg";
-import Features from "./components/features/features";
+import Features from "../../components/rtl/features/Features";
 import allIcons from "../../assets/images/icons/all-icons.svg";
 import { useEffect } from "react";
 function HomePage() {

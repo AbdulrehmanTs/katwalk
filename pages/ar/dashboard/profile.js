@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Layout from "../components/layout/layout";
-import HeadingBar from "../components/heading-bar/HeadingBar";
-import AdminPanelLayout from "../components/dashboard/admin-panel-layout/AdminPanelLayout";
-import ManageProfileBasicInfo from "../components/dashboard/manage-profile-basic-info/ManageProfileBasicInfo";
-import ManageProfileAddress from "../components/dashboard/manage-profile-address/ManageProfileAddress";
-import ManageProfilePaymentSetting from "../components/dashboard/manage-profile-payment-setting/ManageProfilePaymentSetting";
-import ManageProfileDesigner_VAT_and_CR_No from "../components/dashboard/manage-profile-designer-vat-and-cr-no/ManageProfileDesigner_VAT_and_CR_No";
-import ManageProfileChangeYourEmail from "../components/dashboard/manage-profile-change-your-email/ManageProfileChangeYourEmail";
+import Layout from "../../../components/rtl/layout/Layout";
+import HeadingBar from "../../../components/rtl/heading-bar/HeadingBar";
+import AdminPanelLayout from "../../../components/rtl/dashboard/admin-panel-layout/AdminPanelLayout";
+import ManageProfileBasicInfo from "../../../components/rtl/dashboard/manage-profile-basic-info/ManageProfileBasicInfo";
+import ManageProfileAddress from "../../../components/rtl/dashboard/manage-profile-address/ManageProfileAddress";
+import ManageProfilePaymentSetting from "../../../components/rtl/dashboard/manage-profile-payment-setting/ManageProfilePaymentSetting";
+import ManageProfileDesigner_VAT_and_CR_No from "../../../components/rtl/dashboard/manage-profile-designer-vat-and-cr-no/ManageProfileDesigner_VAT_and_CR_No";
+import ManageProfileChangeYourEmail from "../../../components/rtl/dashboard/manage-profile-change-your-email/ManageProfileChangeYourEmail";
 
 function Profiles() {
   useEffect(() => {

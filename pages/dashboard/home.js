@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Layout from "../../components/layout/layout";
+import Layout from "../../components/layout/Layout";
 import AdminPanelLayout from "../../components/dashboard/admin-panel-layout/AdminPanelLayout";
 import TitleAndTableCard from "../../components/dashboard/title-and-table-card/TitleAndTableCard";
 import TableHeader from "../../components/dashboard/table-header/TableHeader";
@@ -163,30 +163,28 @@ function AdminPanel() {
 function StatusCard({ data, index }) {
   return (
     <div
-      className={`w-[100%] h-[auto] ${
-        index == 0
+      className={`w-[100%] h-[auto] ${index == 0
           ? "bg-[#609cde]"
           : index == 1
-          ? "bg-[#e5488a]"
-          : index == 2
-          ? "bg-[#624ebc]"
-          : index == 3
-          ? "bg-[#609cde]"
-          : ""
-      } mb-[1.5rem] rounded-[0.3rem]`}
+            ? "bg-[#e5488a]"
+            : index == 2
+              ? "bg-[#624ebc]"
+              : index == 3
+                ? "bg-[#609cde]"
+                : ""
+        } mb-[1.5rem] rounded-[0.3rem]`}
     >
       <div
-        className={`${
-          index == 0
+        className={`${index == 0
             ? styles.bg_grad_1
             : index == 1
-            ? styles.bg_grad_2
-            : index == 2
-            ? styles.bg_grad_3
-            : index == 3
-            ? styles.bg_grad_4
-            : ""
-        } text-white rounded-lg mb- 4 overflow-hidden`}
+              ? styles.bg_grad_2
+              : index == 2
+                ? styles.bg_grad_3
+                : index == 3
+                  ? styles.bg_grad_4
+                  : ""
+          } text-white rounded-lg mb- 4 overflow-hidden`}
       >
         <div className="px-[1rem] pt-[1rem]">
           <div className="fwb text-[14px]">

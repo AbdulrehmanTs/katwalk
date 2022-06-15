@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Layout from "../components/layout/layout";
-import AdminPanelLayout from "../components/dashboard/admin-panel-layout/AdminPanelLayout";
-import TitleAndTableCard from "../components/dashboard/title-and-table-card/TitleAndTableCard";
-import TableHeader from "../components/dashboard/table-header/TableHeader";
-import TwoColTableWithHeading from "../components/dashboard/two-col-table-with-heading/TwoColTableWithHeading";
-import CardBody from "../components/dashboard/card-body/CardBody";
-import HeadingBar from "../components/heading-bar/HeadingBar";
-import styles from "../components/WithdrawRequests.module.css";
-import Modal from "../components/dashboard/modal/Modal";
+import Layout from "../../../components/rtl/layout/Layout";
+import AdminPanelLayout from "../../../components/rtl/dashboard/admin-panel-layout/AdminPanelLayout";
+import TitleAndTableCard from "../../../components/rtl/dashboard/title-and-table-card/TitleAndTableCard";
+import TableHeader from "../../../components/rtl/dashboard/table-header/TableHeader";
+import TwoColTableWithHeading from "../../../components/rtl/dashboard/two-col-table-with-heading/TwoColTableWithHeading";
+import CardBody from "../../../components/rtl/dashboard/card-body/CardBody";
+import HeadingBar from "../../../components/rtl/heading-bar/HeadingBar";
+import styles from "../../../components/rtl/WithdrawRequests.module.css";
+import Modal from "../../../components/rtl/dashboard/modal/Modal";
 
 const productsData = {
   headings: ["#", "date", "amount", "status", "message"],

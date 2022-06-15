@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import Layout from "../components/layout/layout";
-import AdminPanelLayout from "../components/dashboard/admin-panel-layout/AdminPanelLayout";
-import TitleAndTableCard from "../components/dashboard/title-and-table-card/TitleAndTableCard";
-import TableHeader from "../components/dashboard/table-header/TableHeader";
-import styles from "../components/Pickup.module.css";
+import Layout from "../../../components/rtl/layout/Layout";
+import AdminPanelLayout from "../../../components/rtl/dashboard/admin-panel-layout/AdminPanelLayout";
+import TitleAndTableCard from "../../../components/rtl/dashboard/title-and-table-card/TitleAndTableCard";
+import TableHeader from "../../../components/rtl/dashboard/table-header/TableHeader";
+import styles from "../../../components/rtl/Pickup.module.css";
 
 const filters = [
   {

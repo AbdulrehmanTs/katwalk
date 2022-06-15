@@ -30,7 +30,7 @@ import img3 from "../../assets/images/products/orange-1/img3.jpg";
 import img4 from "../../assets/images/products/orange-1/img4.jpg";
 import styles from "../../components/rtl/designers.module.css";
 import Features from "../../components/rtl/features/Features";
-import ColorBox from "../../components/rtl/color-box/colorBox";
+import ColorBox from "../../components/rtl/color-box/ColorBox";
 import OtherProducts from "../../components/rtl/other-products/OtherProducts";
 import ProductSlider from "../../components/rtl/product-slider/Product-slider";
 import HeadingAndText from "../../components/rtl/heading-and-text/HeadingAndText";

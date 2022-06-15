@@ -6,7 +6,7 @@ import styles from "./hero.module.css";
 import heroImage from "../../assets/images/hero-image.jpg";
 import allIcons from "../../assets/images/icons/all-icons.svg";
 import ImgLazyLoad from "../img-lazy-load/Img-lazy-load";
-// import ImgLazyLoad from "../img-lazy-load/img-lazy-load";
+// import ImgLazyLoad from "../img-lazy-load/Img-lazy-load";
 
 function Hero() {
   return (

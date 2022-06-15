@@ -9,7 +9,7 @@ import img1 from "../../assets/images/products/orange-1/img1.jpg";
 import img2 from "../../assets/images/products/orange-1/img2.jpg";
 import img3 from "../../assets/images/products/orange-1/img3.jpg";
 import img4 from "../../assets/images/products/orange-1/img4.jpg";
-import ColorBox from "../../components/rtl/color-box/colorBox";
+import ColorBox from "../../components/rtl/color-box/ColorBox";
 import { BsChevronDown } from "react-icons/bs";
 import ProductSlider from "../../components/rtl/product-slider/Product-slider";
 import OtherProducts from "../../components/rtl/other-products/OtherProducts";

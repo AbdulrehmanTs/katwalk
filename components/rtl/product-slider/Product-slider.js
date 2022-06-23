@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import allIcons from "../../../assets/images/icons/all-icons.svg";
-import ImgLazyLoad from "../img-lazy-load/Img-lazy-load";
+import ImgLazyLoad from "../img-lazy-load/ImgLazyLoad";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -38,8 +38,8 @@ function ProductSlider({ data }) {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 2,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SamplePrevArrow />,
+    prevArrow: <SampleNextArrow />,
     responsive: [
       {
         breakpoint: 640,
@@ -54,7 +54,7 @@ function ProductSlider({ data }) {
   return (
     <>
       <div className="relative">
-        <div className="my-icon heart-for-product-detail w-[25px] h-[25px] cursor-pointer absolute right-[14px] top-[6px] z-[1] bgAllIcon bg-[left_-3px_top_-69px]"></div>
+        <div className="my-icon heart-for-product-detail w-[25px] h-[25px] cursor-pointer absolute left-[14px] top-[6px] z-[1] bgAllIcon bg-[left_-3px_top_-69px]"></div>
         <Slider {...settings}>
           {data.map((value, index) => {
             return (

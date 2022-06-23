@@ -1,8 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import Hero from "../../components/rtl/hero/Hero";
 import Layout from "../../components/rtl/layout/Layout";
-import ShopByCategory from "../../components/rtl/shop-by-category/ShopByCategory";
+import ShopByCategory from "../../components/rtl/shop-by-category/ShopByCateg";
 import TextImgSection from "../../components/rtl/text-img-section/TextImgSection";
 import productImg1 from "../../assets/images/products/orange-1/img3.jpg";
 import productImg2 from "../../assets/images/products/product2.jpg";
@@ -17,12 +16,11 @@ import Features from "../../components/rtl/features/Features";
 import ColorBox from "../../components/rtl/color-box/ColorBox";
 import OtherProducts from "../../components/rtl/other-products/OtherProducts";
 import ProductSlider from "../../components/rtl/product-slider/Product-slider";
-import HeadingAndText from "../../components/rtl/heading-and-text/HeadingAndText";
+import HeadingAndText from "../../components/rtl/HeadingAndText/HeadingAndText";
 import SizeGuideModal from "../../components/rtl/size-guide-modal/SizeGuideModal";
 import MessageModal from "../../components/rtl/message-modal/MessageModal";
 import ShopFilters from "../../components/rtl/shop-filters/ShopFilters";
 import ProductCard from "../../components/rtl/product-card/ProductCard";
-import MessageBox from "../../components/rtl/message-box/MessageBox";
 import Link from "next/link";
 
 

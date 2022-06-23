@@ -1,9 +1,8 @@
 import React, { useState, } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import MessageBox from "../message-box/MessageBox";
-import blurImg from "../../assets/images/blurimg-min.jpg";
-import ImgLazyLoad from "../img-lazy-load/Img-lazy-load";
+import ImgLazyLoad from "../img-lazy-load/ImgLazyLoad";
+import MSD_Box from "../msd-box/MSD_Box";
 
 function ProductCard({ data, newTag }) {
   const [isLogin, setIsLogin] = useState(false);
@@ -53,8 +52,7 @@ function ProductCard({ data, newTag }) {
           </a>
         </Link>
       </div>
-
-      {isLogin == true ? <MessageBox message={"Please login first"} /> : ""}
+      {isLogin == true ? <MSD_Box message={"Please login first"} /> : ""}
     </>
   );
 }

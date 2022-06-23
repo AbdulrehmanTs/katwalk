@@ -11,7 +11,7 @@ import productImg3 from "../../../../assets/images/products/product3.jpg";
 import productImg4 from "../../../../assets/images/products/product4.jpg";
 import ShopFilters from "../../../../components/rtl/shop-filters/ShopFilters";
 import ProductCard from "../../../../components/rtl/product-card/ProductCard";
-import ImgLazyLoad from "../../../../components/rtl/img-lazy-load/Img-lazy-load";
+import ImgLazyLoad from "../../../../components/rtl/img-lazy-load/ImgLazyLoad";
 
 function TestDesigner() {
   const otherProducts = [

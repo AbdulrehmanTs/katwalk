@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import nadaLineLogo from "../../../assets/images/logo/nada-line.jpg";
 import nadaLineCover from "../../../assets/images/designers/nada-line/cover.jpg";
@@ -9,9 +9,12 @@ import productImg3 from "../../../assets/images/products/product3.jpg";
 import productImg4 from "../../../assets/images/products/product4.jpg";
 import ShopFilters from "../../../components/rtl/shop-filters/ShopFilters";
 import ProductCard from "../../../components/rtl/product-card/ProductCard";
-import ImgLazyLoad from "../../../components/rtl/img-lazy-load/Img-lazy-load";
+import ImgLazyLoad from "../../../components/rtl/img-lazy-load/ImgLazyLoad";
 
 function DesignerDetail() {
+  useEffect(() => {
+    document.querySelector("body").style.direction = "rtl";
+  }, []);
   const otherProducts = [
     {
       img: productImg1,

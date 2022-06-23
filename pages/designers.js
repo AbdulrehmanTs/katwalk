@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import Layout from "../components/layout/Layout";
-
 import Eight from "../assets/images/designers/eight.jpg";
 import FourteenTen from "../assets/images/designers/fourteen-ten.jpg";
 import NadaLine from "../assets/images/designers/nada-line.jpg";
@@ -15,9 +14,9 @@ import Maliha from "../assets/images/designers/maliha.jpg";
 import RawMestika from "../assets/images/designers/raw-mestika.jpg";
 import EstiloDesigns from "../assets/images/designers/estilo-designs.jpg";
 import MunaMattar from "../assets/images/designers/muna-mattar.jpg";
-import styles from "../components/designers.module.css";
+import styles from "../styles/Designers.module.css";
 import Link from "next/link";
-import ImgLazyLoad from "../components/img-lazy-load/Img-lazy-load";
+import ImgLazyLoad from "../components/img-lazy-load/ImgLazyLoad";
 
 function Designers() {
   const designers = [

@@ -1,7 +1,7 @@
 import React from "react";
 import { IoSearchOutline } from "react-icons/io5";
 
-function DesignerFilter({ data, designer_dropdown }) {
+function DesignerFilter({ data, designer_dropdown, changeHandler,allDesigners }) {
   return (
     <>
       <div
@@ -11,7 +11,9 @@ function DesignerFilter({ data, designer_dropdown }) {
       >
         <div className="w-[100%] px-[15px] pt-[25px]">
           <div className="border-[#e2e5ec] border-b-[1px] flex">
-            <input className="fwr w-[100%] h-[32px] leading-[32px] text-[13px] text-[#898b92] pb-[3px] focus:outline-none rounded-none pr-[10px] input-with-search" />
+            <input
+            onChange={(e) => changeHandler(e, allDesigners)}
+             className="fwr w-[100%] h-[32px] leading-[32px] text-[13px] text-[#898b92] pb-[3px] focus:outline-none rounded-none pr-[10px] input-with-search" />
             {/* <IoSearchOutline className="text-[20px] mt-[8px] mr-[7px]" /> */}
             <div className="my-icon search w-[21px] h-[19px] cursor-pointer relative z-4 bgAllIcon bg-[left_-24px_top_-445px]"></div>
           </div>
@@ -51,7 +53,7 @@ function DesignerFilterItem({ data, parentIndex }) {
                 className="form-check w-[100%] py-[7px] flex items-center border-[#e2e5ec] border-b-[1px] pb-[20px] cursor-pointer"
               >
                 <input
-                  className="min-w-[25px] relative form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px] ml-[10px]"
+                  className="min-w-[25px] relative form-check-input appearance-none border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px] ml-[10px]"
                   type="checkbox"
                   value=""
                   id={`designer${parentIndex}${inde > 0 ? "0" : ""}`}

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "../../../../components/rtl/layout/Layout";
@@ -17,7 +17,7 @@ import ChooseImageModal from "../../../../components/rtl/dashboard/choose-image-
 import TwoTabs from "../../../../components/rtl/dashboard/two-tabs/TwoTabs";
 import ThinTable from "../../../../components/rtl/dashboard/thin-table/ThinTable";
 import img1 from "../../../../assets/images/uploaded/IMG 3136.jpg";
-import Options from "../../../../components/rtl/dashboard/options";
+import Options from "../../../../components/rtl/dashboard/Options";
 
 const ordersData = [
   { title: "Total orders", value: "0" },
@@ -180,6 +180,9 @@ const galleryImageData = {
 };
 
 function AddNewProduct() {
+  useEffect(() => {
+    document.querySelector("body").style.direction = 'rtl'
+  }, []);
   const [selectedCategory, setSelectedCategory] = useState("Abaya");
   const [productCategoriesForShow, setProductCategoriesForShow] = useState(["Abaya", "Kaftan", "Dress", "Farwa", "Kimono"]);
 

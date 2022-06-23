@@ -84,13 +84,13 @@ function ViewPickup() {
         <div className="w-[100%] min-h-[100vh] h-[auto]">
           <AdminPanelLayout active={"ViewPickup"}>
             <TitleAndTableCard>
-              <div className="flex items-center pr-[12px]">
+              <div className="flex items-center pr-[0] lg:pl-[12px] flex-col      lg:flex-row">
                 <TableHeader>عرض بيك اب</TableHeader>
-                <div className="flex">
+                <div className="flex flex-col      lg:flex-row gap-y-[5px] p-[5px] w-[100%]">
                   {filters.map((value, index) => {
                     return (
-                      <div key={value.name + 1} className="fwr w-[209px]">
-                        <div className="fwl w-[100%] pr-[10px]">
+                      <div key={value.name + 1} className="fwr w-[100%]        lg:w-[180px]        xl:w-[209px]">
+                        <div className="fwl w-[100%] pr-0 lg:pr-[10px]">
                           <div
 
                             className="admin-input relative w-[100%] h-[44px] leading-[30px] text-[#495057] text-[1rem] bg-[#fff] border-[1px] border-[#e2e5ec] rounded-[.25rem] py-[0.375rem] px-[0.75rem]"
@@ -153,7 +153,7 @@ function ViewPickup() {
 
                   <input
                     type="text"
-                    className="admin-input w-[230px] h-[44px] fwl text-[#495057] text-[1rem] bg-[#fff] border-[1px] border-[#ced4da] rounded-[.25rem] py-[0.375rem] px-[0.75rem]"
+                    className="admin-input w-[100%]        lg:w-[180px]        xl:w-[230px] h-[44px] fwl text-[#495057] text-[1rem] bg-[#fff] border-[1px] border-[#ced4da] rounded-[.25rem] py-[0.375rem] px-[0.75rem] mx-0 lg:mx-[10px]"
                     placeholder="Type Order code & hit Enter"
                   />
                 </div>

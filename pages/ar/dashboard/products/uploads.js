@@ -14,7 +14,7 @@ import Sleeves from "../../../../components/rtl/dashboard/sleeves/Sleeves";
 import ProductPriceStock from "../../../../components/rtl/dashboard/product-price-stock/ProductPriceStock";
 import ChooseImage from "../../../../components/rtl/dashboard/choose-image/ChooseImage";
 import ChooseImageModal from "../../../../components/rtl/dashboard/choose-image-modal/ChooseImageModal";
-import Options from "../../../../components/rtl/dashboard/options";
+import Options from "../../../../components/rtl/dashboard/Options";
 
 const ordersData = [
   { title: "Total orders", value: "0" },
@@ -184,12 +184,13 @@ const productCategories = ["Abaya", "Kaftan", "Dress", "Farwa", "Kimono"]
 
 
 function AddNewProduct() {
+  useEffect(() => {
+    document.querySelector("body").style.direction = 'rtl'
+  }, []);
   const [productCategoriesForShow, setProductCategoriesForShow] = useState(["Abaya", "Kaftan", "Dress", "Farwa", "Kimono"]);
 
 
   const [matchedOptions, setMatchedOptions] = useState([])
-
-
 
   // let initialData = [];
   //  useEffect(() => {
@@ -199,12 +200,7 @@ function AddNewProduct() {
   //   }
   // }, []);
 
-
-
-
-
   const [selectedCategory, setSelectedCategory] = useState("Abaya");
-
   const [selectedType, setSelectedType] = useState("اختر النوع");
   const [selectedSizeAndFit, setSelectedSizeAndFit] =
     useState("اختر الحجم والتناسب");

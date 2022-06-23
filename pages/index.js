@@ -1,41 +1,40 @@
-import Head from "next/head";
-import Image from "next/image";
-import AllUsedIcons from "../components/AllUsedIcons";
-import styles from "../styles/Home.module.css";
-import About from "./about-us";
-import Checkout from "./checkout";
-import FAQ from "./faqs";
-import HomePage from "./homePage";
-import Login from "./users/login";
-import PrivacyPolicy from "./privacypolicy";
-import ProductDetail from "./product-detail";
-import Shop from "./shop.js";
-import Designers from "./designers";
-import DesignerDetail from "./shop/designer";
-import AdminPanel from "./dashboard/home";
+ 
+ import Layout from "../components/layout/Layout";
+ import katwalkBag from "../assets/images/designers/katwalk-bag.jpg";
+ import bestSellingProduct from "../assets/images/best-selling/best-selling-product.jpg";
+ import Features from "../components/features/Features";
+ import WebTopSection from "../components/web-top-section/WebTopSection";
+ 
 import { useEffect } from "react";
+import TextImageSection from "../components/TextImageSection/TextImageSection";
+import ShopByCat from "../components/ShopByCat/ShopByCat";
 
 export default function Home() {
   useEffect(() => {
     document.querySelector("body").style.direction = 'ltr'
   }, [])
+  const designerData = {
+    title: "designers",
+    text: "Explore our talented and independent designers.",
+    img: katwalkBag,
+    type: "designer"
+  };
+  const bestSellingData = {
+    title: "Best Selling",
+    text: "Our customers' favorite picks",
+    img: bestSellingProduct,
+    type: "product"
+  }
+
+
   return (
 
-    <>
-      <HomePage />
-      {/* <PrivacyPolicy /> */}
-      {/* <FAQ /> */}
-      {/* <About /> */}
-      {/* <ProductDetail /> */}
-      {/* <Checkout /> */}
-      {/* <AllUsedIcons /> */}
-      {/* <Login /> */}
-      {/* <Shop /> */}
-      {/* <Designers /> */}
-      {/* <DesignerDetail /> */}
-
-      {/* admin panel */}
-      {/* <AdminPanel /> */}
-    </>
+    <Layout>
+    <WebTopSection />
+    <ShopByCat />
+    <TextImageSection data={designerData} />
+    <TextImageSection data={bestSellingData} />
+    <Features />
+  </Layout>
   );
 }

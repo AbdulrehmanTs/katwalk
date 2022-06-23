@@ -144,15 +144,77 @@ function ShopFilters({ forDesigner }) {
   const allFiltersMainDiv = useRef(null);
   const resetAllFilterAndCrossDiv = useRef(null);
 
-
-  const [currectSelectedSize, setCurrectSelectedSize] = useState("");
+  const [currentSelectedSizeee, setCurrentSelectedSizeee] = useState([]);
   const [currectSelectedColor, setCurrectSelectedColor] = useState("");
   const [currectSelectedPrice, setCurrectSelectedPrice] = useState("");
   const [currectSelectedSortBy, setCurrectSelectedSortBy] = useState("");
 
+  const [allDesignersForShow, setAllDesignersForShow] = useState([
+    {
+      alphabet: "C",
+      designers: ["Clue"],
+    },
+    {
+      alphabet: "E",
+      designers: ["Estilo Designs"],
+    },
+    {
+      alphabet: "F",
+      designers: ["Fouz Couture", "Fourteen Ten"],
+    },
+    {
+      alphabet: "G",
+      designers: ["Gmash"],
+    },
+  
+    {
+      alphabet: "K",
+      designers: ["Kaf By Kaf"],
+    },
+  
+    {
+      alphabet: "M",
+      designers: ["Maliha", "Muna Mattar"],
+    },
+  
+    {
+      alphabet: "N",
+      designers: ["Nada Line", "Nakhlah"],
+    },
+  
+    {
+      alphabet: "R",
+      designers: ["Raw Mestika"],
+    },
+  
+    {
+      alphabet: "Z",
+      designers: ["Zahra Line"],
+    },
+  
+    {
+      alphabet: "",
+      designers: ["ثمانية", "ولاء كاظم"],
+    },
+  ])
+
   const choosingFilterOption = (selectedOption, filterName) => {
     if (filterName == "sizeFilter") {
-      setCurrectSelectedSize(selectedOption);
+      if(currentSelectedSizeee.length == 0) {
+        let _currentSelectedSizeee = currentSelectedSizeee
+        for (let i = 0; i < allSizes.length; i++) {
+          _currentSelectedSizeee.push({value:allSizes[i], status: false})
+        }
+        setCurrentSelectedSizeee(_currentSelectedSizeee)
+      }
+
+      let __currentSelectedSizeee = currentSelectedSizeee
+      for (let j = 0; j < __currentSelectedSizeee.length; j++) {
+        if(__currentSelectedSizeee[j].value == selectedOption) {
+          __currentSelectedSizeee[j].status = !__currentSelectedSizeee[j].status;
+        }
+      }
+        setCurrentSelectedSizeee([...__currentSelectedSizeee])
     } else if (filterName == "colorFilter") {
       setCurrectSelectedColor(selectedOption);
     } else if (filterName == "prizeFilter") {
@@ -172,28 +234,32 @@ function ShopFilters({ forDesigner }) {
     resetAllFilterAndCrossDiv.current.classList.remove("dflex");
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      category_dropdown.current.classList.remove("f-in");
-      size_dropdown.current.classList.remove("f-in");
-      designer_dropdown.current.classList.remove("f-in");
-      color_dropdown.current.classList.remove("f-in");
-      price_dropdown.current.classList.remove("f-in");
-      sort_by_dropdown.current.classList.remove("f-in");
+  // useEffect(() => {
+    // const scrollFuntion = () => {
+    //   category_dropdown.current.classList.remove("f-in");
+    //   size_dropdown.current.classList.remove("f-in");
+    //   designer_dropdown.current.classList.remove("f-in");
+    //   color_dropdown.current.classList.remove("f-in");
+    //   price_dropdown.current.classList.remove("f-in");
+    //   sort_by_dropdown.current.classList.remove("f-in");
 
-      categoryChevron.current.classList.remove("rotate180b");
+    //   categoryChevron.current.classList.remove("rotate180b");
 
-      sizeChevron.current.classList.remove("rotate180b");
+    //   sizeChevron.current.classList.remove("rotate180b");
 
-      priceChevron.current.classList.remove("rotate180b");
+    //   priceChevron.current.classList.remove("rotate180b");
 
-      designerChevron.current.classList.remove("rotate180b");
+    //   designerChevron.current.classList.remove("rotate180b");
 
-      colorChevron.current.classList.remove("rotate180b");
+    //   colorChevron.current.classList.remove("rotate180b");
 
-      sortByChevron.current.classList.remove("rotate180b");
-    });
-  }, []);
+    //   sortByChevron.current.classList.remove("rotate180b");
+    // };
+    // window.addEventListener("scroll", scrollFuntion());
+    // return () => {
+    //   window.removeEventListener("scroll", scrollFuntion());
+    // };
+  // }, []);
 
   function openDropdown(dropdownName) {
     if (category_dropdown !== dropdownName) {
@@ -273,10 +339,30 @@ function ShopFilters({ forDesigner }) {
     setCurrectSelectedSortBy("");
   };
 
+  const changeHandler = (e, filterName) => {
+
+    // console.log("initialData==>", e, filterName);
+
+    let _allDesigners = filterName;
+    
+    let __allDesigners = [];
+    
+    for (let i = 0; i < _allDesigners.length; i++) {
+      __allDesigners.push(filterName[i])
+    }
+    console.log("e.target.value",e.target.value)
+    console.log("__allDesigners", __allDesigners)
+    const startsWithN = __allDesigners.filter((country) => country.alphabet.startsWith(e.target.value.toUpperCase()));
+    setAllDesignersForShow([]);
+    setAllDesignersForShow(startsWithN);
+    console.log("startsWithN",startsWithN);
+  };
+
   return (
     <>
-      <div className="w-[100%] pt-[0px] px-[16px]       lg:pt-[30px]">
-        {forDesigner == true ? (
+      <div className="far w-[100%] pt-[0px] px-[16px]       lg:pt-[30px]">
+      <div className="flex justify-between items-center">
+      {forDesigner == true ? (
           <>
             <div
               className={`text-center pb-0 mb-[20px] block pt-[30px]      lg:mb-0 lg:text-left lg:pt-0 sm:mb-[30px]`}
@@ -289,9 +375,9 @@ function ShopFilters({ forDesigner }) {
         ) : (
           <>
             <div
-              className={`${styles.center_heading_div} flex text-center main-title`}
+              className={`$ {styles.center_heading_div}    flex text-center main-title`}
             >
-              <p className="text-[20px] tracking-[0.5px] uppercase mt-[-2px] pb-[22px]">
+              <p className="fal text-[20px] tracking-[0.5px] uppercase mt-[-2px] pb-[22px]">
                 كل منتجات
               </p>
             </div>
@@ -300,12 +386,14 @@ function ShopFilters({ forDesigner }) {
 
         <div className={`${styles.right_heading_div} flex justify-end`}>
           <p
-            className=" self-end text-[13px] text-[#c53a19] tracking-[0.5px] pr-[20px] cursor-pointer"
+            className=" self-end text-[13px] text-[#c53a19] tracking-[0.5px] pr-[20px] cursor-pointer pb-[20px ] mt-[-40px]"
             onClick={() => resetAllFilters()}
           >
             {forDesigner == true ? "Reset filters" : "مسح التصنيفات"}
           </p>
         </div>
+      </div>
+
         <div
           className={`filter-main-div border-[#b1b1b1] border-t-[0px] border-b-[0px]      md:border-t-[1px] md:border-b-[1px]`}
         >
@@ -326,7 +414,7 @@ function ShopFilters({ forDesigner }) {
             </h3>
             <div className="flex  items-center hidden mb-[20px]" ref={resetAllFilterAndCrossDiv}>
               <h3
-                className="text-[#000] text-[13px] uppercase h-[34px] leading-[40px] cursor-pointer"
+                className="text-[#000] text-[13px] uppercase h-[34px] leading-[40px] cursor-pointer pb-[50px]"
                 onClick={() => resetAllFilters()}
               >
                 مسح التصنيفات
@@ -349,7 +437,7 @@ function ShopFilters({ forDesigner }) {
                 className={`flex justify-between items-center border-[#b1b1b1] border-b-[1px] lg:border-[0]`}
                 onClick={() => openDropdown(category_dropdown)}
               >
-                <p className="uppercase lg:capitalize text-[#1b1b28] text-[12px] lg:text-[11px] my-[8px] lg:my-[13px] px-[16px] h-[22px] leading-[22px] flex">
+                <p className="uppercase lg:capitalize text-[#9b9b9b] text-[12px] lg:text-[11px] my-[8px] lg:my-[13px] px-[16px] h-[22px] leading-[22px] flex">
                   <div
                     ref={categoryPlus}
                     className={`taPoint3 hidde n      lg:bloc k ${styles.plus_icon} block lg:hidden w-[20px] mr-[15px]`}
@@ -360,7 +448,7 @@ function ShopFilters({ forDesigner }) {
                   ref={categoryChevron}
                   className="taPoint3 hidden     lg:block"
                 >
-                  <IoChevronDown className="mr-[10px]" />
+                  <IoChevronDown className="mr-[10px] text-[#6c6c6c]" />
                 </div>
               </div>
               <div
@@ -372,7 +460,7 @@ function ShopFilters({ forDesigner }) {
                   <div className="w-[100%]">
                     <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none  border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ1"
@@ -386,7 +474,7 @@ function ShopFilters({ forDesigner }) {
                     </div>
                     <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none  border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ2"
@@ -400,7 +488,7 @@ function ShopFilters({ forDesigner }) {
                     </div>
                     <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none  border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ3"
@@ -414,7 +502,7 @@ function ShopFilters({ forDesigner }) {
                     </div>
                     <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none  border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ4"
@@ -428,7 +516,7 @@ function ShopFilters({ forDesigner }) {
                     </div>
                     <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none  border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ5"
@@ -443,7 +531,7 @@ function ShopFilters({ forDesigner }) {
 
                     <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none  border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ6"
@@ -457,7 +545,7 @@ function ShopFilters({ forDesigner }) {
                     </div>
                     <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none  border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ7"
@@ -471,7 +559,7 @@ function ShopFilters({ forDesigner }) {
                     </div>
                     <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none  border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ8"
@@ -485,7 +573,7 @@ function ShopFilters({ forDesigner }) {
                     </div>
                     <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none  border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ9"
@@ -499,7 +587,7 @@ function ShopFilters({ forDesigner }) {
                     </div>
                     <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none  border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ10"
@@ -513,7 +601,7 @@ function ShopFilters({ forDesigner }) {
                     </div>
                     <div className="form-check taPoint3 cursor-pointer py-[7px] flex items-center relative">
                       <input
-                        className="w-[28px] form-check-input appearance-none h-4 w-4 border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
+                        className="w-[28px] form-check-input appearance-none  border border-[#fbf1e8] bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer w-[25px] h-[25px]"
                         type="checkbox"
                         value=""
                         id="categ11"
@@ -534,7 +622,7 @@ function ShopFilters({ forDesigner }) {
                 className={`flex justify-between items-center border-[#b1b1b1] border-b-[1px] lg:border-[0]`}
                 onClick={() => openDropdown(designer_dropdown)}
               >
-                <p className="uppercase lg:capitalize text-[#1b1b28] text-[12px] lg:text-[11px] my-[8px] lg:my-[13px] px-[16px] h-[22px] leading-[22px] flex">
+                <p className="uppercase lg:capitalize text-[#9b9b9b] text-[12px] lg:text-[11px] my-[8px] lg:my-[13px] px-[16px] h-[22px] leading-[22px] flex">
                   <div
                     ref={designerPlus}
                     className={`taPoint3 hidde n      lg:bloc k ${styles.plus_icon} block lg:hidden w-[20px] mr-[15px]`}
@@ -545,12 +633,15 @@ function ShopFilters({ forDesigner }) {
                   ref={designerChevron}
                   className="taPoint3 hidden     lg:block"
                 >
-                  <IoChevronDown className="mr-[10px]" />
+                  <IoChevronDown className="mr-[10px] text-[#6c6c6c]" />
                 </div>
               </div>
               <DesignerFilter
                 designer_dropdown={designer_dropdown}
-                data={allDesigners}
+                // data={allDesigners}
+                data={allDesignersForShow}
+                changeHandler={changeHandler}
+                allDesigners={allDesigners}
               />
             </div>
             <div
@@ -561,7 +652,7 @@ function ShopFilters({ forDesigner }) {
                 onClick={() => openDropdown(size_dropdown)}
                 className={`flex justify-between items-center  border-[#b1b1b1] border-b-[1px] lg:border-[0]`}
               >
-                <p className="uppercase lg:capitalize text-[#1b1b28] text-[12px] lg:text-[11px] my-[8px] lg:my-[13px] px-[16px] h-[22px] leading-[22px] flex">
+                <p className="uppercase lg:capitalize text-[#9b9b9b] text-[12px] lg:text-[11px] my-[8px] lg:my-[13px] px-[16px] h-[22px] leading-[22px] flex">
                   <div
                     ref={sizePlus}
                     className={`taPoint3 hidde n      lg:bloc k ${styles.plus_icon} block lg:hidden w-[20px] mr-[15px]`}
@@ -569,14 +660,14 @@ function ShopFilters({ forDesigner }) {
                   بحجم
                 </p>
                 <div ref={sizeChevron} className="taPoint3 hidden     lg:block">
-                  <IoChevronDown className="mr-[10px]" />
+                  <IoChevronDown className="mr-[10px] text-[#6c6c6c]" />
                 </div>
               </div>
               <SizeFilter
                 size_dropdown={size_dropdown}
                 data={allSizes}
                 choosingFilterOption={choosingFilterOption}
-                currectSelected={currectSelectedSize}
+                currentSelectedSizeee={currentSelectedSizeee}
                 filterName={"sizeFilter"}
               />
             </div>
@@ -588,7 +679,7 @@ function ShopFilters({ forDesigner }) {
                 onClick={() => openDropdown(color_dropdown)}
                 className={`flex justify-between items-center  border-[#b1b1b1] border-b-[1px] lg:border-[0]`}
               >
-                <p className="uppercase lg:capitalize text-[#1b1b28] text-[12px] lg:text-[11px] my-[8px] lg:my-[13px] px-[16px] h-[22px] leading-[22px] flex">
+                <p className="uppercase lg:capitalize text-[#9b9b9b] text-[12px] lg:text-[11px] my-[8px] lg:my-[13px] px-[16px] h-[22px] leading-[22px] flex">
                   <div
                     ref={colorPlus}
                     className={`taPoint3 hidde n      lg:bloc k ${styles.plus_icon} block lg:hidden w-[20px] mr-[15px]`}
@@ -599,7 +690,7 @@ function ShopFilters({ forDesigner }) {
                   ref={colorChevron}
                   className="taPoint3 hidden      lg:block"
                 >
-                  <IoChevronDown className="mr-[10px]" />
+                  <IoChevronDown className="mr-[10px] text-[#6c6c6c]" />
                 </div>
               </div>
               <ColorFilter
@@ -618,7 +709,7 @@ function ShopFilters({ forDesigner }) {
                 onClick={() => openDropdown(price_dropdown)}
                 className={`flex justify-between items-center  border-[#b1b1b1] border-b-[1px] lg:border-[0]`}
               >
-                <p className="uppercase lg:capitalize text-[#1b1b28] text-[12px] lg:text-[11px] my-[8px] lg:my-[13px] px-[16px] h-[22px] leading-[22px] flex">
+                <p className="uppercase lg:capitalize text-[#9b9b9b] text-[12px] lg:text-[11px] my-[8px] lg:my-[13px] px-[16px] h-[22px] leading-[22px] flex">
                   <div
                     ref={pricePlus}
                     className={`taPoint3 hidde n      lg:bloc k ${styles.plus_icon} block lg:hidden w-[20px] mr-[15px]`}
@@ -629,7 +720,7 @@ function ShopFilters({ forDesigner }) {
                   ref={priceChevron}
                   className="taPoint3 hidden      lg:block"
                 >
-                  <IoChevronDown className="mr-[10px]" />
+                  <IoChevronDown className="mr-[10px] text-[#6c6c6c]" />
                 </div>
               </div>
               <PriceFilter
@@ -648,7 +739,7 @@ function ShopFilters({ forDesigner }) {
                 onClick={() => openDropdown(sort_by_dropdown)}
                 className={`flex justify-between items-center  border-[#b1b1b1] border-b-[1px] lg:border-[0]`}
               >
-                <p className="uppercase lg:capitalize text-[#1b1b28] text-[12px] lg:text-[11px] my-[8px] lg:my-[13px] px-[16px] h-[22px] leading-[22px] flex">
+                <p className="uppercase lg:capitalize text-[#9b9b9b] text-[12px] lg:text-[11px] my-[8px] lg:my-[13px] px-[16px] h-[22px] leading-[22px] flex">
                   <div
                     ref={sortByPlus}
                     className={`taPoint3 hidde n      lg:bloc k ${styles.plus_icon} block lg:hidden w-[20px] ml-[15px]`}

@@ -1,13 +1,14 @@
 import React from "react";
-import Hero from "../../components/rtl/hero/Hero";
 import Layout from "../../components/rtl/layout/Layout";
-import ShopByCategory from "../../components/rtl/shop-by-category/ShopByCategory";
+import ShopByCateg from "../../components/rtl/shop-by-category/ShopByCateg";
+
+
 import TextImgSection from "../../components/rtl/text-img-section/TextImgSection";
 import katwalkBag from "../../assets/images/designers/katwalk-bag.jpg";
 import bestSellingProduct from "../../assets/images/best-selling/best-selling-product.jpg";
 import Features from "../../components/rtl/features/Features";
-import allIcons from "../../assets/images/icons/all-icons.svg";
 import { useEffect } from "react";
+import WebTopSection from "../../components/rtl/web-top-section/WebTopSection";
 function HomePage() {
   useEffect(() => {
     document.querySelector("body").style.direction = 'rtl'
@@ -22,7 +23,7 @@ function HomePage() {
     title: "الأكثر مبيعًا",
     text: "اختيارات متسوقاتنا المفضلة",
     img: bestSellingProduct,
-    type: "product"
+    type: "product",
   }
 
 
@@ -34,8 +35,8 @@ function HomePage() {
   return (
     <div className="far">
       <Layout>
-        <Hero />
-        <ShopByCategory />
+        <WebTopSection />
+        <ShopByCateg />
         <TextImgSection data={designerData} />
         <TextImgSection data={bestSellingData} />
         <Features />

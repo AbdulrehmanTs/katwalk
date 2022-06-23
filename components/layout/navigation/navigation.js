@@ -5,11 +5,13 @@ import { IoChevronDown, IoCloseOutline } from "react-icons/io5";
 import { BsInstagram, BsWhatsapp } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import logo from "../../../assets/images/logo/logo.svg";
-import styles from "./navigation.module.css";
+import styles from "./Navigation.module.css";
 import logoSquare from "../../../assets/images/logo/logo-square.png";
 import dress1 from "../../../assets/images/products/dress1.jpg";
+import { useRouter } from "next/router";
 
 function Navigation() {
+  const router = useRouter();
   const dropdown1 = useRef(null);
   const [togglerClasses, setTogglerClasses] = useState([]);
   const [cartToggleClasses, setCartToggleClasses] = useState([]);
@@ -26,6 +28,7 @@ function Navigation() {
     }
   };
   const cartToggler = () => {
+    console.log("cartogg called");
     if (!cartToggleClasses.includes("visibility-visible")) {
       setCartToggleClasses(["visibility-visible"]);
     } else {
@@ -76,11 +79,17 @@ function Navigation() {
       setShopAllClasses(["orange_dropdown"]);
     }
   };
+  const handleArabic = () => {
+    const path = "/ar" + router.pathname;
+    document.querySelector("html").dir = "rtl";
+    document.querySelector("body").style.direction = "rtl";
+    router.push(path);
+  };
   return (
     <>
       <nav
         id="navbar"
-        className="fixed top-0 w-[100%] h-[60px] bg-[#fff] px-[3%] flex justify-between items-center z-[3] drop-shadow-[0_0px_6px_rgba(0,0,0,0.08)]     lg:h-[80px]"
+        className="fixed top-0 w-[100%] h-[60px] bg-[#fff] px-[3%] flex justify-between items-center z-[10] drop-shadow-[0_0px_6px_rgba(0,0,0,0.08)]     lg:h-[80px]"
       >
         <div className="max-w-[115px] pt-[8px]     sm:max-w-[125px] sm:pt-[0]">
           <Link href="/">
@@ -267,16 +276,16 @@ function Navigation() {
               onClick={() => searchToggler()}
             ></div>
           </div>
-          <div className="px-[10px] flex items-center border-r-[0px] border-[#e2e5ec] order-3     sm:order-[unset] sm:border-r-[1px]">
+          <div className="pl-[10px] pr-[12px] py-[10px] flex items-center border-r-[0px ] border-[#e2e5ec ] order-3     sm:order-[unset] sm:border-r-[1px ]">
             {/* cart icon for desktop */}
             <div className="cart-icon-div relative hidden     lg:block">
               <div
-                className="my-icon bag w-[21px] h-[19px] cursor-pointer relative z-[4] bgAllIcon bg-[left_-10px_top_-151px]"
+                className="my-icon bag w-[21px] h-[19px] cursor-pointer relative z-[0] bgAllIcon bg-[left_-10px_top_-151px]"
                 onClick={() => cartToggler()}
               ></div>
 
               <div
-                className={`mt-[-20px] card-sm-box min-w-[110px] w-[322px] absolute top-[30px] left-[50%] translate-x-[-43%] hidden`}
+                className={`mt-[0px] card-sm-box min-w-[110px] w-[322px] absolute top-[30px] left-[50%] translate-x-[-43%] before:absolute before:w-[100%] before:h-[30px] before:top-[-10px] before:left-0 hidden`}
               >
                 <div
                   className={` mt-[20px] ${styles.card_sm_box} bg-[#fff]  p-[20px] border-[#fbf1e8] border-[1px] `}
@@ -347,12 +356,15 @@ function Navigation() {
             </div>
             {/* cart icon for mob */}
 
-            <div className="my-icon bag w-[21px] h-[19px] cursor-pointer relative z-4 bgAllIcon bg-[left_-10px_top_-151px] block     lg:hidden"></div>
+            <div
+              onClick={() => cartToggler()}
+              className="my-icon bag w-[21px] h-[19px] cursor-pointer relative z-[0] bgAllIcon bg-[left_-10px_top_-151px] block     lg:hidden"
+            ></div>
             <span className="work-regular text-[12px] ml-[7px] pt-[3px]">
               1
             </span>
           </div>
-          <div className="px-[8px] flex items-center border-r-[1px] border-[#e2e5ec] hidden       lg:flex">
+          <div className="pl-[10px] pr-[8px] flex items-center border-r-[1px] border-l-[1px] border-[#e2e5ec] hidden       lg:flex">
             <Link href="/dashboard/wishlists">
               <a className="flex items-center">
                 <div className="my-icon heart w-[21px] h-[19px] cursor-pointer relative z-4 bgAllIcon bg-[left_-1px_top_-385px]"></div>
@@ -362,13 +374,16 @@ function Navigation() {
               </a>
             </Link>
           </div>
-          <div className="px-[7px] border-r-[1px] border-[#e2e5ec] hidden       lg:flex">
+          <div className="pl-[8px] pr-[7px] border-r-[1px] border-[#e2e5ec] hidden       lg:flex">
             <Link href="/dashboard/home">
               <div className="my-icon user w-[21px] h-[19px] cursor-pointer relative z-4 bgAllIcon bg-[left_-4px_top_-121px]"></div>
             </Link>
           </div>
           <div className="pl-[0px] pr-[18px] pb-[9px] order-1      sm:order-[unset] sm:pl-[5px] sm:pr-[10px] sm:pb-[4px]">
-            <a href=" /ar" className="almarai-regular text-[13px] cursor-pointer">
+            <a
+              onClick={() => handleArabic()}
+              className="almarai-regular text-[13px] cursor-pointer"
+            >
               عربي
             </a>
           </div>

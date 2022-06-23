@@ -12,7 +12,7 @@ const AdminPanelLayout = ({ children, footer, active }) => {
   return (
     <>
       <div
-        className={`${styles.admin_main_div} w-[100%] flex justify-start leading-[1.5] tracking-[0.5px] mt-[80px] px-[10px] pb-[3rem] pt-[28px] overflow-y-auto overflow-x-visible     md:px-[47px]`}
+        className={`${styles.admin_main_div} w-[100%] flex justify-start leading-[1.5] tracking-[0.5px] mt-[80px] px-[10px] pb-[3rem] pt-[28px] overflow-visible      lg:overflow-y-auto lg:overflow-x-visible     md:px-[47px]`}
       >
         <div
           className={`${showSideBar == true ? styles.show_sidebar : ""} ${styles.sidebar_main_div} bg-[transparent] taPoint3 w-[100%] z-[-5] md:w-[unset] fixed md:relative top-0 md:top-[unset]    md:z-[0] ml-[-10px]     md:ml-0`}

@@ -2,13 +2,13 @@ import React from "react";
 import Image from "next/image";
 import logoSquare from "../../../../assets/images/logo/logo-square.png";
 import vat from "../../../../assets/images/logo/vat.png";
-import styles from "./footer.module.css";
+import styles from "./Footer.module.css";
 import Link from "next/link";
 
 function Footer() {
   return (
     <>
-      <footer className="w-[100%] h-[94px] bg-[#c53a19] py-[15px] items-center flex justify-between px-[3%]">
+      <footer className="far w-[100%] h-[94px] bg-[#c53a19] py-[15px] items-center flex justify-between pl-[4.5%] pr-[3%]">
         <div className="flex  items-center">
           <div className={`${styles.image_div} max-w-[80px] mr-[0px] mt-[5px]       sm:max-w-[65px] sm:ml-[10px] md:ml-[50px]`}>
             <span className="image_container">
@@ -18,14 +18,14 @@ function Footer() {
           <ul
             className={`${styles.footer_menu} flex justify-start flex-wrap gap-x-[20px] pl-[20px] hidden    md:flex lg:pr-[0] `}
           >
-            <li className="ml-[10px]">
+            <li className="ml-[12px] mr-[22px]">
               <Link href="/ar/about-us">
                 <a className="text-[#fff]  whitespace-nowrap text-[12px] tracking-[0.05em] uppercase cursor-pointer">
                   نبذة عنا
                 </a>
               </Link>
             </li>
-            <li className="relative ml-[10px]">
+            <li className="relative ml-[12px] mr-[22px]">
               <a
                 href="#"
                 className="text-[#fff] whitespace-nowrap text-[12px] tracking-[0.05em] uppercase cursor-pointer"
@@ -74,7 +74,7 @@ function Footer() {
                 </div>
               </div>
             </li>
-            <li className="ml-[10px]">
+            <li className="ml-[12px] mr-[22px]">
               <a
                 href="#"
                 className="text-[#fff] whitespace-nowrap text-[12px] tracking-[0.05em] uppercase cursor-pointer"
@@ -82,16 +82,16 @@ function Footer() {
                 انضمي معنا!
               </a>
             </li>
-            <li className="ml-[10px]">
+            <li className="ml-[12px] mr-[22px]">
               <Link href="/ar/faqs">
                 <a className="text-[#fff] whitespace-nowrap text-[12px] tracking-[0.05em] uppercase cursor-pointer">
                   الأسئلة المتكررة
                 </a>
               </Link>
             </li>
-            <li >
+            <li className="ml-[12px] mr-[22px]">
               <Link href="/ar/privacypolicy">
-                <a className="text-[#fff] whitespace-nowrap text-[12px] tracking-[0.05em] uppercase cursor-pointer">
+                <a className="far text-[#fff] whitespace-nowrap text-[12px] tracking-[0.05em] uppercase cursor-pointer">
                   سياسة الخصوصية والشروط والأحكام
                 </a>
               </Link>
@@ -99,7 +99,7 @@ function Footer() {
           </ul>
         </div>
         <div className="flex justify-end  items-center sm:justify-center ">
-          <p className={`${styles.footer_right_div} text-[#fff] text-[10px] tracking-[0.05em] uppercase cursor-pointer pr-[20px] pb-[4px] text-right     sm:text-right sm:text-[12px] sm:pb-[0]`}>
+          <p className={`${styles.footer_right_div} text-[#fff] text-[10px] tracking-[0.05em] uppercase cursor-pointer pr-[20px] pb-[4px] text-right     sm:text-right sm:text-[11px] sm:pb-[0]`}>
             © كات ووك ٢٠٢١ ٢٠٦٢٦١٧٥٩١ الرقم الضريبي ٣١٠٤٠١٦٩١٢٠٠٠٠٣
           </p>
           <div className={`${styles.right_img_div} max-w-[40px] mt-[5px] mr-[10px]     sm:mr-[25px] sm:max-w-[45px]`}>

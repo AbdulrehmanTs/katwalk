@@ -10,11 +10,9 @@ import CardBody from "../../../components/rtl/dashboard/card-body/CardBody";
 import TwoColTable from "../../../components/rtl/dashboard/two-col-table/TwoColTable";
 import HeadingBar from "../../../components/rtl/heading-bar/HeadingBar";
 import verified from "../../../assets/images/icons/verified.png";
-
 import statusCard1 from "../../../assets/images/dashboard/home/status-card1.svg";
 import statusCard2 from "../../../assets/images/dashboard/home/status-card2.svg";
 import statusCard3 from "../../../assets/images/dashboard/home/status-card3.svg";
-
 import styles from "../../../components/rtl/home.module.css";
 
 const statusCardData = [
@@ -56,8 +54,8 @@ const productsData = {
 
 function AdminPanel() {
   useEffect(() => {
-    document.querySelector("body").style.direction = 'rtl'
-  }, [])
+    document.querySelector("body").style.direction = "rtl";
+  }, []);
   return (
     <>
       <Layout>
@@ -101,12 +99,17 @@ function AdminPanel() {
               <TitleAndTableCard width={"w-[100%]     lg:w-[62.5%] h-[100%]"}>
                 <TableHeader>منتجات</TableHeader>
                 <CardBody>
-                  <TwoColTableWithHeading data={productsData} pageName={'dashboardHomePage'} />
+                  <TwoColTableWithHeading
+                    data={productsData}
+                    pageName={"dashboardHomePage"}
+                  />
 
                   <Link href="/ar/dashboard/products/uploads">
-                    <button className="light-brown-btn text-[0.875rem] text-[#fff] leading-[40px] tracking-[0.5px] uppercase bg-[#c83e27] block px-[15px] mt-[20px] mx-auto">
-                      add new product
-                    </button>
+                    <a>
+                      <button className="light-brown-btn text-[0.875rem] text-[#fff] leading-[40px] tracking-[0.5px] uppercase bg-[#c83e27] block px-[15px] mt-[20px] mx-auto">
+                        add new product
+                      </button>
+                    </a>
                   </Link>
                 </CardBody>
               </TitleAndTableCard>
@@ -123,11 +126,15 @@ function AdminPanel() {
                           <p className=" text-[#6b6e73] text-[13px] leading-[1.5] tracking-[0.5px] my-[13px]">
                             Manage &#38; organize your shop
                           </p>
-                          <button
-                            className={` pink-btn h-[40px] text-[#e62e04] text-[0.875rem] text-center uppercase bg-[#e62e0426] tracking-[0.5px] taPoint3 py-[10px] px-[15px] cursor-pointer mx-auto`}
-                          >
-                            go to setting
-                          </button>
+                          <Link href="./shops">
+                            <a>
+                              <button
+                                className={` pink-btn h-[40px] text-[#e62e04] text-[0.875rem] text-center uppercase bg-[#e62e0426] tracking-[0.5px] taPoint3 py-[10px] px-[15px] cursor-pointer mx-auto`}
+                              >
+                                go to setting
+                              </button>
+                            </a>
+                          </Link>
                         </div>
                       </div>
                     </CardBody>
@@ -144,11 +151,15 @@ function AdminPanel() {
                           <p className=" text-[#6b6e73] text-[13px] leading-[1.5] tracking-[0.5px] my-[13px]">
                             Configure your payment method
                           </p>
-                          <button
-                            className={` pink-btn h-[40px] text-[#e62e04] text-[0.875rem] text-center uppercase bg-[#e62e0426] tracking-[0.5px] taPoint3 py-[10px] px-[15px] cursor-pointer mx-auto`}
-                          >
-                            configure now
-                          </button>
+                          <Link href="./profile">
+                            <a>
+                              <button
+                                className={` pink-btn h-[40px] text-[#e62e04] text-[0.875rem] text-center uppercase bg-[#e62e0426] tracking-[0.5px] taPoint3 py-[10px] px-[15px] cursor-pointer mx-auto`}
+                              >
+                                configure now
+                              </button>
+                            </a>
+                          </Link>
                         </div>
                       </div>
                     </CardBody>
@@ -166,35 +177,37 @@ function AdminPanel() {
 function StatusCard({ data, index }) {
   return (
     <div
-      className={`w-[100%] h-[auto] ${index == 0
-        ? "bg-[#609cde]"
-        : index == 1
+      className={`w-[100%] h-[auto] ${
+        index == 0
+          ? "bg-[#609cde]"
+          : index == 1
           ? "bg-[#e5488a]"
           : index == 2
-            ? "bg-[#624ebc]"
-            : index == 3
-              ? "bg-[#609cde]"
-              : ""
-        } mb-[1.5rem] rounded-[0.3rem]`}
+          ? "bg-[#624ebc]"
+          : index == 3
+          ? "bg-[#609cde]"
+          : ""
+      } mb-[1.5rem] rounded-[0.3rem]`}
     >
       <div
-        className={`${index == 0
-          ? styles.bg_grad_1
-          : index == 1
+        className={`${
+          index == 0
+            ? styles.bg_grad_1
+            : index == 1
             ? styles.bg_grad_2
             : index == 2
-              ? styles.bg_grad_3
-              : index == 3
-                ? styles.bg_grad_4
-                : ""
-          } text-white rounded-lg mb- 4 overflow-hidden`}
+            ? styles.bg_grad_3
+            : index == 3
+            ? styles.bg_grad_4
+            : ""
+        } text-white rounded-lg mb- 4 overflow-hidden`}
       >
         <div className="px-[1rem] pt-[1rem]">
           <div className=" text-[14px]">
             {data.title == "Total earnings" ? "SAR " : ""}
             {data.number}
           </div>
-          <div className=" opacity-[.5] text-[13px] text-[#fff] h-[40px]">
+          <div className="opacity-[.5] far text-[13px] text-[#fff] h-[40px]">
             {data.title}
           </div>
         </div>

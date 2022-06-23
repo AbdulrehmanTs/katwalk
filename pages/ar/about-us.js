@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../../components/rtl/layout/Layout";
 import printImg from "../../assets/images/categories/1print.jpg";
 import styles from '../../components/rtl/about.module.css';
-import ImgLazyLoad from "../../components/rtl/img-lazy-load/Img-lazy-load";
+import ImgLazyLoad from "../../components/rtl/img-lazy-load/ImgLazyLoad";
 import { useEffect } from "react";
 function About() {
   useEffect(() => {

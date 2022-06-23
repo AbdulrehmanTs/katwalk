@@ -184,11 +184,10 @@ const productCategories = ["Abaya", "Kaftan", "Dress", "Farwa", "Kimono"]
 
 
 function AddNewProduct() {
+
   const [productCategoriesForShow, setProductCategoriesForShow] = useState(["Abaya", "Kaftan", "Dress", "Farwa", "Kimono"]);
 
-
   const [matchedOptions, setMatchedOptions] = useState([])
-
 
 
   // let initialData = [];
@@ -198,7 +197,6 @@ function AddNewProduct() {
   //     initialData.push(productCategories[i])
   //   }
   // }, []);
-
 
 
 
@@ -627,7 +625,7 @@ function AddNewProduct() {
   const changeHandler = (e, filterName) => {
 
 
-    console.log("initialData", e, filterName);
+    // console.log("initialData", e, filterName);
 
     let _productCategories = filterName;
     // setProductCategories(_productCategories);
@@ -711,7 +709,6 @@ function AddNewProduct() {
                         </div>
                       </div>
                     </div>
-
                     <div className="fwr flex mb-[1rem] flex-col      lg:flex-row">
                       <p className="w-[100%]     lg:w-[24.4%] text-[#1b1b28] text-[13px] px-[5px] capitalize">
                         SKU Code

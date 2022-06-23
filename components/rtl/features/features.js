@@ -7,8 +7,8 @@ import bottle from "../../../assets/images/icons/bottle.png";
 import freeDelivery from "../../../assets/images/icons/free-delivery.png";
 import measurementTap from "../../../assets/images/icons/measurement-tap.png";
 import tags from "../../../assets/images/icons/tags.png";
-import FeaturesCard from "../features-card/Features-card";
-import styles from "./features.module.css";
+import FeaturesCard from "../features-card/FeaturesCard";
+import styles from "./Features.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -50,7 +50,7 @@ function Features() {
     <>
       <section className="my-[30px] px-[25px] py-[30px]">
         <div
-          className={`${styles.features_container} container flex flex-wrap justify-center gap-y-[50px] hidden     sm:flex md:gap-y-[0]`}
+          className={`${styles.features_container} container flex flex-wrap justify-around flex-row-reverse gap-y-[50px] hidden     sm:flex md:gap-y-[0]`}
         >
           {features.map((value, index) => {
             return <FeaturesCard key={index} data={value} />;

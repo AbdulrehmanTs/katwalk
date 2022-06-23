@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import GoToTop from "../go-to-top/Go-to-top";
+import GoToTop from "../go-to-top/GoToTop";
 import Footer from "./footer/Footer";
 import Navigation from "./navigation/Navigation";
 
@@ -7,13 +7,17 @@ const Layout = ({ children, footer }) => {
   const [scrollTop, setScrollTop] = useState("");
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    const scrollingFunction = () => {
       if (window.scrollY > 600) {
         setScrollTop(true);
       } else {
         setScrollTop(false);
       }
-    });
+    }
+    window.addEventListener("scroll", scrollingFunction());
+    return () => {
+      window.removeEventListener("scroll", scrollingFunction());
+    };
   }, []);
 
   function top(e) {

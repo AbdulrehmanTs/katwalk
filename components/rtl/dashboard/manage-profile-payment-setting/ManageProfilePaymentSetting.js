@@ -34,14 +34,14 @@ function ManageProfilePaymentSetting({ data, title }) {
           className={`max-h-0 h-auto overflow-hidden taPoint6`}
         >
           <CardBody>
-            {data.map((value) => {
+            {data.map((value,index) => {
               return (
                 <>
                   {value.value && value.value == "loadImg" ? (
-                    <ChooseImage data={value} shopsPage={true} />
+                    <ChooseImage key={value.name} data={value} shopsPage={true} />
                   ) : (
                     <div key={value.name} className="fwr flex mb-[1rem] flex-col      lg:flex-row">
-                      <p className="w-[100%]     lg:w-[23.4%] text-[#1b1b28] text-[13px] px-0        lg:px-[5px] capitalize pt-[7px]">
+                      <p className="w-[100%]     lg:w-[100%] md:w-[23.4%] text-[#1b1b28] text-[13px] px-0        lg:px-[5px] capitalize pt-[7px]">
                         {value.name}
                       </p>
                       <div className="w-[100%] px-0     lg:px-[15px]">
@@ -49,13 +49,13 @@ function ManageProfilePaymentSetting({ data, title }) {
                           value.name == "Bank Payment" ? (
                           <p className="fwr w-[100%]     lg:w-[12.5%] text-[10px] text-[#6C767D] leading-[2] tracking-[0.5px]">
                             <label
-                              htmlFor="toggleCashPayment"
+                              htmlFor={"toggleCashPayment"+index}
                               className="flex items-center cursor-pointer"
                             >
                               <div className="relative">
                                 <input
                                   type="checkbox"
-                                  id="toggleCashPayment"
+                                  id={"toggleCashPayment"+index}
                                   className="sr-only"
                                 //  onChange={() => disableSheila("toggleCashPayment")}
                                 />

@@ -48,18 +48,22 @@ function Profiles() {
     ],
   });
 
+  const showModal = () => {
+    document.getElementById("upload_overlay").classList.add("dblock");
+  };
+
   return (
     <>
       <Layout>
         <div className="w-[100%] min-h-[100vh] h-[auto]">
           <AdminPanelLayout active={"Profiles"}>
-            <HeadingBar heading={"Manage Profile"} />
+            <HeadingBar heading={"إدارة الملف الشخصي"} />
             <div className="w-[100%]">
-              <ManageProfileBasicInfo data={profileData.basicInfo} title={"Basic Info"} />
-              <ManageProfileAddress data={profileData.address} title={"Address"} />
-              <ManageProfilePaymentSetting data={profileData.paymentSetting} title={"Payment Setting"} />
-              <ManageProfileDesigner_VAT_and_CR_No data={profileData.designer_VAT_and_CR_No} title={"Designer VAT & CR No."} />
-              <ManageProfileChangeYourEmail data={profileData.changeYourEmail} title={"Change your email"} />
+              <ManageProfileBasicInfo data={profileData.basicInfo} title={"معلومات أساسية"} showModal={showModal} />
+              <ManageProfileAddress data={profileData.address} title={"عنوان"} />
+              <ManageProfilePaymentSetting data={profileData.paymentSetting} title={"إعداد الدفع"} />
+              <ManageProfileDesigner_VAT_and_CR_No data={profileData.designer_VAT_and_CR_No} title={"ضريبة القيمة المضافة والسجل التجاري للمصمم"} />
+              <ManageProfileChangeYourEmail data={profileData.changeYourEmail} title={"قم بتغيير بريدك الإلكتروني"} />
             </div>
           </AdminPanelLayout>
         </div>

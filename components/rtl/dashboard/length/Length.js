@@ -69,7 +69,7 @@ function Length({ data, isDisableAllAlterations, openAltration }) {
     <>
       <div className=" flex mb-[1rem] flex-col      lg:flex-row">
         <input
-          className="w-[100%]     lg:w-[25%] h-[44px] leading-[34px] capitalize bg-[#e9ecef]  text-[#495057] text-[1rem] rounded-[.25rem] py-[.375rem] px-[.75rem] not-allowed"
+          className="w-[100%]     lg:w-[25%] h-[44px] leading-[34px] capitalize bg-[#e9ecef]  text-[#495057] text-[1rem] rounded-[.25rem] py-[.2rem] px-[.75rem] not-allowed"
           value="الطول"
         />
         <div className=" w-[100%]     lg:w-[62.5%] pl-0         lg:pl-[15px] pr-0         lg:pr-[5px]">
